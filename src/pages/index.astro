@@ -25,16 +25,16 @@ const featured = verseForDay(new Date());
 const todayHref = todaysPosts.length > 0 ? '#today-heading' : withBase('archive/');
 
 const feelingChips = [
-  { label: 'Anxious', tag: 'anxiety' },
-  { label: 'Afraid', tag: 'fear' },
-  { label: 'Grieving', tag: 'grief' },
-  { label: 'Lonely', tag: 'loneliness' },
-  { label: 'Exhausted', tag: 'exhaustion' },
-  { label: 'Doubting', tag: 'doubt' },
-  { label: 'Ashamed', tag: 'shame' },
-  { label: 'Waiting', tag: 'waiting' },
-  { label: 'Sick', tag: 'sickness' },
-  { label: 'Worried about money', tag: 'money' },
+  { label: 'Anxious', tag: 'anxiety', mood: 'anxiety' },
+  { label: 'Afraid', tag: 'fear', mood: 'fear' },
+  { label: 'Grieving', tag: 'grief', mood: 'grief' },
+  { label: 'Lonely', tag: 'loneliness', mood: 'loneliness' },
+  { label: 'Exhausted', tag: 'exhaustion', mood: 'exhaustion' },
+  { label: 'Doubting', tag: 'doubt', mood: 'doubt' },
+  { label: 'Ashamed', tag: 'shame', mood: 'shame' },
+  { label: 'Waiting', tag: 'waiting', mood: 'waiting' },
+  { label: 'Sick', tag: 'sickness', mood: 'sickness' },
+  { label: 'Worried about money', tag: 'money', mood: 'money' },
 ];
 
 function bodyText(post: (typeof allPosts)[number]): string {
@@ -60,7 +60,13 @@ const homeJsonLd = [
 ---
 <BaseLayout title={siteName} description={defaultDescription} jsonLd={homeJsonLd}>
   <section class="verse-hero" aria-labelledby="verse-hero-heading">
+    <div class="verse-hero-glow" aria-hidden="true"></div>
     <p class="verse-hero-kicker" id="verse-hero-heading">Word for today</p>
+    <div class="verse-ornament" aria-hidden="true">
+      <span class="verse-ornament-line"></span>
+      <span class="verse-ornament-mark">†</span>
+      <span class="verse-ornament-line"></span>
+    </div>
     <blockquote class="verse-hero-quote">
       <p>“{featured.text}”</p>
       <footer>
@@ -79,7 +85,7 @@ const homeJsonLd = [
     <ul class="feeling-chips" role="list">
       {feelingChips.map((chip) => (
         <li>
-          <a class="feeling-chip" href={withBase(`hard-times/${chip.tag}/`)}>{chip.label}</a>
+          <a class={`feeling-chip mood-${chip.mood}`} href={withBase(`hard-times/${chip.tag}/`)}>{chip.label}</a>
         </li>
       ))}
     </ul>
@@ -120,22 +126,26 @@ const homeJsonLd = [
   )}
 
   <div class="home-paths home-ctas" aria-label="Ways to go deeper">
-    <a class="path-card" href={withBase('learn/')}>
+    <a class="path-card path-learn" href={withBase('learn/')}>
+      <span class="path-icon" aria-hidden="true">L</span>
       <span class="path-kicker">Learn</span>
       <strong>Simple lessons</strong>
       <span class="path-note">A short school of walking with Jesus — no rush.</span>
     </a>
-    <a class="path-card" href={withBase('sit/')}>
+    <a class="path-card path-sit" href={withBase('sit/')}>
+      <span class="path-icon" aria-hidden="true">S</span>
       <span class="path-kicker">Pause</span>
       <strong>Sit with Jesus</strong>
       <span class="path-note">A quiet minute with today’s word.</span>
     </a>
-    <a class="path-card" href={withBase('readings/')}>
+    <a class="path-card path-readings" href={withBase('readings/')}>
+      <span class="path-icon" aria-hidden="true">R</span>
       <span class="path-kicker">Readings</span>
       <strong>Longer readings</strong>
       <span class="path-note">Chapters of Jesus’ teaching to sit with slowly.</span>
     </a>
-    <a class="path-card" href={withBase('hard-times/')}>
+    <a class="path-card path-hard" href={withBase('hard-times/')}>
+      <span class="path-icon" aria-hidden="true">H</span>
       <span class="path-kicker">Hard times</span>
       <strong>Start where it hurts</strong>
       <span class="path-note">A short verse for anxiety, grief, fear, and more.</span>

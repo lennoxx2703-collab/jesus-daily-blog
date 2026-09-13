@@ -21,16 +21,19 @@ const lessons = (await getCollection('lessons')).sort(
 
   <ul class="post-list lesson-list">
     {lessons.map((lesson) => (
-      <li class="post-card lesson-card">
-        <p class="meta lesson-meta">
-          <span class="lesson-order">Lesson {lesson.data.order}</span>
-          <span class="meta-sep" aria-hidden="true">·</span>
-          <span>{lesson.data.minutes} min</span>
-        </p>
-        <h2>
-          <a href={withBase(`learn/${lesson.slug}/`)}>{lesson.data.title}</a>
-        </h2>
-        <p class="excerpt">{lesson.data.description}</p>
+      <li class={`post-card lesson-card lesson-accent-${((lesson.data.order - 1) % 5) + 1}`}>
+        <span class="lesson-mark" aria-hidden="true">{lesson.data.order}</span>
+        <div class="lesson-body-wrap">
+          <p class="meta lesson-meta">
+            <span class="lesson-order">Lesson {lesson.data.order}</span>
+            <span class="meta-sep" aria-hidden="true">·</span>
+            <span>{lesson.data.minutes} min</span>
+          </p>
+          <h2>
+            <a href={withBase(`learn/${lesson.slug}/`)}>{lesson.data.title}</a>
+          </h2>
+          <p class="excerpt">{lesson.data.description}</p>
+        </div>
       </li>
     ))}
   </ul>
