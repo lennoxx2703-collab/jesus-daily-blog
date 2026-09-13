@@ -3,7 +3,7 @@ title: The Painter Who Believed the Story
 description: In South Asia, an artist commissioned to paint the biblical creation story came to faith in Jesus while working — and became the first known believer from his people group.
 pubDate: 2026-09-13
 kind: modern
-source: International Mission Board (Jude and Rocky Brown), “First person: God used a painting to draw a man to Him” (CC BY-NC 4.0)
+source: "International Mission Board (Jude and Rocky Brown), First person: God used a painting to draw a man to Him (CC BY-NC 4.0)"
 sourceUrl: https://www.imb.org/2025/03/10/first-person-god-used-a-painting-to-draw-a-man-to-him/
 scripture: Romans 10:9
 tags: [conversion, modern, creation, mission]
