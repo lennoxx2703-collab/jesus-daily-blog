@@ -1,6 +1,14 @@
 ---
 import { getCollection } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
+import { withBase } from '../../lib/site';
+import { readingTimeLabel } from '../../lib/readingTime';
+import {
+  comparePostsLatestFirst,
+  neighbors,
+  prayerForPost,
+  relatedPosts,
+} from '../../lib/posts';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -11,12 +19,28 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+const allPosts = (await getCollection('posts')).sort(comparePostsLatestFirst);
+const { older, newer } = neighbors(post, allPosts);
+const related = relatedPosts(post, allPosts, 3);
 const { Content } = await post.render();
+const body = typeof post.body === 'string' ? post.body : '';
+const readingLabel = readingTimeLabel(body);
+const prayer = prayerForPost(post);
+const permalink = new URL(withBase(`posts/${post.slug}/`), Astro.site).href;
 ---
 <PostLayout
   title={post.data.title}
   description={post.data.description}
   pubDate={post.data.pubDate}
+  daySlot={post.data.slot}
+  tags={post.data.tags}
+  scripture={post.data.scripture}
+  readingLabel={readingLabel}
+  prayer={prayer}
+  older={older}
+  newer={newer}
+  related={related}
+  permalink={permalink}
 >
   <Content />
 </PostLayout>

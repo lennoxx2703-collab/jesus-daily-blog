@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+import { collectTagCounts, comparePostsLatestFirst } from '../../lib/posts';
+
+const posts = (await getCollection('posts')).sort(comparePostsLatestFirst);
+const tags = collectTagCounts(posts);
+---
+<BaseLayout title="Tags" description="Browse Walking with Jesus reflections by topic.">
+  <div class="page-intro">
+    <h1>Tags</h1>
+    <p>Themes that gather the reflections — gospel, prayer, rest, and more.</p>
+  </div>
+
+  {tags.length === 0 ? (
+    <p>No tags yet.</p>
+  ) : (
+    <ul class="tag-index">
+      {tags.map((entry) => (
+        <li>
+          <a class="tag-chip large" href={withBase(`tags/${entry.slug}/`)}>
+            {entry.tag}
+            <span class="tag-count">{entry.count}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  )}
+</BaseLayout>

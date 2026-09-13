@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/site';
+import {
+  comparePostsLatestFirst,
+  formatDate,
+  groupPostsByMonth,
+  isoDate,
+  slotLabel,
+} from '../lib/posts';
+
+const posts = (await getCollection('posts')).sort(comparePostsLatestFirst);
+const months = groupPostsByMonth(posts);
+---
+<BaseLayout title="Archive" description="All Walking with Jesus reflections, grouped by month.">
+  <div class="page-intro">
+    <h1>Archive</h1>
+    <p>Every reflection, newest first, gathered by month.</p>
+  </div>
+
+  {months.length === 0 ? (
+    <p>No posts yet.</p>
+  ) : (
+    <div class="archive-months">
+      {months.map((month) => (
+        <section class="archive-month" aria-labelledby={`month-${month.key}`}>
+          <h2 id={`month-${month.key}`}>{month.label}</h2>
+          <ul class="archive-list">
+            {month.posts.map((post) => {
+              const label = slotLabel(post.data.slot);
+              return (
+                <li>
+                  <time datetime={isoDate(post.data.pubDate)}>{formatDate(post.data.pubDate)}</time>
+                  {label && <span class={`slot-badge slot-${post.data.slot}`}>{label}</span>}
+                  <a href={withBase(`posts/${post.slug}/`)}>{post.data.title}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ))}
+    </div>
+  )}
+</BaseLayout>

@@ -2,7 +2,9 @@
 title: Come and See
 description: Jesus’ gentle invitation in John 1 — curiosity, encounter, and the beginning of discipleship.
 pubDate: 2026-09-13
-tags: [John, invitation, discipleship]
+tags: [gospel, invitation, discipleship]
+scripture: John 1:39
+slot: morning
 ---
 
 There is a quiet power in a simple invitation. Not a debate. Not a demand. Just an open door and a welcoming voice: *Come and see.*

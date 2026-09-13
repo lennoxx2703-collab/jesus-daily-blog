@@ -1,28 +1,174 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import { withBase } from '../lib/site';
+import {
+  formatDate,
+  isoDate,
+  slotLabel,
+  slugifyTag,
+  type Post,
+} from '../lib/posts';
 
 interface Props {
   title: string;
   description: string;
   pubDate: Date;
+  daySlot?: 'morning' | 'midday' | 'evening';
+  tags?: string[];
+  scripture?: string;
+  readingLabel: string;
+  prayer: string;
+  older?: Post;
+  newer?: Post;
+  related: Post[];
+  permalink: string;
 }
 
-const { title, description, pubDate } = Astro.props;
-const formatted = pubDate.toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-  timeZone: 'UTC',
-});
+const {
+  title,
+  description,
+  pubDate,
+  daySlot,
+  tags = [],
+  scripture,
+  readingLabel,
+  prayer,
+  older,
+  newer,
+  related,
+  permalink,
+} = Astro.props;
+
+const formatted = formatDate(pubDate);
+const slotText = slotLabel(daySlot);
+const shareSubject = encodeURIComponent(`${title} · Walking with Jesus`);
+const shareBody = encodeURIComponent(`${title}\n\n${description}\n\n${permalink}`);
+const mailto = `mailto:?subject=${shareSubject}&body=${shareBody}`;
 ---
 <BaseLayout title={title} description={description}>
   <a class="back-link" href={withBase()}>← All reflections</a>
-  <article class="prose">
-    <h1>{title}</h1>
-    <p class="meta">
-      <time datetime={pubDate.toISOString().slice(0, 10)}>{formatted}</time>
-    </p>
-    <slot />
+  <article class="prose post-article">
+    <header class="post-header">
+      <h1>{title}</h1>
+      <p class="meta post-meta">
+        <time datetime={isoDate(pubDate)}>{formatted}</time>
+        {slotText && (
+          <>
+            <span class="meta-sep" aria-hidden="true">·</span>
+            <span class={`slot-badge slot-${daySlot}`}>{slotText}</span>
+          </>
+        )}
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <span>{readingLabel}</span>
+      </p>
+      {scripture && (
+        <p class="scripture-ref">
+          <span class="scripture-label">Scripture</span>
+          <span>{scripture}</span>
+        </p>
+      )}
+      {tags.length > 0 && (
+        <ul class="tag-list" aria-label="Tags">
+          {tags.map((tag) => (
+            <li>
+              <a class="tag-chip" href={withBase(`tags/${slugifyTag(tag)}/`)}>{tag}</a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </header>
+
+    <div class="post-body">
+      <slot />
+    </div>
+
+    <aside class="prayer-box" aria-label="A prayer">
+      <h2>A prayer</h2>
+      <p>{prayer}</p>
+    </aside>
+
+    <div class="share-row">
+      <span class="share-label">Share</span>
+      <button type="button" class="share-btn" id="copy-link-btn" data-url={permalink}>
+        Copy link
+      </button>
+      <a class="share-mail" href={mailto}>Email</a>
+      <span class="share-status" id="copy-link-status" role="status" aria-live="polite"></span>
+    </div>
   </article>
+
+  {(newer || older) && (
+    <nav class="post-nav" aria-label="Adjacent reflections">
+      {older ? (
+        <a class="post-nav-item prev" href={withBase(`posts/${older.slug}/`)}>
+          <span class="post-nav-dir">← Previous</span>
+          <span class="post-nav-title">{older.data.title}</span>
+        </a>
+      ) : <span class="post-nav-item empty"></span>}
+      {newer ? (
+        <a class="post-nav-item next" href={withBase(`posts/${newer.slug}/`)}>
+          <span class="post-nav-dir">Next →</span>
+          <span class="post-nav-title">{newer.data.title}</span>
+        </a>
+      ) : <span class="post-nav-item empty"></span>}
+    </nav>
+  )}
+
+  {related.length > 0 && (
+    <section class="related-posts" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related reflections</h2>
+      <ul class="post-list compact">
+        {related.map((post) => {
+          const relatedSlot = slotLabel(post.data.slot);
+          return (
+            <li class="post-card">
+              <h3>
+                <a href={withBase(`posts/${post.slug}/`)}>{post.data.title}</a>
+              </h3>
+              <p class="meta">
+                <time datetime={isoDate(post.data.pubDate)}>{formatDate(post.data.pubDate)}</time>
+                {relatedSlot && (
+                  <>
+                    <span class="meta-sep" aria-hidden="true">·</span>
+                    <span class={`slot-badge slot-${post.data.slot}`}>{relatedSlot}</span>
+                  </>
+                )}
+              </p>
+              <p class="excerpt">{post.data.description}</p>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  )}
+
+  <script is:inline>
+    (function () {
+      var btn = document.getElementById('copy-link-btn');
+      var status = document.getElementById('copy-link-status');
+      if (!btn || !status) return;
+      btn.addEventListener('click', function () {
+        var url = btn.getAttribute('data-url') || window.location.href;
+        function done(ok) {
+          status.textContent = ok ? 'Link copied.' : 'Could not copy. Select the address bar instead.';
+          window.setTimeout(function () { status.textContent = ''; }, 2500);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(function () { done(true); }).catch(function () { done(false); });
+        } else {
+          try {
+            var input = document.createElement('input');
+            input.value = url;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+            done(true);
+          } catch (e) {
+            done(false);
+          }
+        }
+      });
+    })();
+  </script>
 </BaseLayout>

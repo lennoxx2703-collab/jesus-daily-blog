@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+---
+<BaseLayout title="Search" description="Search Walking with Jesus reflections by title, Scripture, or theme.">
+  <div class="page-intro">
+    <h1>Search</h1>
+    <p>Find a reflection by title, description, Scripture, or tag. Filtering happens in your browser.</p>
+  </div>
+
+  <div class="search-panel">
+    <label class="search-label" for="site-search">Search reflections</label>
+    <input
+      id="site-search"
+      class="search-input"
+      type="search"
+      name="q"
+      placeholder="Try yoke, Emmaus, rest, John…"
+      autocomplete="off"
+      spellcheck="false"
+    />
+    <p class="search-hint" id="search-status" role="status" aria-live="polite">Loading index…</p>
+  </div>
+
+  <ul class="post-list" id="search-results" hidden></ul>
+
+  <script define:vars={{ indexUrl: withBase('search-index.json'), postsBase: withBase('posts/') }}>
+    const input = document.getElementById('site-search');
+    const results = document.getElementById('search-results');
+    const status = document.getElementById('search-status');
+    let index = [];
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function formatDate(iso) {
+      try {
+        return new Date(iso + 'T00:00:00Z').toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          timeZone: 'UTC',
+        });
+      } catch {
+        return iso;
+      }
+    }
+
+    function slotLabel(slot) {
+      if (slot === 'morning') return 'Morning';
+      if (slot === 'midday') return 'Midday';
+      if (slot === 'evening') return 'Evening';
+      return '';
+    }
+
+    function matches(entry, query) {
+      const hay = [
+        entry.title,
+        entry.description,
+        entry.scripture || '',
+        (entry.tags || []).join(' '),
+        entry.slot || '',
+      ]
+        .join(' ')
+        .toLowerCase();
+      return query.split(/\s+/).filter(Boolean).every((part) => hay.includes(part));
+    }
+
+    function render(items, query) {
+      if (!query) {
+        results.hidden = true;
+        results.innerHTML = '';
+        status.textContent = `${index.length} reflections ready. Start typing to filter.`;
+        return;
+      }
+      results.hidden = false;
+      if (items.length === 0) {
+        results.innerHTML = '';
+        status.textContent = `No matches for “${query}”.`;
+        return;
+      }
+      status.textContent = `${items.length} match${items.length === 1 ? '' : 'es'} for “${query}”.`;
+      results.innerHTML = items
+        .map((entry) => {
+          const label = slotLabel(entry.slot);
+          const metaParts = [
+            `<time datetime="${escapeHtml(entry.date)}">${escapeHtml(formatDate(entry.date))}</time>`,
+          ];
+          if (label) {
+            metaParts.push(`<span class="slot-badge slot-${escapeHtml(entry.slot)}">${escapeHtml(label)}</span>`);
+          }
+          if (entry.scripture) {
+            metaParts.push(`<span>${escapeHtml(entry.scripture)}</span>`);
+          }
+          const tags = (entry.tags || [])
+            .map((tag) => `<span class="tag-chip static">${escapeHtml(tag)}</span>`)
+            .join(' ');
+          return `
+            <li class="post-card">
+              <h2><a href="${postsBase}${escapeHtml(entry.slug)}/">${escapeHtml(entry.title)}</a></h2>
+              <p class="meta">${metaParts.join(' <span class="meta-sep" aria-hidden="true">·</span> ')}</p>
+              ${tags ? `<div class="tag-list compact">${tags}</div>` : ''}
+              <p class="excerpt">${escapeHtml(entry.description)}</p>
+            </li>
+          `;
+        })
+        .join('');
+    }
+
+    function onQuery() {
+      const query = (input.value || '').trim().toLowerCase();
+      const filtered = query ? index.filter((entry) => matches(entry, query)) : [];
+      render(filtered, query);
+    }
+
+    fetch(indexUrl)
+      .then((response) => {
+        if (!response.ok) throw new Error('Failed to load search index');
+        return response.json();
+      })
+      .then((data) => {
+        index = Array.isArray(data) ? data : [];
+        status.textContent = `${index.length} reflections ready. Start typing to filter.`;
+        input.addEventListener('input', onQuery);
+        const params = new URLSearchParams(window.location.search);
+        const initial = params.get('q');
+        if (initial) {
+          input.value = initial;
+          onQuery();
+        }
+      })
+      .catch(() => {
+        status.textContent = 'Search is unavailable right now. Please try again later.';
+      });
+  </script>
+</BaseLayout>

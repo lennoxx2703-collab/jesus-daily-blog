@@ -1,17 +1,27 @@
 ---
 import '../styles/global.css';
-import { withBase } from '../lib/site';
+import { withBase, siteName, defaultTagline, defaultDescription } from '../lib/site';
 
 interface Props {
   title: string;
   description?: string;
 }
 
-const { title, description = 'Daily reflections on His life, teaching, and love.' } = Astro.props;
+const { title, description = defaultDescription } = Astro.props;
 const year = new Date().getFullYear();
-const siteTitle = 'Walking with Jesus';
-const fullTitle = title === siteTitle ? title : `${title} · ${siteTitle}`;
+const fullTitle = title === siteName ? title : `${title} · ${siteName}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname;
+const base = withBase().replace(/\/$/, '') || '';
+
+function isActive(href: string): boolean {
+  const target = withBase(href).replace(/\/$/, '') || '/';
+  const current = path.replace(/\/$/, '') || '/';
+  if (href === '' || href === '/') {
+    return current === base || current === `${base}/` || current === '/jesus-daily-blog';
+  }
+  return current === target || current.startsWith(`${target}/`);
+}
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +31,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href={withBase('favicon.svg')} />
-    <link rel="alternate" type="application/rss+xml" title="Walking with Jesus" href={withBase('rss.xml')} />
+    <link rel="alternate" type="application/rss+xml" title={siteName} href={withBase('rss.xml')} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
@@ -30,11 +40,15 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <body>
     <header class="site-header">
       <div class="site-header-inner">
-        <a class="site-brand" href={withBase()}>{siteTitle}</a>
-        <p class="site-tagline">Daily reflections on His life, teaching, and love.</p>
+        <a class="site-brand" href={withBase()}>{siteName}</a>
+        <p class="site-tagline">{defaultTagline}</p>
         <nav class="site-nav" aria-label="Main">
-          <a href={withBase()}>Home</a>
-          <a href={withBase('about/')}>About</a>
+          <a href={withBase()} aria-current={isActive('/') ? 'page' : undefined}>Home</a>
+          <a href={withBase('archive/')} aria-current={isActive('archive/') ? 'page' : undefined}>Archive</a>
+          <a href={withBase('tags/')} aria-current={isActive('tags/') ? 'page' : undefined}>Tags</a>
+          <a href={withBase('search/')} aria-current={isActive('search/') ? 'page' : undefined}>Search</a>
+          <a href={withBase('about/')} aria-current={isActive('about/') ? 'page' : undefined}>About</a>
+          <a href={withBase('rss.xml')}>RSS</a>
         </nav>
       </div>
     </header>
@@ -44,7 +58,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <footer class="site-footer">
       <div class="site-footer-inner">
         <p class="verse">“I am the way, and the truth, and the life.” — John 14:6</p>
-        <p>© {year} Walking with Jesus</p>
+        <p>© {year} {siteName} · <a href={withBase('rss.xml')}>RSS</a></p>
       </div>
     </footer>
   </body>

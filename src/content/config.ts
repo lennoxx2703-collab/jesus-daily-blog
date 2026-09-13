@@ -7,6 +7,9 @@ const posts = defineCollection({
     description: z.string(),
     pubDate: z.coerce.date(),
     tags: z.array(z.string()).optional(),
+    scripture: z.string().optional(),
+    slot: z.enum(['morning', 'midday', 'evening']).optional(),
+    prayer: z.string().optional(),
   }),
 });
 

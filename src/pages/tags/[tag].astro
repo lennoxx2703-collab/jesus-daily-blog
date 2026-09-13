@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+import { readingTimeLabel } from '../../lib/readingTime';
+import {
+  collectTagCounts,
+  comparePostsLatestFirst,
+  formatDate,
+  isoDate,
+  slotLabel,
+  slugifyTag,
+} from '../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  const tags = collectTagCounts(posts);
+  return tags.map((entry) => ({
+    params: { tag: entry.slug },
+    props: { tagLabel: entry.tag, tagSlug: entry.slug },
+  }));
+}
+
+const { tagLabel, tagSlug } = Astro.props;
+const allPosts = (await getCollection('posts')).sort(comparePostsLatestFirst);
+const posts = allPosts.filter((post) =>
+  (post.data.tags ?? []).some((tag) => slugifyTag(tag) === tagSlug)
+);
+---
+<BaseLayout title={`Tag: ${tagLabel}`} description={`Reflections tagged “${tagLabel}” on Walking with Jesus.`}>
+  <div class="page-intro">
+    <p class="eyebrow"><a href={withBase('tags/')}>← All tags</a></p>
+    <h1>{tagLabel}</h1>
+    <p>{posts.length} reflection{posts.length === 1 ? '' : 's'} with this tag.</p>
+  </div>
+
+  <ul class="post-list">
+    {posts.map((post) => {
+      const label = slotLabel(post.data.slot);
+      const minutes = readingTimeLabel(typeof post.body === 'string' ? post.body : '');
+      return (
+        <li class="post-card">
+          <h2>
+            <a href={withBase(`posts/${post.slug}/`)}>{post.data.title}</a>
+          </h2>
+          <p class="meta">
+            <time datetime={isoDate(post.data.pubDate)}>{formatDate(post.data.pubDate)}</time>
+            {label && (
+              <>
+                <span class="meta-sep" aria-hidden="true">·</span>
+                <span class={`slot-badge slot-${post.data.slot}`}>{label}</span>
+              </>
+            )}
+            <span class="meta-sep" aria-hidden="true">·</span>
+            <span>{minutes}</span>
+          </p>
+          <p class="excerpt">{post.data.description}</p>
+        </li>
+      );
+    })}
+  </ul>
+</BaseLayout>
