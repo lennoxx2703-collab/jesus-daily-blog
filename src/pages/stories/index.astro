@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+import { formatDate, isoDate } from '../../lib/posts';
+import { readingTimeLabel } from '../../lib/readingTime';
+
+const stories = (await getCollection('stories')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf() || a.data.title.localeCompare(b.data.title)
+);
+
+function kindLabel(kind: 'gospel' | 'parable-sketch'): string {
+  return kind === 'gospel' ? 'From the Gospels' : 'Pastoral sketch';
+}
+---
+<BaseLayout
+  title="Stories"
+  description="Stories of encounter — from the Gospels, and careful sketches that point to Him."
+>
+  <div class="page-intro">
+    <h1>Stories</h1>
+    <p>
+      Stories of encounter — from the Gospels, and careful sketches that point to Him.
+    </p>
+  </div>
+
+  <ul class="post-list story-list">
+    {stories.map((story) => {
+      const body = typeof story.body === 'string' ? story.body : '';
+      return (
+        <li class={`post-card story-card story-kind-${story.data.kind}`}>
+          <p class="meta story-meta">
+            <span class={`kind-badge kind-${story.data.kind}`}>{kindLabel(story.data.kind)}</span>
+            {story.data.scripture && (
+              <>
+                <span class="meta-sep" aria-hidden="true">·</span>
+                <span>{story.data.scripture}</span>
+              </>
+            )}
+            <span class="meta-sep" aria-hidden="true">·</span>
+            <time datetime={isoDate(story.data.pubDate)}>{formatDate(story.data.pubDate)}</time>
+            <span class="meta-sep" aria-hidden="true">·</span>
+            <span>{readingTimeLabel(body)}</span>
+          </p>
+          <h2>
+            <a href={withBase(`stories/${story.slug}/`)}>{story.data.title}</a>
+          </h2>
+          <p class="excerpt">{story.data.description}</p>
+        </li>
+      );
+    })}
+  </ul>
+</BaseLayout>

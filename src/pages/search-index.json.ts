@@ -8,6 +8,9 @@ export async function GET() {
   const readings = (await getCollection('readings')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
   );
+  const stories = (await getCollection('stories')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  );
 
   const postEntries = posts.map((post) => ({
     kind: 'post',
@@ -33,6 +36,18 @@ export async function GET() {
     slot: '',
   }));
 
+  const storyEntries = stories.map((story) => ({
+    kind: 'story',
+    title: story.data.title,
+    description: story.data.description,
+    tags: story.data.tags ?? [],
+    scripture: story.data.scripture ?? '',
+    slug: story.slug,
+    href: withBase(`stories/${story.slug}/`),
+    date: isoDate(story.data.pubDate),
+    slot: story.data.kind,
+  }));
+
   const verseEntries = HARD_TIMES_VERSES.map((verse) => ({
     kind: 'verse',
     title: verse.reference,
@@ -45,7 +60,7 @@ export async function GET() {
     slot: '',
   }));
 
-  const index = [...postEntries, ...readingEntries, ...verseEntries];
+  const index = [...postEntries, ...readingEntries, ...storyEntries, ...verseEntries];
 
   return new Response(JSON.stringify(index), {
     headers: {

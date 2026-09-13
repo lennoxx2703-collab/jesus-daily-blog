@@ -46,4 +46,16 @@ const lessons = defineCollection({
   }),
 });
 
-export const collections = { posts, readings, lessons };
+const stories = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    kind: z.enum(['gospel', 'parable-sketch']),
+    scripture: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+  }),
+});
+
+export const collections = { posts, readings, lessons, stories };

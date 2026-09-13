@@ -16,6 +16,7 @@ export const GET: APIRoute = async () => {
   const posts = await getCollection('posts');
   const readings = await getCollection('readings');
   const lessons = await getCollection('lessons');
+  const stories = await getCollection('stories');
   const tags = collectTagCounts(posts);
 
   const entries: string[] = [
@@ -26,6 +27,7 @@ export const GET: APIRoute = async () => {
     urlEntry(absoluteUrl('search/'), 'monthly', '0.5'),
     urlEntry(absoluteUrl('hard-times/'), 'weekly', '0.9'),
     urlEntry(absoluteUrl('readings/'), 'weekly', '0.9'),
+    urlEntry(absoluteUrl('stories/'), 'weekly', '0.9'),
     urlEntry(absoluteUrl('share/'), 'monthly', '0.6'),
     urlEntry(absoluteUrl('start-here/'), 'monthly', '0.9'),
     urlEntry(absoluteUrl('learn/'), 'monthly', '0.9'),
@@ -51,6 +53,10 @@ export const GET: APIRoute = async () => {
 
   for (const lesson of lessons) {
     entries.push(urlEntry(absoluteUrl(`learn/${lesson.slug}/`), 'monthly', '0.8'));
+  }
+
+  for (const story of stories) {
+    entries.push(urlEntry(absoluteUrl(`stories/${story.slug}/`), 'weekly', '0.8'));
   }
 
   for (const post of posts) {

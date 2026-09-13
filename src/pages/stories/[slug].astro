@@ -1,0 +1,76 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase, siteName, absoluteUrl } from '../../lib/site';
+import { formatDate, isoDate } from '../../lib/posts';
+import { readingTimeLabel } from '../../lib/readingTime';
+
+export async function getStaticPaths() {
+  const stories = await getCollection('stories');
+  return stories.map((story) => ({
+    params: { slug: story.slug },
+    props: { story },
+  }));
+}
+
+const { story } = Astro.props;
+const { Content } = await story.render();
+const body = typeof story.body === 'string' ? story.body : '';
+
+function kindLabel(kind: 'gospel' | 'parable-sketch'): string {
+  return kind === 'gospel' ? 'From the Gospels' : 'Pastoral sketch';
+}
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  name: story.data.title,
+  headline: story.data.title,
+  description: story.data.description,
+  datePublished: isoDate(story.data.pubDate),
+  isPartOf: {
+    '@type': 'Blog',
+    name: siteName,
+    url: absoluteUrl(),
+  },
+};
+---
+<BaseLayout
+  title={story.data.title}
+  description={story.data.description}
+  ogType="article"
+  jsonLd={articleJsonLd}
+>
+  <a class="back-link" href={withBase('stories/')}>← All stories</a>
+  <article class="prose story-article">
+    <header class="post-header">
+      <h1>{story.data.title}</h1>
+      <p class="meta post-meta">
+        <span class={`kind-badge kind-${story.data.kind}`}>{kindLabel(story.data.kind)}</span>
+        {story.data.scripture && (
+          <>
+            <span class="meta-sep" aria-hidden="true">·</span>
+            <span>{story.data.scripture}</span>
+          </>
+        )}
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <time datetime={isoDate(story.data.pubDate)}>{formatDate(story.data.pubDate)}</time>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <span>{readingTimeLabel(body)}</span>
+      </p>
+      {story.data.kind === 'parable-sketch' && (
+        <p class="story-frame-note">
+          A pastoral sketch — imagine with care. Not presented as a verified true story of a living person.
+        </p>
+      )}
+      {story.data.kind === 'gospel' && (
+        <p class="story-frame-note">
+          A Gospel retelling from Scripture (World English Bible wording and paraphrase). Passage cited below.
+        </p>
+      )}
+    </header>
+    <div class="post-body story-body">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
