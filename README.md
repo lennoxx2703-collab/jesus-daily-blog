@@ -89,10 +89,10 @@ npm run build
 
 ## Pages
 
-- **Home** — today’s reflections, featured verse, paths to Hard times and Readings
+- **Home** — today’s reflections, featured verse, Quote of the day, paths to Hard times and Readings
 - **Readings** — `/readings/` and `/readings/[slug]/` longer Scripture
 - **Stories** — `/stories/` heart-change encounters with Jesus across history and especially recent decades (historical / modern / submitted), each with a cited source; `/stories/share/` for 21st-century testimonies
-- **Quotes** — `/quotes/` short attributed celebrity/influencer remarks about Jesus and faith from public sources (not endorsements); data in `src/data/quotes.ts`
+- **Quotes** — `/quotes/` short attributed celebrity/influencer remarks about Jesus and faith from public sources (not endorsements); data in `src/data/quotes.ts`. Home **Quote of the day** rotates client-side from the same pool.
 - **Hard times** — `/hard-times/` all verses; `/hard-times/[tag]/` by need
 - **Post detail** — full article, prayer, share links, prev/next, related posts
 - **Archive** — `/archive/` all posts grouped by month
@@ -108,9 +108,22 @@ npm run build
 - `src/lib/readingTime.ts` — reading time (~200 wpm)
 - `src/lib/posts.ts` — sorting, tags, neighbors, related posts, prayer defaults
 - `src/lib/verses.ts` — stable day-of-year featured verse
+- `src/data/quotes.ts` — faith quotes pool + `quoteForDay()` / `dayIndexForDate()` for daily rotation
 - `src/lib/hardTimesVerses.ts` — Hard times WEB verse library
 - `src/lib/hardTimes.ts` — tag counts, anchors, situation lines
 - `src/lib/site.ts` — `withBase()` for GitHub Pages project paths
+
+
+## Growing the quotes pool (daily routine)
+
+Add only **verified, sourced** public remarks — do not invent or polish wording.
+
+1. Find a short attributed quote about Jesus / faith from a public interview, article, podcast, or video.
+2. Append an entry to `src/data/quotes.ts` with: `id`, `person`, `quote`, optional `year`, `sourceTitle`, `sourceUrl`.
+3. Regenerate JSON if you keep `public/quotes.json` in sync (`npx tsx` import + write, or rebuild — `src/pages/quotes.json.ts` also emits `/quotes.json`).
+4. Build and publish (`npm run build`, copy `dist` → `docs/`, commit, push).
+
+The home Quote of the day embeds the pool and picks `quotes[dayOfYear % length]` from the visitor’s **local** calendar date, so rotation advances daily without a rebuild. More entries = a longer cycle before repeats.
 
 ## License
 

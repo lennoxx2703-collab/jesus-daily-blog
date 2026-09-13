@@ -1483,6 +1483,88 @@ a.tag-chip-active:hover {
   color: var(--ink-muted);
 }
 
+/* —— Quote of the day (home) —— */
+.qotd {
+  margin: 0 0 var(--space-section);
+  padding: 1.35rem 1.35rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  text-align: center;
+}
+
+.qotd-kicker {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.qotd-quote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.qotd-quote p {
+  margin: 0 auto 0.95rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2.6vw, 1.35rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--ink);
+  max-width: 28em;
+  text-wrap: pretty;
+}
+
+.qotd-meta {
+  margin: 0;
+  font-style: normal;
+}
+
+.qotd-attribution {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.qotd-attribution strong {
+  font-weight: 650;
+  color: var(--accent-soft);
+}
+
+.qotd-links {
+  margin: 0.45rem 0 0;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.qotd-links a {
+  color: var(--ink-muted);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.qotd-links a:hover {
+  color: var(--accent-soft);
+}
+
+.qotd-disclaimer {
+  margin: 0.85rem 0 0;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--ink-faint);
+}
+
 /* —— “How are you?” — compact, calm, one accent —— */
 .feeling-strip {
   margin: 0 0 var(--space-section);
