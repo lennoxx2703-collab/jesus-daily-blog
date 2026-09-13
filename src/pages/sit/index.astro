@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase, absoluteUrl } from '../../lib/site';
+import { verseForDay } from '../../lib/verses';
+
+const featured = verseForDay(new Date());
+const description =
+  'A quiet minute to sit with Jesus — today’s verse, a short breath prayer, and gentle next steps.';
+
+const sitJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Sit with Jesus',
+  url: absoluteUrl('sit/'),
+  description,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Walking with Jesus',
+    url: absoluteUrl(),
+  },
+};
+---
+<BaseLayout title="Sit with Jesus" description={description} jsonLd={sitJsonLd}>
+  <article class="sit-page">
+    <header class="sit-header">
+      <p class="sit-kicker">A still room</p>
+      <h1>Sit with Jesus</h1>
+      <p class="sit-lead">
+        For about a minute — sixty to ninety seconds — set the phone aside.
+        You do not need to fix anything. Just be here.
+      </p>
+    </header>
+
+    <section class="sit-verse" aria-label="Today’s verse">
+      <blockquote>
+        <p>“{featured.text}”</p>
+        <footer>
+          <cite>{featured.reference}</cite>
+          <span class="verse-hero-credit">World English Bible</span>
+        </footer>
+      </blockquote>
+    </section>
+
+    <section class="sit-pause" aria-labelledby="sit-pause-heading">
+      <h2 id="sit-pause-heading">Breathe with Him</h2>
+      <p class="sit-breath">
+        Inhale: <em>Jesus, You are here.</em><br />
+        Exhale: <em>I am with You.</em>
+      </p>
+      <p class="sit-note">
+        Repeat slowly a few times. Let the verse rest on you like light on water.
+        If your mind wanders, return gently — He is not impatient.
+      </p>
+    </section>
+
+    <nav class="sit-links" aria-label="Continue from here">
+      <a class="path-card" href={withBase('pray/')}>
+        <span class="path-kicker">Pray</span>
+        <strong>A written prayer</strong>
+        <span class="path-note">When you want words waiting for you.</span>
+      </a>
+      <a class="path-card" href={withBase('hard-times/')}>
+        <span class="path-kicker">Hard times</span>
+        <strong>Start where it hurts</strong>
+        <span class="path-note">A short verse for anxiety, grief, fear, and more.</span>
+      </a>
+      <a class="path-card" href={withBase('readings/abide-in-me/')}>
+        <span class="path-kicker">Reading</span>
+        <strong>Abide in Me</strong>
+        <span class="path-note">Sit longer with Jesus’ words in John 15.</span>
+      </a>
+    </nav>
+
+    <p class="sit-home">
+      <a href={withBase()}>← Back home</a>
+    </p>
+  </article>
+</BaseLayout>

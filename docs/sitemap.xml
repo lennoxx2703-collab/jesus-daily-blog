@@ -46,6 +46,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/sit/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/pray/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

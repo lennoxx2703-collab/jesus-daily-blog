@@ -27,6 +27,7 @@ export const GET: APIRoute = async () => {
     urlEntry(absoluteUrl('readings/'), 'weekly', '0.9'),
     urlEntry(absoluteUrl('share/'), 'monthly', '0.6'),
     urlEntry(absoluteUrl('start-here/'), 'monthly', '0.9'),
+    urlEntry(absoluteUrl('sit/'), 'daily', '0.9'),
     urlEntry(absoluteUrl('pray/'), 'monthly', '0.8'),
     urlEntry(absoluteUrl('faq/'), 'monthly', '0.7'),
     urlEntry(absoluteUrl('de/'), 'monthly', '0.8'),

@@ -1,65 +1,80 @@
 export type FeaturedVerse = {
   text: string;
   reference: string;
+  translation: 'WEB';
 };
 
-/** Short sayings of Jesus used for the home-page verse of the day. */
+/** Short sayings of Jesus — World English Bible (public domain). */
 export const FEATURED_VERSES: FeaturedVerse[] = [
   {
-    text: 'Come to me, all who labor and are heavy laden, and I will give you rest.',
+    text: 'Come to me, all you who labor and are heavily burdened, and I will give you rest.',
     reference: 'Matthew 11:28',
+    translation: 'WEB',
   },
   {
-    text: 'I am the way, and the truth, and the life.',
+    text: 'I am the way, the truth, and the life. No one comes to the Father, except through me.',
     reference: 'John 14:6',
+    translation: 'WEB',
   },
   {
     text: 'I am the good shepherd. The good shepherd lays down his life for the sheep.',
     reference: 'John 10:11',
+    translation: 'WEB',
   },
   {
-    text: 'Peace I leave with you; my peace I give to you.',
+    text: 'Peace I leave with you. My peace I give to you; not as the world gives, I give to you. Don’t let your heart be troubled, neither let it be fearful.',
     reference: 'John 14:27',
+    translation: 'WEB',
   },
   {
-    text: 'I am the light of the world. Whoever follows me will not walk in darkness.',
+    text: 'I am the light of the world. He who follows me will not walk in the darkness, but will have the light of life.',
     reference: 'John 8:12',
+    translation: 'WEB',
   },
   {
-    text: 'Let not your hearts be troubled. Believe in God; believe also in me.',
+    text: 'Don’t let your heart be troubled. Believe in God. Believe also in me.',
     reference: 'John 14:1',
+    translation: 'WEB',
   },
   {
-    text: 'I am the resurrection and the life. Whoever believes in me, though he die, yet shall he live.',
+    text: 'I am the resurrection and the life. He who believes in me will still live, even if he dies.',
     reference: 'John 11:25',
+    translation: 'WEB',
   },
   {
-    text: 'Abide in me, and I in you.',
+    text: 'Remain in me, and I in you.',
     reference: 'John 15:4',
+    translation: 'WEB',
   },
   {
-    text: 'For the Son of Man came to seek and to save the lost.',
+    text: 'For the Son of Man came to seek and to save that which was lost.',
     reference: 'Luke 19:10',
+    translation: 'WEB',
   },
   {
-    text: 'I came that they may have life and have it abundantly.',
+    text: 'I came that they may have life, and may have it abundantly.',
     reference: 'John 10:10',
+    translation: 'WEB',
   },
   {
-    text: 'In the world you will have tribulation. But take heart; I have overcome the world.',
+    text: 'In the world you have oppression; but cheer up! I have overcome the world.',
     reference: 'John 16:33',
+    translation: 'WEB',
   },
   {
-    text: 'Follow me, and I will make you fishers of men.',
+    text: 'Come after me, and I will make you fishers for men.',
     reference: 'Matthew 4:19',
+    translation: 'WEB',
   },
   {
-    text: 'I am the bread of life; whoever comes to me shall not hunger.',
+    text: 'I am the bread of life. He who comes to me will not be hungry, and he who believes in me will never be thirsty.',
     reference: 'John 6:35',
+    translation: 'WEB',
   },
   {
-    text: 'Ask, and it will be given to you; seek, and you will find; knock, and it will be opened to you.',
+    text: 'Ask, and it will be given you. Seek, and you will find. Knock, and it will be opened for you.',
     reference: 'Matthew 7:7',
+    translation: 'WEB',
   },
 ];
 
