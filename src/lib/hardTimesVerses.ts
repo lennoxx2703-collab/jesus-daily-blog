@@ -223,6 +223,30 @@ export const HARD_TIMES_VERSES: HardTimesVerse[] = [
     translation: 'WEB',
     tags: ['grief'],
   },
+  {
+    reference: 'John 16:22',
+    text: 'Therefore you now have sorrow, but I will see you again, and your heart will rejoice, and no one will take your joy away from you.',
+    translation: 'WEB',
+    tags: ['grief'],
+  },
+  {
+    reference: 'Psalm 119:50',
+    text: 'This is my comfort in my affliction, for your word has revived me.',
+    translation: 'WEB',
+    tags: ['grief'],
+  },
+  {
+    reference: 'Isaiah 51:12',
+    text: '“I, even I, am he who comforts you. Who are you, that you are afraid of man who shall die, and of the son of man who will be made as grass?”',
+    translation: 'WEB',
+    tags: ['fear'],
+  },
+  {
+    reference: 'Joshua 1:9',
+    text: 'Haven’t I commanded you? Be strong and courageous. Don’t be afraid. Don’t be dismayed, for Yahweh your God is with you wherever you go.',
+    translation: 'WEB',
+    tags: ['fear'],
+  },
 ];
 
 export function versesForTag(tag: HardTimesTag): HardTimesVerse[] {

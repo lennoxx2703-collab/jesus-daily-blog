@@ -51,6 +51,10 @@ const SITUATIONS: Record<string, string> = {
   'Psalm 147:3': 'When body or spirit is wounded',
   'John 14:18': 'When you feel abandoned',
   'Matthew 5:4': 'When mourning will not lift',
+  'John 16:22': 'When sorrow is still heavy',
+  'Psalm 119:50': 'When only His word can revive you',
+  'Isaiah 51:12': 'When human threats loom large',
+  'Joshua 1:9': 'When you need courage for the next step',
 };
 
 export function verseSituation(verse: HardTimesVerse): string {
