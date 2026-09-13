@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { withBase, defaultDescription, siteName, absoluteUrl } from '../lib/site';
 import { verseForDay } from '../lib/verses';
+import { quotes, quoteForDay } from '../data/quotes';
 import { readingTimeLabel } from '../lib/readingTime';
 import {
   comparePostsDayOrder,
@@ -22,6 +23,7 @@ const todaysPosts = allPosts
 const recentPosts = allPosts.slice(0, 6);
 const hasMore = allPosts.length > 6;
 const featured = verseForDay(new Date());
+const quoteOfDay = quoteForDay(new Date());
 const todayHref = todaysPosts.length > 0 ? '#today-heading' : withBase('archive/');
 
 const feelingChips = [
@@ -75,6 +77,80 @@ const homeJsonLd = [
     </blockquote>
     <p class="verse-hero-invite">Come as you are. He is already near.</p>
   </section>
+
+
+  <section
+    class="qotd"
+    id="quote-of-the-day"
+    aria-labelledby="qotd-heading"
+    data-qotd
+  >
+    <p class="qotd-kicker" id="qotd-heading">Quote of the day</p>
+    <blockquote class="qotd-quote">
+      <p data-qotd-text>“{quoteOfDay.quote}”</p>
+    </blockquote>
+    <footer class="qotd-meta">
+      <p class="qotd-attribution">
+        <strong data-qotd-person>{quoteOfDay.person}</strong>
+        <span class="meta-sep" data-qotd-year-sep aria-hidden="true" hidden={quoteOfDay.year == null}>·</span>
+        <span class="quote-year" data-qotd-year hidden={quoteOfDay.year == null}>
+          {quoteOfDay.year}
+        </span>
+      </p>
+      <p class="qotd-links">
+        <a
+          data-qotd-source
+          href={quoteOfDay.sourceUrl}
+          rel="noopener noreferrer"
+        >
+          {quoteOfDay.sourceTitle}
+        </a>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <a href={withBase('quotes/')}>More quotes</a>
+      </p>
+    </footer>
+    <p class="qotd-disclaimer">
+      Not an endorsement of everything they say or do — a window toward Jesus.
+    </p>
+  </section>
+
+  <script define:vars={{ quotesPool: quotes }}>
+    (function () {
+      var root = document.querySelector('[data-qotd]');
+      if (!root || !Array.isArray(quotesPool) || quotesPool.length === 0) return;
+
+      function dayIndexForDate(date) {
+        var start = new Date(date.getFullYear(), 0, 1);
+        var current = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        return Math.floor((current.getTime() - start.getTime()) / 86400000);
+      }
+
+      var pick = quotesPool[dayIndexForDate(new Date()) % quotesPool.length];
+      var textEl = root.querySelector('[data-qotd-text]');
+      var personEl = root.querySelector('[data-qotd-person]');
+      var yearEl = root.querySelector('[data-qotd-year]');
+      var sourceEl = root.querySelector('[data-qotd-source]');
+
+      if (textEl) textEl.textContent = '\u201C' + pick.quote + '\u201D';
+      if (personEl) personEl.textContent = pick.person;
+      var yearSep = root.querySelector('[data-qotd-year-sep]');
+      if (yearEl) {
+        if (pick.year != null) {
+          yearEl.textContent = String(pick.year);
+          yearEl.hidden = false;
+          if (yearSep) yearSep.hidden = false;
+        } else {
+          yearEl.textContent = '';
+          yearEl.hidden = true;
+          if (yearSep) yearSep.hidden = true;
+        }
+      }
+      if (sourceEl) {
+        sourceEl.href = pick.sourceUrl;
+        sourceEl.textContent = pick.sourceTitle;
+      }
+    })();
+  </script>
 
   <section class="feeling-strip" aria-labelledby="feeling-heading">
     <div class="feeling-intro">

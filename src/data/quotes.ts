@@ -135,3 +135,19 @@ export const quotes: FaithQuote[] = [
       'https://www.independent.co.uk/arts-entertainment/tv/news/russell-brand-baptism-thames-b2536815.html',
   },
 ];
+
+/** Local calendar day-of-year, 0-based (Jan 1 = 0). */
+export function dayIndexForDate(date: Date = new Date()): number {
+  const start = new Date(date.getFullYear(), 0, 1);
+  const current = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  return Math.floor((current.getTime() - start.getTime()) / 86_400_000);
+}
+
+/** Pick the quote for a calendar day. Stable for a given local date. */
+export function quoteForDay(date: Date = new Date()): FaithQuote {
+  if (quotes.length === 0) {
+    throw new Error('quotes pool is empty');
+  }
+  const index = dayIndexForDate(date) % quotes.length;
+  return quotes[index];
+}
