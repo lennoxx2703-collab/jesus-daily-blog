@@ -5,4 +5,5 @@ dist/
 npm-debug.log*
 .env
 .env.*
+# Cannot push workflow files without `workflow` OAuth scope; see deploy.yml.example
 .github/workflows/
