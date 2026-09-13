@@ -1252,3 +1252,51 @@ a.feeling-chip:focus-visible {
     padding: 1.15rem 1rem 1.2rem;
   }
 }
+
+/* Learn */
+.lesson-list .lesson-card {
+  padding-top: 1.15rem;
+}
+
+.lesson-meta {
+  margin-bottom: 0.35rem;
+}
+
+.lesson-order {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.lesson-promise {
+  margin-top: 0.75rem;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+.go-deeper {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.go-deeper-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.go-deeper-list li {
+  margin-bottom: 0.55rem;
+}
+
+.go-deeper-note {
+  color: var(--ink-muted);
+  font-size: 0.98em;
+}
+
+.lesson-body h2 {
+  margin-top: 2rem;
+}

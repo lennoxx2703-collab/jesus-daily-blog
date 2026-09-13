@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+
+const lessons = (await getCollection('lessons')).sort(
+  (a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title)
+);
+---
+<BaseLayout
+  title="Learn"
+  description="A simple school of walking with Jesus — short lessons, plain words, no rush."
+>
+  <div class="page-intro">
+    <h1>Learn</h1>
+    <p>
+      This is a simple school of walking with Jesus — short lessons, plain words, no rush.
+      Take one when you have a quiet pocket of time. Come back when you are ready for the next.
+    </p>
+  </div>
+
+  <ul class="post-list lesson-list">
+    {lessons.map((lesson) => (
+      <li class="post-card lesson-card">
+        <p class="meta lesson-meta">
+          <span class="lesson-order">Lesson {lesson.data.order}</span>
+          <span class="meta-sep" aria-hidden="true">·</span>
+          <span>{lesson.data.minutes} min</span>
+        </p>
+        <h2>
+          <a href={withBase(`learn/${lesson.slug}/`)}>{lesson.data.title}</a>
+        </h2>
+        <p class="excerpt">{lesson.data.description}</p>
+      </li>
+    ))}
+  </ul>
+
+  <p class="eyebrow home-quiet-links">
+    New here?
+    <a href={withBase('start-here/')}>Start here</a>
+    · <a href={withBase('faq/')}>FAQ</a>
+    · <a href={withBase('readings/')}>Readings</a>
+  </p>
+</BaseLayout>

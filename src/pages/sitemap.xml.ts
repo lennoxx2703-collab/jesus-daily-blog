@@ -15,6 +15,7 @@ function urlEntry(loc: string, changefreq: string, priority: string): string {
 export const GET: APIRoute = async () => {
   const posts = await getCollection('posts');
   const readings = await getCollection('readings');
+  const lessons = await getCollection('lessons');
   const tags = collectTagCounts(posts);
 
   const entries: string[] = [
@@ -27,6 +28,7 @@ export const GET: APIRoute = async () => {
     urlEntry(absoluteUrl('readings/'), 'weekly', '0.9'),
     urlEntry(absoluteUrl('share/'), 'monthly', '0.6'),
     urlEntry(absoluteUrl('start-here/'), 'monthly', '0.9'),
+    urlEntry(absoluteUrl('learn/'), 'monthly', '0.9'),
     urlEntry(absoluteUrl('sit/'), 'daily', '0.9'),
     urlEntry(absoluteUrl('pray/'), 'monthly', '0.8'),
     urlEntry(absoluteUrl('faq/'), 'monthly', '0.7'),
@@ -44,6 +46,10 @@ export const GET: APIRoute = async () => {
 
   for (const reading of readings) {
     entries.push(urlEntry(absoluteUrl(`readings/${reading.slug}/`), 'monthly', '0.8'));
+  }
+
+  for (const lesson of lessons) {
+    entries.push(urlEntry(absoluteUrl(`learn/${lesson.slug}/`), 'monthly', '0.8'));
   }
 
   for (const post of posts) {

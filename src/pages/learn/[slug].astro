@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase, siteName, absoluteUrl } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const lessons = await getCollection('lessons');
+  return lessons.map((lesson) => ({
+    params: { slug: lesson.slug },
+    props: { lesson },
+  }));
+}
+
+const { lesson } = Astro.props;
+const { Content } = await lesson.render();
+const goDeeper = lesson.data.goDeeper ?? [];
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  name: lesson.data.title,
+  headline: lesson.data.title,
+  description: lesson.data.description,
+  isPartOf: {
+    '@type': 'Blog',
+    name: siteName,
+    url: absoluteUrl(),
+  },
+};
+---
+<BaseLayout
+  title={lesson.data.title}
+  description={lesson.data.description}
+  ogType="article"
+  jsonLd={articleJsonLd}
+>
+  <a class="back-link" href={withBase('learn/')}>← All lessons</a>
+  <article class="prose lesson-article">
+    <header class="post-header">
+      <h1>{lesson.data.title}</h1>
+      <p class="meta post-meta">
+        <span>Lesson {lesson.data.order}</span>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <span>About {lesson.data.minutes} minutes</span>
+      </p>
+      <p class="excerpt lesson-promise">{lesson.data.description}</p>
+    </header>
+    <div class="post-body lesson-body">
+      <Content />
+    </div>
+    {goDeeper.length > 0 && (
+      <section class="go-deeper" aria-labelledby="go-deeper-heading">
+        <h2 id="go-deeper-heading">Go deeper</h2>
+        <ul class="go-deeper-list">
+          {goDeeper.map((item) => (
+            <li>
+              <a href={withBase(item.href)}>{item.label}</a>
+              {item.note && <span class="go-deeper-note"> — {item.note}</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </article>
+</BaseLayout>

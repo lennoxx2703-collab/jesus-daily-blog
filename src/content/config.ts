@@ -26,4 +26,24 @@ const readings = defineCollection({
   }),
 });
 
-export const collections = { posts, readings };
+const lessons = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    order: z.number(),
+    minutes: z.number(),
+    tags: z.array(z.string()).optional(),
+    goDeeper: z
+      .array(
+        z.object({
+          label: z.string(),
+          href: z.string(),
+          note: z.string().optional(),
+        })
+      )
+      .optional(),
+  }),
+});
+
+export const collections = { posts, readings, lessons };
