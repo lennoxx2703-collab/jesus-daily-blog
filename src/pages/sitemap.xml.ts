@@ -32,6 +32,7 @@ export const GET: APIRoute = async () => {
     urlEntry(absoluteUrl('sit/'), 'daily', '0.9'),
     urlEntry(absoluteUrl('pray/'), 'monthly', '0.8'),
     urlEntry(absoluteUrl('faq/'), 'monthly', '0.7'),
+    urlEntry(absoluteUrl('more/'), 'monthly', '0.7'),
     urlEntry(absoluteUrl('de/'), 'monthly', '0.8'),
     urlEntry(absoluteUrl('rss.xml'), 'daily', '0.5'),
   ];

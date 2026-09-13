@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase, absoluteUrl } from '../../lib/site';
+
+const description =
+  'Archive, search, pray, FAQ, about, and other quiet ways to explore Walking with Jesus.';
+
+const destinations = [
+  {
+    href: 'start-here/',
+    title: 'Start here',
+    note: 'A gentle on-ramp if you are new.',
+  },
+  {
+    href: 'pray/',
+    title: 'Pray',
+    note: 'Simple written prayers when words are hard.',
+  },
+  {
+    href: 'faq/',
+    title: 'FAQ',
+    note: 'Common questions for seekers and the curious.',
+  },
+  {
+    href: 'archive/',
+    title: 'Archive',
+    note: 'Every reflection, by day and season.',
+  },
+  {
+    href: 'tags/',
+    title: 'Tags',
+    note: 'Browse themes across the reflections.',
+  },
+  {
+    href: 'search/',
+    title: 'Search',
+    note: 'Find a word, verse, or title.',
+  },
+  {
+    href: 'about/',
+    title: 'About',
+    note: 'Why this site exists.',
+  },
+  {
+    href: 'share/',
+    title: 'Share',
+    note: 'Links you can send to a friend.',
+  },
+  {
+    href: 'de/',
+    title: 'Deutsch (DE)',
+    note: 'Eine kurze Willkommensseite auf Deutsch.',
+    lang: 'de',
+  },
+  {
+    href: 'rss.xml',
+    title: 'RSS',
+    note: 'Subscribe in any feed reader.',
+  },
+];
+
+const moreJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'More',
+  url: absoluteUrl('more/'),
+  description,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Walking with Jesus',
+    url: absoluteUrl(),
+  },
+};
+---
+<BaseLayout title="More" description={description} jsonLd={moreJsonLd}>
+  <div class="page-intro">
+    <h1>More</h1>
+    <p>
+      Everything else, kept calm and in one place — so the main path stays clear.
+    </p>
+  </div>
+
+  <ul class="more-grid" role="list">
+    {destinations.map((item) => (
+      <li>
+        <a
+          class="more-link"
+          href={withBase(item.href)}
+          lang={'lang' in item ? item.lang : undefined}
+        >
+          <strong>{item.title}</strong>
+          <span>{item.note}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

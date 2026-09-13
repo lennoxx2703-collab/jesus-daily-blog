@@ -40,6 +40,15 @@ function isActive(href: string): boolean {
   }
   return current === target || current.startsWith(`${target}/`);
 }
+
+const primaryNav = [
+  { href: '/', label: 'Home' },
+  { href: 'learn/', label: 'Learn' },
+  { href: 'hard-times/', label: 'Hard times' },
+  { href: 'sit/', label: 'Sit' },
+  { href: 'readings/', label: 'Readings' },
+  { href: 'more/', label: 'More' },
+];
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -68,28 +77,40 @@ function isActive(href: string): boolean {
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
     <title>{fullTitle}</title>
   </head>
   <body>
     <header class="site-header">
       <div class="site-header-inner">
-        <a class="site-brand" href={withBase()}>{siteName}</a>
-        <p class="site-tagline">{defaultTagline}</p>
+        <div class="site-header-top">
+          <div class="site-brand-block">
+            <a class="site-brand" href={withBase()}>{siteName}</a>
+            <p class="site-tagline">{defaultTagline}</p>
+          </div>
+          <details class="site-menu">
+            <summary>Menu</summary>
+            <nav class="site-menu-panel" aria-label="Mobile">
+              {primaryNav.map((item) => (
+                <a
+                  href={withBase(item.href === '/' ? '' : item.href)}
+                  aria-current={isActive(item.href) ? 'page' : undefined}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </details>
+        </div>
         <nav class="site-nav" aria-label="Main">
-          <a href={withBase()} aria-current={isActive('/') ? 'page' : undefined}>Home</a>
-          <a href={withBase('start-here/')} aria-current={isActive('start-here/') ? 'page' : undefined}>Start here</a>
-          <a href={withBase('learn/')} aria-current={isActive('learn/') ? 'page' : undefined}>Learn</a>
-          <a href={withBase('sit/')} aria-current={isActive('sit/') ? 'page' : undefined}>Sit</a>
-          <a href={withBase('readings/')} aria-current={isActive('readings/') ? 'page' : undefined}>Readings</a>
-          <a href={withBase('hard-times/')} aria-current={isActive('hard-times/') ? 'page' : undefined}>Hard times</a>
-          <a href={withBase('pray/')} aria-current={isActive('pray/') ? 'page' : undefined}>Pray</a>
-          <a href={withBase('archive/')} aria-current={isActive('archive/') ? 'page' : undefined}>Archive</a>
-          <a href={withBase('tags/')} aria-current={isActive('tags/') ? 'page' : undefined}>Tags</a>
-          <a href={withBase('search/')} aria-current={isActive('search/') ? 'page' : undefined}>Search</a>
-          <a href={withBase('about/')} aria-current={isActive('about/') ? 'page' : undefined}>About</a>
-          <a href={withBase('de/')} aria-current={isActive('de/') ? 'page' : undefined} lang="de">DE</a>
-          <a href={withBase('rss.xml')}>RSS</a>
+          {primaryNav.map((item) => (
+            <a
+              href={withBase(item.href === '/' ? '' : item.href)}
+              aria-current={isActive(item.href) ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          ))}
         </nav>
       </div>
     </header>
@@ -104,6 +125,14 @@ function isActive(href: string): boolean {
           <a href={withBase('rss.xml')}>RSS</a> ·
           <a href={withBase('share/')}>Share</a>
         </p>
+        <nav class="footer-nav" aria-label="More destinations">
+          <a href={withBase('start-here/')}>Start here</a>
+          <a href={withBase('pray/')}>Pray</a>
+          <a href={withBase('faq/')}>FAQ</a>
+          <a href={withBase('archive/')}>Archive</a>
+          <a href={withBase('about/')}>About</a>
+          <a href={withBase('more/')}>More</a>
+        </nav>
         <p class="footer-directory">
           <a
             href="https://www.faithfulbloggers.com/"
