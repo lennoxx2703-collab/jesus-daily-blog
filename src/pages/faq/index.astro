@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase, absoluteUrl, siteName } from '../../lib/site';
+
+const faqs = [
+  {
+    question: 'Who is Jesus?',
+    answer:
+      'Jesus is the Son of God who came close to ordinary people. He healed the sick, forgave sinners, taught with both authority and kindness, and gave His life so we could be brought home to God. He rose from the dead and is alive. He still invites anyone who is curious, tired, or hurting: Come and see.',
+  },
+  {
+    question: 'How do I start reading the Bible?',
+    answer:
+      'Begin small. You do not need to read everything at once. Start with a Gospel — Matthew, Mark, Luke, or John — and read a short passage slowly. Ask: what is Jesus saying, and what does this show about His heart? On this site, the Readings pages offer longer sits with His words, and each daily reflection includes a verse you can carry.',
+  },
+  {
+    question: 'What if I doubt?',
+    answer:
+      'Doubt is not the end of faith. Many who loved Jesus asked hard questions, and He did not turn them away. Bring your doubts honestly to God. Keep reading a little Scripture. Keep asking. Faith often grows in the company of honest questions, not by pretending you have none.',
+  },
+  {
+    question: 'What if I’m hurting?',
+    answer:
+      'You are welcome here as you are. Jesus does not ask you to tidy your pain before you come. Begin with a short verse for what you face — anxiety, grief, fear, loneliness, or another hard day — and stay as long as you need. He is near to the brokenhearted.',
+  },
+  {
+    question: 'Can I pray if I don’t know how?',
+    answer:
+      'Yes. Prayer is simply speaking with God. You do not need special words or a perfect posture. Say what is true: thank You, help me, I’m sorry, I’m afraid, stay with me. If you want company while you find the words, the Pray page has short written prayers you can borrow and make your own.',
+  },
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+  name: `FAQ · ${siteName}`,
+  url: absoluteUrl('faq/'),
+};
+---
+<BaseLayout
+  title="FAQ"
+  description="Simple answers for seekers — who Jesus is, how to begin with the Bible, doubt, hard days, and prayer."
+  jsonLd={faqJsonLd}
+>
+  <article class="prose">
+    <h1>FAQ</h1>
+    <p>
+      A few questions people often carry quietly. Answers in plain words —
+      not a lecture, an invitation.
+    </p>
+
+    {faqs.map((item) => (
+      <section>
+        <h2>{item.question}</h2>
+        <p>{item.answer}</p>
+      </section>
+    ))}
+
+    <h2>Where to go next</h2>
+    <ul>
+      <li>
+        <a href={withBase('start-here/')}>Start here</a>
+        — who Jesus is, and three gentle next steps.
+      </li>
+      <li>
+        <a href={withBase('hard-times/')}>Hard times</a>
+        — short verses when something hurts.
+      </li>
+      <li>
+        <a href={withBase('readings/')}>Readings</a>
+        — sit slowly with Jesus’ teaching.
+      </li>
+      <li>
+        <a href={withBase('pray/')}>Pray</a>
+        — simple written prayers if you want company finding words.
+      </li>
+    </ul>
+
+    <p>
+      Still curious?
+      <a href={withBase('about/')}>About</a> this site, or return
+      <a href={withBase()}>Home</a>.
+    </p>
+  </article>
+</BaseLayout>

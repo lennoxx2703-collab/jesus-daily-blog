@@ -97,6 +97,7 @@ npm run build
 - **Tags** — `/tags/` and `/tags/[tag]/`
 - **Search** — `/search/` client-side filter (posts, readings, verses)
 - **Pray** — `/pray/` simple written prayers to pray with Jesus
+- **FAQ** — `/faq/` short answers for seekers (Jesus, Bible, doubt, hurt, prayer)
 - **About** — short statement about the blog
 - **RSS** — `/jesus-daily-blog/rss.xml`
 
