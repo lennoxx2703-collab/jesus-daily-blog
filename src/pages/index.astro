@@ -60,7 +60,6 @@ const homeJsonLd = [
 ---
 <BaseLayout title={siteName} description={defaultDescription} jsonLd={homeJsonLd}>
   <section class="verse-hero" aria-labelledby="verse-hero-heading">
-    <div class="verse-hero-glow" aria-hidden="true"></div>
     <p class="verse-hero-kicker" id="verse-hero-heading">Word for today</p>
     <div class="verse-ornament" aria-hidden="true">
       <span class="verse-ornament-line"></span>
@@ -125,32 +124,31 @@ const homeJsonLd = [
     </section>
   )}
 
-  <div class="home-paths home-ctas" aria-label="Ways to go deeper">
-    <a class="path-card path-learn" href={withBase('learn/')}>
-      <span class="path-icon" aria-hidden="true">L</span>
-      <span class="path-kicker">Learn</span>
-      <strong>Simple lessons</strong>
-      <span class="path-note">A short school of walking with Jesus — no rush.</span>
-    </a>
-    <a class="path-card path-sit" href={withBase('sit/')}>
-      <span class="path-icon" aria-hidden="true">S</span>
-      <span class="path-kicker">Pause</span>
-      <strong>Sit with Jesus</strong>
-      <span class="path-note">A quiet minute with today’s word.</span>
-    </a>
-    <a class="path-card path-readings" href={withBase('readings/')}>
-      <span class="path-icon" aria-hidden="true">R</span>
-      <span class="path-kicker">Readings</span>
-      <strong>Longer readings</strong>
-      <span class="path-note">Chapters of Jesus’ teaching to sit with slowly.</span>
-    </a>
-    <a class="path-card path-hard" href={withBase('hard-times/')}>
-      <span class="path-icon" aria-hidden="true">H</span>
-      <span class="path-kicker">Hard times</span>
-      <strong>Start where it hurts</strong>
-      <span class="path-note">A short verse for anxiety, grief, fear, and more.</span>
-    </a>
-  </div>
+  <section class="explore-section" aria-labelledby="explore-heading">
+    <h2 id="explore-heading">Explore</h2>
+    <div class="home-paths home-ctas" aria-label="Ways to go deeper">
+      <a class="path-card path-learn" href={withBase('learn/')}>
+        <span class="path-kicker">Learn</span>
+        <strong>Simple lessons</strong>
+        <span class="path-note">A short school of walking with Jesus — no rush.</span>
+      </a>
+      <a class="path-card path-sit" href={withBase('sit/')}>
+        <span class="path-kicker">Pause</span>
+        <strong>Sit with Jesus</strong>
+        <span class="path-note">A quiet minute with today’s word.</span>
+      </a>
+      <a class="path-card path-readings" href={withBase('readings/')}>
+        <span class="path-kicker">Readings</span>
+        <strong>Longer readings</strong>
+        <span class="path-note">Chapters of Jesus’ teaching to sit with slowly.</span>
+      </a>
+      <a class="path-card path-hard" href={withBase('hard-times/')}>
+        <span class="path-kicker">Hard times</span>
+        <strong>Start where it hurts</strong>
+        <span class="path-note">A short verse for anxiety, grief, fear, and more.</span>
+      </a>
+    </div>
+  </section>
 
   <p class="home-quiet-links eyebrow">
     <a href={withBase('start-here/')}>Start here</a>
