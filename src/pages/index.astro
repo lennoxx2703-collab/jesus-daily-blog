@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('posts')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+<BaseLayout title="Walking with Jesus" description="Daily reflections on His life, teaching, and love.">
+  <div class="page-intro">
+    <h1>Daily reflections</h1>
+    <p>One quiet invitation each day to walk with Jesus — through His words, His life, and His love.</p>
+  </div>
+  <ul class="post-list">
+    {posts.map((post) => {
+      const date = post.data.pubDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        timeZone: 'UTC',
+      });
+      return (
+        <li class="post-card">
+          <h2>
+            <a href={`${import.meta.env.BASE_URL}posts/${post.slug}/`}>{post.data.title}</a>
+          </h2>
+          <p class="meta">
+            <time datetime={post.data.pubDate.toISOString().slice(0, 10)}>{date}</time>
+          </p>
+          <p class="excerpt">{post.data.description}</p>
+        </li>
+      );
+    })}
+  </ul>
+</BaseLayout>

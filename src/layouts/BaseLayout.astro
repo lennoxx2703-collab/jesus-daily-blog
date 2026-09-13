@@ -1,0 +1,50 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Daily reflections on His life, teaching, and love.' } = Astro.props;
+const year = new Date().getFullYear();
+const siteTitle = 'Walking with Jesus';
+const fullTitle = title === siteTitle ? title : `${title} · ${siteTitle}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <link rel="alternate" type="application/rss+xml" title="Walking with Jesus" href={`${import.meta.env.BASE_URL}rss.xml`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <title>{fullTitle}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="site-brand" href={`${import.meta.env.BASE_URL}`}>{siteTitle}</a>
+        <p class="site-tagline">Daily reflections on His life, teaching, and love.</p>
+        <nav class="site-nav" aria-label="Main">
+          <a href={`${import.meta.env.BASE_URL}`}>Home</a>
+          <a href={`${import.meta.env.BASE_URL}about/`}>About</a>
+        </nav>
+      </div>
+    </header>
+    <main class="site-main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="verse">“I am the way, and the truth, and the life.” — John 14:6</p>
+        <p>© {year} Walking with Jesus</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+:root {
+  --bg: #f7f1e6;
+  --bg-soft: #f0e8d8;
+  --ink: #1a2744;
+  --ink-muted: #4a5568;
+  --accent: #1e3a5f;
+  --accent-soft: #2c5282;
+  --border: #d4c4a8;
+  --link: #1e4d7b;
+  --max: 42rem;
+  --font-serif: "Source Serif 4", "Libre Baskerville", Georgia, "Times New Roman", serif;
+  --font-sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--accent-soft);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.site-header {
+  background: var(--accent);
+  color: #f7f1e6;
+  padding: 1.25rem 1.25rem 1.5rem;
+  border-bottom: 3px solid #152a45;
+}
+
+.site-header a {
+  color: #f7f1e6;
+  text-decoration: none;
+}
+
+.site-header a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.site-header-inner,
+.site-main,
+.site-footer-inner {
+  width: min(100% - 2rem, 48rem);
+  margin-inline: auto;
+}
+
+.site-brand {
+  display: block;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.25rem;
+}
+
+.site-tagline {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.site-main {
+  flex: 1;
+  padding: 2rem 0 3rem;
+}
+
+.site-footer {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 1.25rem;
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
+.site-footer p {
+  margin: 0.35rem 0;
+}
+
+.verse {
+  font-style: italic;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-sans);
+  line-height: 1.25;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin: 0 0 0.5rem;
+}
+
+.meta {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  margin: 0 0 1.5rem;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.post-card {
+  background: #fffdf8;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 1px 2px rgba(26, 39, 68, 0.04);
+}
+
+.post-card h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+}
+
+.post-card h2 a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.post-card h2 a:hover {
+  text-decoration: underline;
+}
+
+.post-card .excerpt {
+  margin: 0.75rem 0 0;
+  color: var(--ink);
+}
+
+.prose {
+  max-width: var(--max);
+}
+
+.prose p {
+  margin: 0 0 1.15rem;
+}
+
+.prose blockquote {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.15rem;
+  border-left: 4px solid var(--accent);
+  background: var(--bg-soft);
+  color: var(--ink);
+  font-style: italic;
+}
+
+.prose blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.prose strong {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+.page-intro {
+  margin-bottom: 2rem;
+}
+
+.page-intro p {
+  margin: 0.75rem 0 0;
+  color: var(--ink-muted);
+  font-size: 1.05rem;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1.05rem;
+  }
+
+  .post-card {
+    padding: 1rem 1.1rem;
+  }
+}
