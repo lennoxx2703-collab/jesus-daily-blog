@@ -44,6 +44,8 @@ function isActive(href: string): boolean {
         <p class="site-tagline">{defaultTagline}</p>
         <nav class="site-nav" aria-label="Main">
           <a href={withBase()} aria-current={isActive('/') ? 'page' : undefined}>Home</a>
+          <a href={withBase('readings/')} aria-current={isActive('readings/') ? 'page' : undefined}>Readings</a>
+          <a href={withBase('hard-times/')} aria-current={isActive('hard-times/') ? 'page' : undefined}>Hard times</a>
           <a href={withBase('archive/')} aria-current={isActive('archive/') ? 'page' : undefined}>Archive</a>
           <a href={withBase('tags/')} aria-current={isActive('tags/') ? 'page' : undefined}>Tags</a>
           <a href={withBase('search/')} aria-current={isActive('search/') ? 'page' : undefined}>Search</a>

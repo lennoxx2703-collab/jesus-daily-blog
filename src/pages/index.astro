@@ -70,6 +70,19 @@ function bodyText(post: (typeof allPosts)[number]): string {
     </section>
   )}
 
+  <div class="home-paths" aria-label="More Scripture">
+    <a class="path-card" href={withBase('hard-times/')}>
+      <span class="path-kicker">Hard times</span>
+      <strong>Verses for when it hurts</strong>
+      <span class="path-note">A short word for anxiety, grief, fear, and other hard days.</span>
+    </a>
+    <a class="path-card" href={withBase('readings/')}>
+      <span class="path-kicker">Readings</span>
+      <strong>Sit with a longer word</strong>
+      <span class="path-note">Chapters of Jesus’ teaching to read slowly.</span>
+    </a>
+  </div>
+
   <aside class="verse-card" aria-label="Featured verse">
     <p class="verse-card-label">Word for today</p>
     <blockquote>

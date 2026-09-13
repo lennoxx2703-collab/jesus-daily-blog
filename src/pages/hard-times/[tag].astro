@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+import {
+  HARD_TIMES_TAGS,
+  collectHardTimesTagCounts,
+  verseAnchor,
+  verseSituation,
+  versesForTag,
+  type HardTimesTag,
+} from '../../lib/hardTimes';
+
+export async function getStaticPaths() {
+  return HARD_TIMES_TAGS.map((tag) => ({
+    params: { tag },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props as { tag: HardTimesTag };
+const verses = versesForTag(tag);
+const tags = collectHardTimesTagCounts();
+---
+<BaseLayout
+  title={`Hard times: ${tag}`}
+  description={`World English Bible verses for ${tag} — Walking with Jesus.`}
+>
+  <div class="page-intro">
+    <p class="eyebrow"><a href={withBase('hard-times/')}>← All hard times</a></p>
+    <h1>{tag}</h1>
+    <p>
+      {verses.length} verse{verses.length === 1 ? '' : 's'} for this need.
+      World English Bible (public domain).
+    </p>
+  </div>
+
+  <ul class="tag-index">
+    {tags.map((entry) => (
+      <li>
+        <a
+          class:list={['tag-chip', 'large', { 'tag-chip-active': entry.tag === tag }]}
+          href={withBase(`hard-times/${entry.slug}/`)}
+          aria-current={entry.tag === tag ? 'page' : undefined}
+        >
+          {entry.tag}
+          <span class="tag-count">{entry.count}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <ul class="post-list ht-verse-list">
+    {verses.map((verse) => (
+      <li class="post-card ht-verse" id={verseAnchor(verse)}>
+        <h2 class="ht-ref">{verse.reference}</h2>
+        <p class="ht-situation">{verseSituation(verse)}</p>
+        <blockquote>
+          <p>“{verse.text}”</p>
+        </blockquote>
+        <p class="ht-credit">WEB</p>
+        <ul class="tag-list compact" aria-label="Tags">
+          {verse.tags.map((item) => (
+            <li>
+              <a class="tag-chip" href={withBase(`hard-times/${item}/`)}>{item}</a>
+            </li>
+          ))}
+        </ul>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

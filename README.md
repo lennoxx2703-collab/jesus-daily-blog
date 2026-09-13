@@ -44,6 +44,28 @@ prayer: Optional closing prayer text.
 
 Then write the article body in Markdown (about 600–900 words).
 
+## Longer readings
+
+Create Markdown files in `src/content/readings/`:
+
+```yaml
+---
+title: The Sermon on the Mount
+description: One or two sentences.
+pubDate: 2026-09-13
+book: Matthew
+chapterRange: "5–7"
+translation: World English Bible
+tags: [gospel, teaching]
+---
+```
+
+Use **public-domain** English Bible text only (World English Bible or KJV). Do not paste NIV, ESV, NKJV, or other copyrighted translations.
+
+## Hard times verses
+
+The Hard times page is driven by `src/lib/hardTimesVerses.ts` (World English Bible, public domain). Tags: anxiety, fear, grief, loneliness, exhaustion, doubt, shame, waiting, sickness, money.
+
 ### Publish (docs/ method — current)
 
 ```bash
@@ -67,11 +89,13 @@ npm run build
 
 ## Pages
 
-- **Home** — today’s reflections (by slot), featured verse, recent posts
+- **Home** — today’s reflections, featured verse, paths to Hard times and Readings
+- **Readings** — `/readings/` and `/readings/[slug]/` longer Scripture
+- **Hard times** — `/hard-times/` all verses; `/hard-times/[tag]/` by need
 - **Post detail** — full article, prayer, share links, prev/next, related posts
 - **Archive** — `/archive/` all posts grouped by month
 - **Tags** — `/tags/` and `/tags/[tag]/`
-- **Search** — `/search/` client-side filter over a build-time JSON index
+- **Search** — `/search/` client-side filter (posts, readings, verses)
 - **About** — short statement about the blog
 - **RSS** — `/jesus-daily-blog/rss.xml`
 
@@ -80,8 +104,10 @@ npm run build
 - `src/lib/readingTime.ts` — reading time (~200 wpm)
 - `src/lib/posts.ts` — sorting, tags, neighbors, related posts, prayer defaults
 - `src/lib/verses.ts` — stable day-of-year featured verse
+- `src/lib/hardTimesVerses.ts` — Hard times WEB verse library
+- `src/lib/hardTimes.ts` — tag counts, anchors, situation lines
 - `src/lib/site.ts` — `withBase()` for GitHub Pages project paths
 
 ## License
 
-Content and code for personal / ministry use. Scripture quotations cite book, chapter, and verse in each post.
+Content and code for personal / ministry use. Scripture on readings and Hard times is quoted from the World English Bible (public domain).

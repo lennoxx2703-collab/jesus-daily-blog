@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+import {
+  HARD_TIMES_VERSES,
+  collectHardTimesTagCounts,
+  verseAnchor,
+  verseSituation,
+} from '../../lib/hardTimes';
+
+const tags = collectHardTimesTagCounts();
+const verses = HARD_TIMES_VERSES;
+---
+<BaseLayout
+  title="Hard times"
+  description="Verses from the World English Bible for anxiety, fear, grief, and other hard days."
+>
+  <div class="page-intro">
+    <h1>Hard times</h1>
+    <p>
+      Scripture meets people in real pain. Choose a word for what hurts, and sit with it.
+      All quotations are from the World English Bible (public domain).
+    </p>
+    <p class="eyebrow">
+      <a href={withBase('readings/')}>Or sit with a longer reading →</a>
+    </p>
+  </div>
+
+  <section aria-labelledby="ht-tags-heading">
+    <h2 id="ht-tags-heading" class="visually-quiet">Browse by need</h2>
+    <ul class="tag-index">
+      {tags.map((entry) => (
+        <li>
+          <a class="tag-chip large" href={withBase(`hard-times/${entry.slug}/`)}>
+            {entry.tag}
+            <span class="tag-count">{entry.count}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="ht-all" aria-labelledby="ht-all-heading">
+    <h2 id="ht-all-heading">All verses</h2>
+    <p class="ht-credit-line">{verses.length} verses · World English Bible (public domain)</p>
+    <ul class="post-list ht-verse-list">
+      {verses.map((verse) => (
+        <li class="post-card ht-verse" id={verseAnchor(verse)}>
+          <h3 class="ht-ref">{verse.reference}</h3>
+          <p class="ht-situation">{verseSituation(verse)}</p>
+          <blockquote>
+            <p>“{verse.text}”</p>
+          </blockquote>
+          <p class="ht-credit">WEB</p>
+          <ul class="tag-list compact" aria-label="Tags">
+            {verse.tags.map((tag) => (
+              <li>
+                <a class="tag-chip" href={withBase(`hard-times/${tag}/`)}>{tag}</a>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

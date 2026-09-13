@@ -1,0 +1,97 @@
+---
+title: The Sermon on the Mount
+description: Matthew 5–7 in the World English Bible — Jesus’ long teaching on the blessed life, prayer, worry, and the house built on rock.
+pubDate: 2026-09-13
+book: Matthew
+chapterRange: "5–7"
+translation: World English Bible
+tags: [gospel, teaching, prayer, discipleship]
+---
+
+The Sermon on the Mount is not a speech for easy days. Jesus spoke it to people who already knew hunger, insult, debt, and the fear of tomorrow. He sat down on a hillside and taught a way of being human that still meets us when the week is heavy: blessed are those who mourn; do not be anxious; ask, seek, knock; build on the rock.
+
+Read it slowly. You do not have to finish in one sitting. Let one sentence stay with you.
+
+<div class="translation-note">World English Bible (public domain)</div>
+
+## Matthew 5
+<div class="scripture-block">
+<p><sup class="v" aria-hidden="true">1</sup>Seeing the multitudes, he went up onto the mountain. When he had sat down, his disciples came to him. <sup class="v" aria-hidden="true">2</sup>He opened his mouth and taught them, saying,</p>
+
+<div class="beatitudes">
+  <p><sup class="v" aria-hidden="true">3</sup>“Blessed are the poor in spirit, for theirs is the Kingdom of Heaven.</p>
+  <p><sup class="v" aria-hidden="true">4</sup>Blessed are those who mourn, for they shall be comforted.</p>
+  <p><sup class="v" aria-hidden="true">5</sup>Blessed are the gentle, for they shall inherit the earth.</p>
+  <p><sup class="v" aria-hidden="true">6</sup>Blessed are those who hunger and thirst after righteousness, for they shall be filled.</p>
+  <p><sup class="v" aria-hidden="true">7</sup>Blessed are the merciful, for they shall obtain mercy.</p>
+  <p><sup class="v" aria-hidden="true">8</sup>Blessed are the pure in heart, for they shall see God.</p>
+  <p><sup class="v" aria-hidden="true">9</sup>Blessed are the peacemakers, for they shall be called children of God.</p>
+  <p><sup class="v" aria-hidden="true">10</sup>Blessed are those who have been persecuted for righteousness’ sake, for theirs is the Kingdom of Heaven.</p>
+</div>
+
+<p><sup class="v" aria-hidden="true">11</sup>“Blessed are you when people reproach you, persecute you, and say all kinds of evil against you falsely, for my sake. <sup class="v" aria-hidden="true">12</sup>Rejoice, and be exceedingly glad, for great is your reward in heaven. For that is how they persecuted the prophets who were before you.</p>
+
+<p><sup class="v" aria-hidden="true">13</sup>“You are the salt of the earth, but if the salt has lost its flavor, with what will it be salted? It is then good for nothing, but to be cast out and trodden under the feet of men. <sup class="v" aria-hidden="true">14</sup>You are the light of the world. A city located on a hill can’t be hidden. <sup class="v" aria-hidden="true">15</sup>Neither do you light a lamp, and put it under a measuring basket, but on a stand; and it shines to all who are in the house. <sup class="v" aria-hidden="true">16</sup>Even so, let your light shine before men; that they may see your good works, and glorify your Father who is in heaven.</p>
+
+<p><sup class="v" aria-hidden="true">17</sup>“Don’t think that I came to destroy the law or the prophets. I didn’t come to destroy, but to fulfill. <sup class="v" aria-hidden="true">18</sup>For most certainly, I tell you, until heaven and earth pass away, not even one smallest letter or one tiny pen stroke shall in any way pass away from the law, until all things are accomplished. <sup class="v" aria-hidden="true">19</sup>Whoever, therefore, shall break one of these least commandments, and teach others to do so, shall be called least in the Kingdom of Heaven; but whoever shall do and teach them shall be called great in the Kingdom of Heaven. <sup class="v" aria-hidden="true">20</sup>For I tell you that unless your righteousness exceeds that of the scribes and Pharisees, there is no way you will enter into the Kingdom of Heaven.</p>
+
+<p><sup class="v" aria-hidden="true">21</sup>“You have heard that it was said to the ancient ones, ‘You shall not murder;’ and ‘Whoever murders will be in danger of the judgment.’ <sup class="v" aria-hidden="true">22</sup>But I tell you, that everyone who is angry with his brother without a cause will be in danger of the judgment; and whoever says to his brother, ‘Raca!’ will be in danger of the council; and whoever says, ‘You fool!’ will be in danger of the fire of Gehenna. <sup class="v" aria-hidden="true">23</sup>“If therefore you are offering your gift at the altar, and there remember that your brother has anything against you, <sup class="v" aria-hidden="true">24</sup>leave your gift there before the altar, and go your way. First be reconciled to your brother, and then come and offer your gift. <sup class="v" aria-hidden="true">25</sup>Agree with your adversary quickly, while you are with him on the way; lest perhaps the prosecutor deliver you to the judge, and the judge deliver you to the officer, and you be cast into prison. <sup class="v" aria-hidden="true">26</sup>Most certainly I tell you, you shall by no means get out of there, until you have paid the last penny.</p>
+
+<p><sup class="v" aria-hidden="true">27</sup>“You have heard that it was said, ‘You shall not commit adultery;’ <sup class="v" aria-hidden="true">28</sup>but I tell you that everyone who gazes at a woman to lust after her has committed adultery with her already in his heart. <sup class="v" aria-hidden="true">29</sup>If your right eye causes you to stumble, pluck it out and throw it away from you. For it is more profitable for you that one of your members should perish, than for your whole body to be cast into Gehenna. <sup class="v" aria-hidden="true">30</sup>If your right hand causes you to stumble, cut it off, and throw it away from you. For it is more profitable for you that one of your members should perish, than for your whole body to be cast into Gehenna.</p>
+
+<p><sup class="v" aria-hidden="true">31</sup>“It was also said, ‘Whoever shall put away his wife, let him give her a writing of divorce,’ <sup class="v" aria-hidden="true">32</sup>but I tell you that whoever puts away his wife, except for the cause of sexual immorality, makes her an adulteress; and whoever marries her when she is put away commits adultery.</p>
+
+<p><sup class="v" aria-hidden="true">33</sup>“Again you have heard that it was said to them of old time, ‘You shall not make false vows, but shall perform to the Lord your vows,’ <sup class="v" aria-hidden="true">34</sup>but I tell you, don’t swear at all: neither by heaven, for it is the throne of God; <sup class="v" aria-hidden="true">35</sup>nor by the earth, for it is the footstool of his feet; nor by Jerusalem, for it is the city of the great King. <sup class="v" aria-hidden="true">36</sup>Neither shall you swear by your head, for you can’t make one hair white or black. <sup class="v" aria-hidden="true">37</sup>But let your ‘Yes’ be ‘Yes’ and your ‘No’ be ‘No.’ Whatever is more than these is of the evil one.</p>
+
+<p><sup class="v" aria-hidden="true">38</sup>“You have heard that it was said, ‘An eye for an eye, and a tooth for a tooth.’ <sup class="v" aria-hidden="true">39</sup>But I tell you, don’t resist him who is evil; but whoever strikes you on your right cheek, turn to him the other also. <sup class="v" aria-hidden="true">40</sup>If anyone sues you to take away your coat, let him have your cloak also. <sup class="v" aria-hidden="true">41</sup>Whoever compels you to go one mile, go with him two. <sup class="v" aria-hidden="true">42</sup>Give to him who asks you, and don’t turn away him who desires to borrow from you.</p>
+
+<p><sup class="v" aria-hidden="true">43</sup>“You have heard that it was said, ‘You shall love your neighbor and hate your enemy.’ <sup class="v" aria-hidden="true">44</sup>But I tell you, love your enemies, bless those who curse you, do good to those who hate you, and pray for those who mistreat you and persecute you, <sup class="v" aria-hidden="true">45</sup>that you may be children of your Father who is in heaven. For he makes his sun to rise on the evil and the good, and sends rain on the just and the unjust. <sup class="v" aria-hidden="true">46</sup>For if you love those who love you, what reward do you have? Don’t even the tax collectors do the same? <sup class="v" aria-hidden="true">47</sup>If you only greet your friends, what more do you do than others? Don’t even the tax collectors do the same? <sup class="v" aria-hidden="true">48</sup>Therefore you shall be perfect, just as your Father in heaven is perfect.</p>
+</div>
+## Matthew 6
+<div class="scripture-block">
+<p><sup class="v" aria-hidden="true">1</sup>“Be careful that you don’t do your charitable giving before men, to be seen by them, or else you have no reward from your Father who is in heaven. <sup class="v" aria-hidden="true">2</sup>Therefore when you do merciful deeds, don’t sound a trumpet before yourself, as the hypocrites do in the synagogues and in the streets, that they may get glory from men. Most certainly I tell you, they have received their reward. <sup class="v" aria-hidden="true">3</sup>But when you do merciful deeds, don’t let your left hand know what your right hand does, <sup class="v" aria-hidden="true">4</sup>so that your merciful deeds may be in secret, then your Father who sees in secret will reward you openly.</p>
+
+<p><sup class="v" aria-hidden="true">5</sup>“When you pray, you shall not be as the hypocrites, for they love to stand and pray in the synagogues and in the corners of the streets, that they may be seen by men. Most certainly, I tell you, they have received their reward. <sup class="v" aria-hidden="true">6</sup>But you, when you pray, enter into your inner room, and having shut your door, pray to your Father who is in secret, and your Father who sees in secret will reward you openly. <sup class="v" aria-hidden="true">7</sup>In praying, don’t use vain repetitions, as the Gentiles do; for they think that they will be heard for their much speaking. <sup class="v" aria-hidden="true">8</sup>Therefore don’t be like them, for your Father knows what things you need, before you ask him.</p>
+
+<div class="lords-prayer">
+  <p><sup class="v" aria-hidden="true">9</sup>Pray like this: ‘Our Father in heaven, may your name be kept holy.</p>
+  <p><sup class="v" aria-hidden="true">10</sup>Let your Kingdom come. Let your will be done, as in heaven, so on earth.</p>
+  <p><sup class="v" aria-hidden="true">11</sup>Give us today our daily bread.</p>
+  <p><sup class="v" aria-hidden="true">12</sup>Forgive us our debts, as we also forgive our debtors.</p>
+  <p><sup class="v" aria-hidden="true">13</sup>Bring us not into temptation, but deliver us from the evil one. For yours is the Kingdom, the power, and the glory forever. Amen.’</p>
+</div>
+
+<p><sup class="v" aria-hidden="true">14</sup>“For if you forgive men their trespasses, your heavenly Father will also forgive you. <sup class="v" aria-hidden="true">15</sup>But if you don’t forgive men their trespasses, neither will your Father forgive your trespasses.</p>
+
+<p><sup class="v" aria-hidden="true">16</sup>“Moreover when you fast, don’t be like the hypocrites, with sad faces. For they disfigure their faces, that they may be seen by men to be fasting. Most certainly I tell you, they have received their reward. <sup class="v" aria-hidden="true">17</sup>But you, when you fast, anoint your head, and wash your face; <sup class="v" aria-hidden="true">18</sup>so that you are not seen by men to be fasting, but by your Father who is in secret, and your Father, who sees in secret, will reward you.</p>
+
+<p><sup class="v" aria-hidden="true">19</sup>“Don’t lay up treasures for yourselves on the earth, where moth and rust consume, and where thieves break through and steal; <sup class="v" aria-hidden="true">20</sup>but lay up for yourselves treasures in heaven, where neither moth nor rust consume, and where thieves don’t break through and steal; <sup class="v" aria-hidden="true">21</sup>for where your treasure is, there your heart will be also.</p>
+
+<p><sup class="v" aria-hidden="true">22</sup>“The lamp of the body is the eye. If therefore your eye is sound, your whole body will be full of light. <sup class="v" aria-hidden="true">23</sup>But if your eye is evil, your whole body will be full of darkness. If therefore the light that is in you is darkness, how great is the darkness!</p>
+
+<p><sup class="v" aria-hidden="true">24</sup>“No one can serve two masters, for either he will hate the one and love the other; or else he will be devoted to one and despise the other. You can’t serve both God and Mammon.</p>
+
+<p><sup class="v" aria-hidden="true">25</sup>Therefore I tell you, don’t be anxious for your life: what you will eat, or what you will drink; nor yet for your body, what you will wear. Isn’t life more than food, and the body more than clothing? <sup class="v" aria-hidden="true">26</sup>See the birds of the sky, that they don’t sow, neither do they reap, nor gather into barns. Your heavenly Father feeds them. Aren’t you of much more value than they? <sup class="v" aria-hidden="true">27</sup>“Which of you, by being anxious, can add one moment to his lifespan? <sup class="v" aria-hidden="true">28</sup>Why are you anxious about clothing? Consider the lilies of the field, how they grow. They don’t toil, neither do they spin, <sup class="v" aria-hidden="true">29</sup>yet I tell you that even Solomon in all his glory was not dressed like one of these. <sup class="v" aria-hidden="true">30</sup>But if God so clothes the grass of the field, which today exists, and tomorrow is thrown into the oven, won’t he much more clothe you, you of little faith? <sup class="v" aria-hidden="true">31</sup>“Therefore don’t be anxious, saying, ‘What will we eat?’, ‘What will we drink?’ or, ‘With what will we be clothed?’ <sup class="v" aria-hidden="true">32</sup>For the Gentiles seek after all these things; for your heavenly Father knows that you need all these things. <sup class="v" aria-hidden="true">33</sup>But seek first God’s Kingdom, and his righteousness; and all these things will be given to you as well. <sup class="v" aria-hidden="true">34</sup>Therefore don’t be anxious for tomorrow, for tomorrow will be anxious for itself. Each day’s own evil is sufficient.</p>
+</div>
+## Matthew 7
+<div class="scripture-block">
+<p><sup class="v" aria-hidden="true">1</sup>“Don’t judge, so that you won’t be judged. <sup class="v" aria-hidden="true">2</sup>For with whatever judgment you judge, you will be judged; and with whatever measure you measure, it will be measured to you. <sup class="v" aria-hidden="true">3</sup>Why do you see the speck that is in your brother’s eye, but don’t consider the beam that is in your own eye? <sup class="v" aria-hidden="true">4</sup>Or how will you tell your brother, ‘Let me remove the speck from your eye;’ and behold, the beam is in your own eye? <sup class="v" aria-hidden="true">5</sup>You hypocrite! First remove the beam out of your own eye, and then you can see clearly to remove the speck out of your brother’s eye.</p>
+
+<p><sup class="v" aria-hidden="true">6</sup>“Don’t give that which is holy to the dogs, neither throw your pearls before the pigs, lest perhaps they trample them under their feet, and turn and tear you to pieces.</p>
+
+<p><sup class="v" aria-hidden="true">7</sup>“Ask, and it will be given you. Seek, and you will find. Knock, and it will be opened for you. <sup class="v" aria-hidden="true">8</sup>For everyone who asks receives. He who seeks finds. To him who knocks it will be opened. <sup class="v" aria-hidden="true">9</sup>Or who is there among you, who, if his son asks him for bread, will give him a stone? <sup class="v" aria-hidden="true">10</sup>Or if he asks for a fish, who will give him a serpent? <sup class="v" aria-hidden="true">11</sup>If you then, being evil, know how to give good gifts to your children, how much more will your Father who is in heaven give good things to those who ask him! <sup class="v" aria-hidden="true">12</sup>Therefore whatever you desire for men to do to you, you shall also do to them; for this is the law and the prophets.</p>
+
+<p><sup class="v" aria-hidden="true">13</sup>“Enter in by the narrow gate; for wide is the gate and broad is the way that leads to destruction, and many are those who enter in by it. <sup class="v" aria-hidden="true">14</sup>How narrow is the gate, and restricted is the way that leads to life! Few are those who find it.</p>
+
+<p><sup class="v" aria-hidden="true">15</sup>“Beware of false prophets, who come to you in sheep’s clothing, but inwardly are ravening wolves. <sup class="v" aria-hidden="true">16</sup>By their fruits you will know them. Do you gather grapes from thorns, or figs from thistles? <sup class="v" aria-hidden="true">17</sup>Even so, every good tree produces good fruit; but the corrupt tree produces evil fruit. <sup class="v" aria-hidden="true">18</sup>A good tree can’t produce evil fruit, neither can a corrupt tree produce good fruit. <sup class="v" aria-hidden="true">19</sup>Every tree that doesn’t grow good fruit is cut down, and thrown into the fire. <sup class="v" aria-hidden="true">20</sup>Therefore by their fruits you will know them.</p>
+
+<p><sup class="v" aria-hidden="true">21</sup>Not everyone who says to me, ‘Lord, Lord,’ will enter into the Kingdom of Heaven; but he who does the will of my Father who is in heaven. <sup class="v" aria-hidden="true">22</sup>Many will tell me in that day, ‘Lord, Lord, didn’t we prophesy in your name, in your name cast out demons, and in your name do many mighty works?’ <sup class="v" aria-hidden="true">23</sup>Then I will tell them, ‘I never knew you. Depart from me, you who work iniquity.’</p>
+
+<p><sup class="v" aria-hidden="true">24</sup>“Everyone therefore who hears these words of mine, and does them, I will liken him to a wise man, who built his house on a rock. <sup class="v" aria-hidden="true">25</sup>The rain came down, the floods came, and the winds blew, and beat on that house; and it didn’t fall, for it was founded on the rock. <sup class="v" aria-hidden="true">26</sup>Everyone who hears these words of mine, and doesn’t do them will be like a foolish man, who built his house on the sand. <sup class="v" aria-hidden="true">27</sup>The rain came down, the floods came, and the winds blew, and beat on that house; and it fell—and great was its fall.”</p>
+
+<p><sup class="v" aria-hidden="true">28</sup>When Jesus had finished saying these things, the multitudes were astonished at his teaching, <sup class="v" aria-hidden="true">29</sup>for he taught them with authority, and not like the scribes.</p>
+</div>
+
+When you have come to the end, do not rush away. Sit with one line — a beatitude, a petition from the Lord’s Prayer, or the house on the rock — and let Jesus speak it again over the particular hardness of this day.
+
+*These words of Jesus are given here in the World English Bible, a public-domain translation.*

@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+import { formatDate, isoDate } from '../../lib/posts';
+import { readingTimeLabel } from '../../lib/readingTime';
+
+const readings = (await getCollection('readings')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf() || a.data.title.localeCompare(b.data.title)
+);
+---
+<BaseLayout title="Readings" description="Longer Scripture readings to sit with — the words of Jesus in the World English Bible.">
+  <div class="page-intro">
+    <h1>Readings</h1>
+    <p>
+      Sit with a longer word. These chapters are given in the World English Bible (public domain)
+      so you can read slowly, without hurry.
+    </p>
+  </div>
+
+  <ul class="post-list">
+    {readings.map((reading) => {
+      const body = typeof reading.body === 'string' ? reading.body : '';
+      return (
+        <li class="post-card">
+          <h2>
+            <a href={withBase(`readings/${reading.slug}/`)}>{reading.data.title}</a>
+          </h2>
+          <p class="meta">
+            <span>{reading.data.book} {reading.data.chapterRange}</span>
+            <span class="meta-sep" aria-hidden="true">·</span>
+            <span>{reading.data.translation}</span>
+            <span class="meta-sep" aria-hidden="true">·</span>
+            <time datetime={isoDate(reading.data.pubDate)}>{formatDate(reading.data.pubDate)}</time>
+            <span class="meta-sep" aria-hidden="true">·</span>
+            <span>{readingTimeLabel(body)}</span>
+          </p>
+          <p class="excerpt">{reading.data.description}</p>
+        </li>
+      );
+    })}
+  </ul>
+</BaseLayout>

@@ -2,20 +2,20 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { withBase } from '../../lib/site';
 ---
-<BaseLayout title="Search" description="Search Walking with Jesus reflections by title, Scripture, or theme.">
+<BaseLayout title="Search" description="Search Walking with Jesus reflections, readings, and verses.">
   <div class="page-intro">
     <h1>Search</h1>
-    <p>Find a reflection by title, description, Scripture, or tag. Filtering happens in your browser.</p>
+    <p>Find a reflection, a longer reading, or a verse for hard times. Filtering happens in your browser.</p>
   </div>
 
   <div class="search-panel">
-    <label class="search-label" for="site-search">Search reflections</label>
+    <label class="search-label" for="site-search">Search the site</label>
     <input
       id="site-search"
       class="search-input"
       type="search"
       name="q"
-      placeholder="Try yoke, Emmaus, rest, John…"
+      placeholder="Try yoke, peace, Matthew, grief…"
       autocomplete="off"
       spellcheck="false"
     />
@@ -24,7 +24,7 @@ import { withBase } from '../../lib/site';
 
   <ul class="post-list" id="search-results" hidden></ul>
 
-  <script define:vars={{ indexUrl: withBase('search-index.json'), postsBase: withBase('posts/') }}>
+  <script define:vars={{ indexUrl: withBase('search-index.json') }}>
     const input = document.getElementById('site-search');
     const results = document.getElementById('search-results');
     const status = document.getElementById('search-status');
@@ -39,6 +39,7 @@ import { withBase } from '../../lib/site';
     }
 
     function formatDate(iso) {
+      if (!iso) return '';
       try {
         return new Date(iso + 'T00:00:00Z').toLocaleDateString('en-US', {
           year: 'numeric',
@@ -58,6 +59,12 @@ import { withBase } from '../../lib/site';
       return '';
     }
 
+    function kindLabel(kind) {
+      if (kind === 'reading') return 'Reading';
+      if (kind === 'verse') return 'Verse';
+      return 'Reflection';
+    }
+
     function matches(entry, query) {
       const hay = [
         entry.title,
@@ -65,6 +72,7 @@ import { withBase } from '../../lib/site';
         entry.scripture || '',
         (entry.tags || []).join(' '),
         entry.slot || '',
+        entry.kind || '',
       ]
         .join(' ')
         .toLowerCase();
@@ -75,7 +83,7 @@ import { withBase } from '../../lib/site';
       if (!query) {
         results.hidden = true;
         results.innerHTML = '';
-        status.textContent = `${index.length} reflections ready. Start typing to filter.`;
+        status.textContent = `${index.length} items ready. Start typing to filter.`;
         return;
       }
       results.hidden = false;
@@ -88,24 +96,30 @@ import { withBase } from '../../lib/site';
       results.innerHTML = items
         .map((entry) => {
           const label = slotLabel(entry.slot);
-          const metaParts = [
-            `<time datetime="${escapeHtml(entry.date)}">${escapeHtml(formatDate(entry.date))}</time>`,
-          ];
+          const kind = kindLabel(entry.kind);
+          const metaParts = [`<span class="slot-badge">${escapeHtml(kind)}</span>`];
+          if (entry.date) {
+            metaParts.push(`<time datetime="${escapeHtml(entry.date)}">${escapeHtml(formatDate(entry.date))}</time>`);
+          }
           if (label) {
             metaParts.push(`<span class="slot-badge slot-${escapeHtml(entry.slot)}">${escapeHtml(label)}</span>`);
           }
-          if (entry.scripture) {
+          if (entry.kind !== 'verse' && entry.scripture) {
             metaParts.push(`<span>${escapeHtml(entry.scripture)}</span>`);
           }
           const tags = (entry.tags || [])
             .map((tag) => `<span class="tag-chip static">${escapeHtml(tag)}</span>`)
             .join(' ');
+          const excerpt = entry.kind === 'verse' && entry.scripture
+            ? entry.scripture
+            : entry.description;
+          const href = entry.href || '#';
           return `
             <li class="post-card">
-              <h2><a href="${postsBase}${escapeHtml(entry.slug)}/">${escapeHtml(entry.title)}</a></h2>
+              <h2><a href="${escapeHtml(href)}">${escapeHtml(entry.title)}</a></h2>
               <p class="meta">${metaParts.join(' <span class="meta-sep" aria-hidden="true">·</span> ')}</p>
               ${tags ? `<div class="tag-list compact">${tags}</div>` : ''}
-              <p class="excerpt">${escapeHtml(entry.description)}</p>
+              <p class="excerpt">${escapeHtml(excerpt)}</p>
             </li>
           `;
         })
@@ -125,7 +139,7 @@ import { withBase } from '../../lib/site';
       })
       .then((data) => {
         index = Array.isArray(data) ? data : [];
-        status.textContent = `${index.length} reflections ready. Start typing to filter.`;
+        status.textContent = `${index.length} items ready. Start typing to filter.`;
         input.addEventListener('input', onQuery);
         const params = new URLSearchParams(window.location.search);
         const initial = params.get('q');

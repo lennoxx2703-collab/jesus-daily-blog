@@ -13,4 +13,17 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = { posts };
+const readings = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    book: z.string(),
+    chapterRange: z.string(),
+    translation: z.string(),
+    tags: z.array(z.string()).optional(),
+  }),
+});
+
+export const collections = { posts, readings };

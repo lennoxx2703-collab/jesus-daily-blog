@@ -697,3 +697,162 @@ a.tag-chip:hover {
     gap: 0.55rem 0.9rem;
   }
 }
+
+
+.home-paths {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 0 0 2.25rem;
+}
+
+.path-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 2px rgba(26, 39, 68, 0.04);
+}
+
+.path-card:hover {
+  border-color: var(--accent-soft);
+  color: inherit;
+}
+
+.path-kicker {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+
+.path-card strong {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+.path-note {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
+.reading-article {
+  max-width: 44rem;
+}
+
+.reading-body .translation-note,
+.ht-credit-line,
+.ht-credit {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin: 0 0 1.25rem;
+}
+
+.scripture-block {
+  margin: 1.25rem 0 2rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fffdf8 0%, var(--bg-soft) 100%);
+}
+
+.scripture-block p {
+  margin: 0 0 1rem;
+}
+
+.scripture-block p:last-child {
+  margin-bottom: 0;
+}
+
+.scripture-block .v {
+  font-family: var(--font-sans);
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--ink-muted);
+  margin-right: 0.28em;
+  vertical-align: super;
+}
+
+.beatitudes,
+.lords-prayer {
+  margin: 1rem 0;
+  padding: 0.35rem 0 0.35rem 0.75rem;
+  border-left: 3px solid var(--accent);
+}
+
+.beatitudes p,
+.lords-prayer p {
+  margin: 0 0 0.55rem;
+}
+
+.reading-body h2 {
+  margin-top: 2rem;
+}
+
+.ht-all {
+  margin-top: 2.25rem;
+}
+
+.ht-verse blockquote {
+  margin: 0.65rem 0 0.5rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-style: italic;
+}
+
+.ht-verse blockquote p {
+  margin: 0;
+}
+
+.ht-ref {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+}
+
+.ht-situation {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+.ht-credit {
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.tag-chip-active,
+a.tag-chip-active {
+  background: var(--accent);
+  color: #f7f1e6;
+  border-color: var(--accent);
+}
+
+a.tag-chip-active:hover {
+  background: var(--accent-soft);
+  color: #fff;
+}
+
+.visually-quiet {
+  font-size: 1.15rem;
+  margin-bottom: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .home-paths {
+    grid-template-columns: 1fr;
+  }
+}

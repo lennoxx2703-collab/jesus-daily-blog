@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+import { formatDate, isoDate } from '../../lib/posts';
+import { readingTimeLabel } from '../../lib/readingTime';
+
+export async function getStaticPaths() {
+  const readings = await getCollection('readings');
+  return readings.map((reading) => ({
+    params: { slug: reading.slug },
+    props: { reading },
+  }));
+}
+
+const { reading } = Astro.props;
+const { Content } = await reading.render();
+const body = typeof reading.body === 'string' ? reading.body : '';
+---
+<BaseLayout title={reading.data.title} description={reading.data.description}>
+  <a class="back-link" href={withBase('readings/')}>← All readings</a>
+  <article class="prose reading-article">
+    <header class="post-header">
+      <h1>{reading.data.title}</h1>
+      <p class="meta post-meta">
+        <span>{reading.data.book} {reading.data.chapterRange}</span>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <span>{reading.data.translation}</span>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <time datetime={isoDate(reading.data.pubDate)}>{formatDate(reading.data.pubDate)}</time>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <span>{readingTimeLabel(body)}</span>
+      </p>
+    </header>
+    <div class="post-body reading-body">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
