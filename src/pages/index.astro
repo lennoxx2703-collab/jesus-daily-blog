@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/site';
 
 const posts = (await getCollection('posts')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -22,7 +23,7 @@ const posts = (await getCollection('posts')).sort(
       return (
         <li class="post-card">
           <h2>
-            <a href={`${import.meta.env.BASE_URL}posts/${post.slug}/`}>{post.data.title}</a>
+            <a href={withBase(`posts/${post.slug}/`)}>{post.data.title}</a>
           </h2>
           <p class="meta">
             <time datetime={post.data.pubDate.toISOString().slice(0, 10)}>{date}</time>

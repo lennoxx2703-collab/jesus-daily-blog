@@ -8,7 +8,11 @@ Daily Christian reflections on the life, teaching, and love of Jesus Christ.
 
 ## Stack
 
-Astro (static site) with Markdown content collections, deployed to GitHub Pages via GitHub Actions on every push to `main`.
+Astro (static site) with Markdown content collections.
+
+**Publishing today:** the built site is committed under `docs/` and GitHub Pages serves from the `/docs` folder on `main` (works without Actions `workflow` scope).
+
+**Preferred later:** `.github/workflows/deploy.yml` builds and deploys via `actions/deploy-pages` on every push to `main`. Pushing that workflow requires a GitHub token with the `workflow` scope (`gh auth refresh -s workflow`). After the workflow is active, switch Pages source to **GitHub Actions**.
 
 ## Adding a daily post
 
@@ -31,18 +35,24 @@ tags: [optional, tags]
 ---
 ```
 
-Then write the article body in Markdown. Commit and push to `main`; the deploy workflow builds and publishes automatically.
+Then write the article body in Markdown.
+
+### Publish (docs/ method — current)
+
+```bash
+npm install
+npm run build
+rm -rf docs && cp -r dist docs && touch docs/.nojekyll
+git add src/content/posts docs
+git commit -m "Add daily post YYYY-MM-DD"
+git push origin main
+```
 
 ### Local development
 
 ```bash
 npm install
 npm run dev
-```
-
-Build check:
-
-```bash
 npm run build
 ```
 
@@ -55,4 +65,4 @@ npm run build
 
 ## License
 
-Content and code for personal / ministry use. Scripture quotations are from common public translations; cite book, chapter, and verse in each post.
+Content and code for personal / ministry use. Scripture quotations cite book, chapter, and verse in each post.

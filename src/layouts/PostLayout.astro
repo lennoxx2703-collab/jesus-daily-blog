@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { withBase } from '../lib/site';
 
 interface Props {
   title: string;
@@ -16,7 +17,7 @@ const formatted = pubDate.toLocaleDateString('en-US', {
 });
 ---
 <BaseLayout title={title} description={description}>
-  <a class="back-link" href={`${import.meta.env.BASE_URL}`}>← All reflections</a>
+  <a class="back-link" href={withBase()}>← All reflections</a>
   <article class="prose">
     <h1>{title}</h1>
     <p class="meta">
