@@ -247,6 +247,66 @@ export const HARD_TIMES_VERSES: HardTimesVerse[] = [
     translation: 'WEB',
     tags: ['fear'],
   },
+  {
+    reference: 'John 20:27',
+    text: 'Then he said to Thomas, “Reach here your finger, and see my hands. Reach here your hand, and put it into my side. Don’t be unbelieving, but believing.”',
+    translation: 'WEB',
+    tags: ['doubt'],
+  },
+  {
+    reference: 'Psalm 73:26',
+    text: 'My flesh and my heart fails, but God is the strength of my heart and my portion forever.',
+    translation: 'WEB',
+    tags: ['doubt', 'exhaustion'],
+  },
+  {
+    reference: 'Isaiah 54:4',
+    text: 'Don’t be afraid; for you will not be ashamed. Don’t be confounded; for you will not be disappointed. For you will forget the shame of your youth; and the reproach of your widowhood you shall remember no more.',
+    translation: 'WEB',
+    tags: ['shame'],
+  },
+  {
+    reference: 'Psalm 34:5',
+    text: 'They looked to him, and were radiant. Their faces shall never be covered with shame.',
+    translation: 'WEB',
+    tags: ['shame'],
+  },
+  {
+    reference: 'Philippians 4:19',
+    text: 'My God will supply every need of yours according to his riches in glory in Christ Jesus.',
+    translation: 'WEB',
+    tags: ['money'],
+  },
+  {
+    reference: '1 Timothy 6:6-8',
+    text: 'But godliness with contentment is great gain. For we brought nothing into the world, and we certainly can’t carry anything out. But having food and clothing, we will be content with that.',
+    translation: 'WEB',
+    tags: ['money'],
+  },
+  {
+    reference: 'Psalm 103:2-3',
+    text: 'Praise Yahweh, my soul, and don’t forget all his benefits; who forgives all your sins; who heals all your diseases;',
+    translation: 'WEB',
+    tags: ['sickness'],
+  },
+  {
+    reference: 'Jeremiah 17:14',
+    text: 'Heal me, O Yahweh, and I will be healed. Save me, and I will be saved; for you are my praise.',
+    translation: 'WEB',
+    tags: ['sickness'],
+  },
+  {
+    reference: 'Lamentations 3:25-26',
+    text: 'Yahweh is good to those who wait for him, to the soul who seeks him. It is good that a man should hope and quietly wait for the salvation of Yahweh.',
+    translation: 'WEB',
+    tags: ['waiting'],
+  },
+  {
+    reference: 'Psalm 130:5',
+    text: 'I wait for Yahweh. My soul waits. I hope in his word.',
+    translation: 'WEB',
+    tags: ['waiting'],
+  },
 ];
 
 export function versesForTag(tag: HardTimesTag): HardTimesVerse[] {

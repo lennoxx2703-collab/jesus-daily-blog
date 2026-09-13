@@ -55,6 +55,16 @@ const SITUATIONS: Record<string, string> = {
   'Psalm 119:50': 'When only His word can revive you',
   'Isaiah 51:12': 'When human threats loom large',
   'Joshua 1:9': 'When you need courage for the next step',
+  'John 20:27': 'When doubt asks to touch the wounds',
+  'Psalm 73:26': 'When flesh and heart are failing',
+  'Isaiah 54:4': 'When shame still has your name',
+  'Psalm 34:5': 'When you need a face that is not ashamed',
+  'Philippians 4:19': 'When supply feels uncertain',
+  '1 Timothy 6:6-8': 'When enough feels hard to believe',
+  'Psalm 103:2-3': 'When you need healing remembered',
+  'Jeremiah 17:14': 'When you ask to be healed and saved',
+  'Lamentations 3:25-26': 'When waiting is the work',
+  'Psalm 130:5': 'When your soul waits for His word',
 };
 
 export function verseSituation(verse: HardTimesVerse): string {
