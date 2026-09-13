@@ -2,6 +2,7 @@ import { getCollection } from 'astro:content';
 import { comparePostsLatestFirst, isoDate } from '../lib/posts';
 import { HARD_TIMES_VERSES, verseAnchor, verseSituation } from '../lib/hardTimes';
 import { withBase } from '../lib/site';
+import { quotes } from '../data/quotes';
 
 export async function GET() {
   const posts = (await getCollection('posts')).sort(comparePostsLatestFirst);
@@ -60,7 +61,20 @@ export async function GET() {
     slot: '',
   }));
 
-  const index = [...postEntries, ...readingEntries, ...storyEntries, ...verseEntries];
+
+  const quoteEntries = quotes.map((q) => ({
+    kind: 'quote',
+    title: `${q.person}${q.year != null ? ` (${q.year})` : ''}`,
+    description: q.quote,
+    tags: ['quotes', 'faith', q.person],
+    scripture: '',
+    slug: q.id,
+    href: `${withBase('quotes/')}#${q.id}`,
+    date: q.year != null ? String(q.year) : '',
+    slot: 'quote',
+  }));
+
+  const index = [...postEntries, ...readingEntries, ...storyEntries, ...verseEntries, ...quoteEntries];
 
   return new Response(JSON.stringify(index), {
     headers: {

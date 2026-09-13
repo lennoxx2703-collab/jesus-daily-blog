@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { quotes } from '../../data/quotes';
+import { withBase, absoluteUrl } from '../../lib/site';
+
+const description =
+  'Short, attributed public remarks about Jesus and faith from interviews, podcasts, and articles — with links back to the sources.';
+
+const quotesJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Quotes',
+  url: absoluteUrl('quotes/'),
+  description,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Walking with Jesus',
+    url: absoluteUrl(),
+  },
+};
+---
+<BaseLayout title="Quotes" description={description} jsonLd={quotesJsonLd}>
+  <div class="page-intro">
+    <h1>Quotes</h1>
+    <p>
+      Short, attributed remarks about Jesus and faith from public interviews,
+      podcasts, videos, and articles. These are public comments as reported in
+      the linked sources — we quote briefly and point you back to the source.
+    </p>
+    <p class="quotes-disclaimer">
+      These are not endorsements of everything each person says or does. They
+      are windows toward Jesus — glimpses of people pointing, however imperfectly,
+      in His direction.
+    </p>
+  </div>
+
+  <ul class="quote-shelf" role="list">
+    {quotes.map((entry) => (
+      <li class="quote-card" id={entry.id}>
+        <blockquote class="quote-card-body">
+          <p>“{entry.quote}”</p>
+        </blockquote>
+        <footer class="quote-card-footer">
+          <p class="quote-attribution">
+            <strong>{entry.person}</strong>
+            {entry.year != null && (
+              <>
+                <span class="meta-sep" aria-hidden="true">·</span>
+                <span class="quote-year">{entry.year}</span>
+              </>
+            )}
+          </p>
+          <p class="quote-source-line">
+            <span class="story-source-label">Source</span>
+            <a href={entry.sourceUrl} rel="noopener noreferrer">
+              {entry.sourceTitle}
+            </a>
+          </p>
+        </footer>
+      </li>
+    ))}
+  </ul>
+
+  <p class="quotes-foot-note">
+    Looking for longer heart-change accounts?
+    <a href={withBase('stories/')}>Read Stories</a>
+    ·
+    <a href={withBase('more/')}>More</a>
+  </p>
+</BaseLayout>
