@@ -52,9 +52,11 @@ const stories = defineCollection({
     title: z.string(),
     description: z.string(),
     pubDate: z.coerce.date(),
-    kind: z.enum(['gospel', 'parable-sketch']),
-    scripture: z.string().optional(),
+    kind: z.enum(['historical', 'modern', 'submitted']),
+    source: z.string(),
+    sourceUrl: z.string().url().optional(),
     tags: z.array(z.string()).optional(),
+    scripture: z.string().optional(),
   }),
 });
 

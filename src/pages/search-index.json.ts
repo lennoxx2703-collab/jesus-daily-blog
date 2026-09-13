@@ -39,7 +39,7 @@ export async function GET() {
   const storyEntries = stories.map((story) => ({
     kind: 'story',
     title: story.data.title,
-    description: story.data.description,
+    description: `${story.data.description} Source: ${story.data.source}`,
     tags: story.data.tags ?? [],
     scripture: story.data.scripture ?? '',
     slug: story.slug,

@@ -1120,6 +1120,47 @@ a.tag-chip-active:hover {
   margin-bottom: 0.55rem;
 }
 
+.story-source-line {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.story-source-prominent {
+  margin: 0.65rem 0 0.85rem;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.story-source-label {
+  display: inline-block;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--accent);
+  margin-right: 0.45rem;
+}
+
+.stories-share-cta {
+  margin: 2rem 0 0.5rem;
+  font-family: var(--font-sans);
+}
+
+.share-story-mail {
+  display: inline-block;
+  margin: 0.35rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.empty-note {
+  font-family: var(--font-sans);
+  color: var(--ink-muted);
+}
+
+
 .reading-article {
   max-width: var(--max);
 }

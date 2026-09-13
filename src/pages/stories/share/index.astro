@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { withBase } from '../../../lib/site';
+
+const mailto =
+  'mailto:lennoxx2703@gmail.com?subject=' +
+  encodeURIComponent('Walking with Jesus story');
+---
+<BaseLayout
+  title="Share your story"
+  description="Share a real encounter with Jesus for Walking with Jesus Stories — email is the intake for now."
+>
+  <a class="back-link" href={withBase('stories/')}>← All stories</a>
+  <article class="prose">
+    <h1>Share your story</h1>
+    <p>
+      Walking with Jesus Stories gathers <strong>real encounters</strong> —
+      from history, from recent decades, and from readers who write in.
+      We do not invent testimonies or invent named people.
+      Every published story cites a source.
+    </p>
+    <p>
+      If Jesus has met you — in Scripture, in prayer, in a hard season, in quiet mercy —
+      and you are willing for that account to encourage others, you may send it to Lennox.
+    </p>
+
+    <h2>How to send</h2>
+    <p>
+      For now, email is the intake. There is no form backend on this page.
+    </p>
+    <p>
+      <a class="share-story-mail" href={mailto}>Email your story to lennoxx2703@gmail.com</a>
+      <br />
+      <span class="meta">Suggested subject: <code>Walking with Jesus story</code></span>
+    </p>
+
+    <h2>What to include</h2>
+    <ul>
+      <li>What happened, in your own words (a few paragraphs is enough).</li>
+      <li>When and where, as much as you are comfortable saying.</li>
+      <li>How you prefer to be named: first name only, initials, or anonymous.</li>
+      <li>Whether we may publish it on this site under Stories.</li>
+    </ul>
+
+    <h2>How we handle it</h2>
+    <p>
+      Stories may be edited lightly for clarity, length, and tone —
+      never to invent details or change the truth of what you said.
+      Nothing is published without a clear sense that you meant it for others to read.
+      If we are unsure, we will ask.
+    </p>
+    <p>
+      Prefer to keep reading first?
+      <a href={withBase('stories/')}>Back to Stories</a>
+      · <a href={withBase('start-here/')}>Start here</a>
+      · <a href={withBase('pray/')}>Pray</a>
+    </p>
+  </article>
+</BaseLayout>

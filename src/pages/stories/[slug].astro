@@ -17,8 +17,10 @@ const { story } = Astro.props;
 const { Content } = await story.render();
 const body = typeof story.body === 'string' ? story.body : '';
 
-function kindLabel(kind: 'gospel' | 'parable-sketch'): string {
-  return kind === 'gospel' ? 'From the Gospels' : 'Pastoral sketch';
+function kindLabel(kind: 'historical' | 'modern' | 'submitted'): string {
+  if (kind === 'historical') return 'From history';
+  if (kind === 'modern') return 'Recent decades';
+  return 'Shared testimony';
 }
 
 const articleJsonLd = {
@@ -45,6 +47,14 @@ const articleJsonLd = {
   <article class="prose story-article">
     <header class="post-header">
       <h1>{story.data.title}</h1>
+      <p class="story-source-line story-source-prominent">
+        <span class="story-source-label">Source</span>
+        {story.data.sourceUrl ? (
+          <a href={story.data.sourceUrl} rel="noopener noreferrer">{story.data.source}</a>
+        ) : (
+          <span>{story.data.source}</span>
+        )}
+      </p>
       <p class="meta post-meta">
         <span class={`kind-badge kind-${story.data.kind}`}>{kindLabel(story.data.kind)}</span>
         {story.data.scripture && (
@@ -58,19 +68,12 @@ const articleJsonLd = {
         <span class="meta-sep" aria-hidden="true">·</span>
         <span>{readingTimeLabel(body)}</span>
       </p>
-      {story.data.kind === 'parable-sketch' && (
-        <p class="story-frame-note">
-          A pastoral sketch — imagine with care. Not presented as a verified true story of a living person.
-        </p>
-      )}
-      {story.data.kind === 'gospel' && (
-        <p class="story-frame-note">
-          A Gospel retelling from Scripture (World English Bible wording and paraphrase). Passage cited below.
-        </p>
-      )}
     </header>
     <div class="post-body story-body">
       <Content />
     </div>
+    <p class="stories-share-cta">
+      <a href={withBase('stories/share/')}>Share your own encounter →</a>
+    </p>
   </article>
 </BaseLayout>

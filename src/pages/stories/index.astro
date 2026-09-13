@@ -9,45 +9,66 @@ const stories = (await getCollection('stories')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf() || a.data.title.localeCompare(b.data.title)
 );
 
-function kindLabel(kind: 'gospel' | 'parable-sketch'): string {
-  return kind === 'gospel' ? 'From the Gospels' : 'Pastoral sketch';
+function kindLabel(kind: 'historical' | 'modern' | 'submitted'): string {
+  if (kind === 'historical') return 'From history';
+  if (kind === 'modern') return 'Recent decades';
+  return 'Shared testimony';
 }
 ---
 <BaseLayout
   title="Stories"
-  description="Stories of encounter — from the Gospels, and careful sketches that point to Him."
+  description="Real encounters with Jesus across the centuries and recent decades — every story cites a source. Readers may share their own."
 >
   <div class="page-intro">
     <h1>Stories</h1>
     <p>
-      Stories of encounter — from the Gospels, and careful sketches that point to Him.
+      Encounters with Jesus across the centuries and recent decades.
+      These are not invented sketches or Gospel retellings — they are real accounts,
+      each with a cited source. If He has met you, you may
+      <a href={withBase('stories/share/')}>share your story</a>.
     </p>
   </div>
 
-  <ul class="post-list story-list">
-    {stories.map((story) => {
-      const body = typeof story.body === 'string' ? story.body : '';
-      return (
-        <li class={`post-card story-card story-kind-${story.data.kind}`}>
-          <p class="meta story-meta">
-            <span class={`kind-badge kind-${story.data.kind}`}>{kindLabel(story.data.kind)}</span>
-            {story.data.scripture && (
-              <>
-                <span class="meta-sep" aria-hidden="true">·</span>
-                <span>{story.data.scripture}</span>
-              </>
-            )}
-            <span class="meta-sep" aria-hidden="true">·</span>
-            <time datetime={isoDate(story.data.pubDate)}>{formatDate(story.data.pubDate)}</time>
-            <span class="meta-sep" aria-hidden="true">·</span>
-            <span>{readingTimeLabel(body)}</span>
-          </p>
-          <h2>
-            <a href={withBase(`stories/${story.slug}/`)}>{story.data.title}</a>
-          </h2>
-          <p class="excerpt">{story.data.description}</p>
-        </li>
-      );
-    })}
-  </ul>
+  {stories.length === 0 ? (
+    <p class="empty-note">Stories are coming. Meanwhile, you are welcome to <a href={withBase('stories/share/')}>share yours</a>.</p>
+  ) : (
+    <ul class="post-list story-list">
+      {stories.map((story) => {
+        const body = typeof story.body === 'string' ? story.body : '';
+        return (
+          <li class={`post-card story-card story-kind-${story.data.kind}`}>
+            <p class="meta story-meta">
+              <span class={`kind-badge kind-${story.data.kind}`}>{kindLabel(story.data.kind)}</span>
+              {story.data.scripture && (
+                <>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>{story.data.scripture}</span>
+                </>
+              )}
+              <span class="meta-sep" aria-hidden="true">·</span>
+              <time datetime={isoDate(story.data.pubDate)}>{formatDate(story.data.pubDate)}</time>
+              <span class="meta-sep" aria-hidden="true">·</span>
+              <span>{readingTimeLabel(body)}</span>
+            </p>
+            <h2>
+              <a href={withBase(`stories/${story.slug}/`)}>{story.data.title}</a>
+            </h2>
+            <p class="excerpt">{story.data.description}</p>
+            <p class="story-source-line">
+              <span class="story-source-label">Source</span>
+              {story.data.sourceUrl ? (
+                <a href={story.data.sourceUrl} rel="noopener noreferrer">{story.data.source}</a>
+              ) : (
+                <span>{story.data.source}</span>
+              )}
+            </p>
+          </li>
+        );
+      })}
+    </ul>
+  )}
+
+  <p class="stories-share-cta">
+    <a href={withBase('stories/share/')}>Share your story →</a>
+  </p>
 </BaseLayout>
