@@ -91,7 +91,7 @@ npm run build
 
 - **Home** — today’s reflections, featured verse, paths to Hard times and Readings
 - **Readings** — `/readings/` and `/readings/[slug]/` longer Scripture
-- **Stories** — `/stories/` real encounters with Jesus (historical / modern / submitted), each with a cited source; `/stories/share/` to send a testimony
+- **Stories** — `/stories/` heart-change encounters with Jesus across history and especially recent decades (historical / modern / submitted), each with a cited source; `/stories/share/` for 21st-century testimonies
 - **Hard times** — `/hard-times/` all verses; `/hard-times/[tag]/` by need
 - **Post detail** — full article, prayer, share links, prev/next, related posts
 - **Archive** — `/archive/` all posts grouped by month
