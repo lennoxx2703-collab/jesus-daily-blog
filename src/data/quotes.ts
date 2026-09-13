@@ -152,6 +152,35 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.christianpost.com/news/kathy-ireland-declares-jesus-is-everything-in-her-life.html',
   },
+  {
+    id: 'washington-unashamed-share-2017',
+    person: 'Denzel Washington',
+    quote: "I'm unashamed and unafraid to share it!",
+    year: 2017,
+    sourceTitle: 'Christian Post (movie junket interview)',
+    sourceUrl:
+      'https://www.christianpost.com/news/denzel-washington-its-difficult-to-trust-that-jesus-died-for-our-sins-we-know-but-we-forget.html',
+  },
+  {
+    id: 'washington-trust-jesus-died-2017',
+    person: 'Denzel Washington',
+    quote:
+      'It is so difficult to trust that Jesus died for our sins because the mind never shuts off… We know, but we forget constantly, moment by moment.',
+    year: 2017,
+    sourceTitle: 'Christian Post (movie junket interview)',
+    sourceUrl:
+      'https://www.christianpost.com/news/denzel-washington-its-difficult-to-trust-that-jesus-died-for-our-sins-we-know-but-we-forget.html',
+  },
+  {
+    id: 'cooper-core-of-everything',
+    person: 'Alice Cooper',
+    quote:
+      "He's the core of everything. He's life itself. He's the light… He changes your heart.",
+    year: 2024,
+    sourceTitle: 'Greg Laurie interview (via Blabbermouth)',
+    sourceUrl:
+      'https://blabbermouth.net/news/alice-cooper-jesus-christ-is-the-core-of-everything-hes-life-itself-hes-the-light',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
