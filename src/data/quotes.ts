@@ -134,6 +134,24 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.independent.co.uk/arts-entertainment/tv/news/russell-brand-baptism-thames-b2536815.html',
   },
+  {
+    id: 'wright-jesus-worked-for-me-2022',
+    person: 'Letitia Wright',
+    quote: 'I had to find what worked for me and I found that Jesus worked for me.',
+    year: 2022,
+    sourceTitle: 'CBN News (Guardian interview, as reported)',
+    sourceUrl:
+      'https://cbn.com/news/entertainment/black-panther-star-letitia-wright-reveals-how-christ-transformed-her-life-jesus',
+  },
+  {
+    id: 'ireland-jesus-everything-2023',
+    person: 'Kathy Ireland',
+    quote: "The most important relationship in my life is Jesus… He's everything!",
+    year: 2023,
+    sourceTitle: 'Christian Post (Movieguide Awards)',
+    sourceUrl:
+      'https://www.christianpost.com/news/kathy-ireland-declares-jesus-is-everything-in-her-life.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
