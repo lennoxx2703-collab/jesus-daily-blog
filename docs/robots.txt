@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lennoxx2703-collab.github.io/jesus-daily-blog/sitemap.xml

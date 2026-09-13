@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { withBase } from '../../lib/site';
+import { withBase, siteName, absoluteUrl } from '../../lib/site';
 import { formatDate, isoDate } from '../../lib/posts';
 import { readingTimeLabel } from '../../lib/readingTime';
 
@@ -16,8 +16,26 @@ export async function getStaticPaths() {
 const { reading } = Astro.props;
 const { Content } = await reading.render();
 const body = typeof reading.body === 'string' ? reading.body : '';
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  name: reading.data.title,
+  headline: reading.data.title,
+  description: reading.data.description,
+  datePublished: isoDate(reading.data.pubDate),
+  isPartOf: {
+    '@type': 'Blog',
+    name: siteName,
+    url: absoluteUrl(),
+  },
+};
 ---
-<BaseLayout title={reading.data.title} description={reading.data.description}>
+<BaseLayout
+  title={reading.data.title}
+  description={reading.data.description}
+  ogType="article"
+  jsonLd={articleJsonLd}
+>
   <a class="back-link" href={withBase('readings/')}>← All readings</a>
   <article class="prose reading-article">
     <header class="post-header">

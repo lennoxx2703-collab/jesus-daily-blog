@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+import { comparePostsDayOrder, isoDate } from '../../lib/posts';
+
+const allPosts = await getCollection('posts');
+const todayKey = isoDate(new Date());
+const todaysPosts = allPosts
+  .filter((post) => isoDate(post.data.pubDate) === todayKey)
+  .sort(comparePostsDayOrder);
+const todayHref =
+  todaysPosts.length > 0
+    ? withBase(`posts/${todaysPosts[0].slug}/`)
+    : withBase();
+const readingHref = withBase('readings/sermon-on-the-mount/');
+---
+<BaseLayout
+  title="Start here"
+  description="Who Jesus is, in plain words — and three gentle next steps to begin walking with Him."
+>
+  <article class="prose">
+    <h1>Start here</h1>
+    <p>
+      Jesus is the Son of God who came close to ordinary people. He healed, forgave,
+      taught with authority and kindness, and gave His life so we could be brought home
+      to God. He is alive. He still invites anyone who is curious, tired, or hurting:
+      <em>Come and see.</em>
+    </p>
+    <p>
+      You do not need to have everything figured out. A next step can be small.
+    </p>
+
+    <h2>Three next steps</h2>
+    <ol class="start-steps">
+      <li>
+        <a href={withBase('hard-times/')}><strong>Hard times</strong></a>
+        — if something hurts right now, begin with a short verse for that need.
+      </li>
+      <li>
+        <a href={readingHref}><strong>A longer reading</strong></a>
+        — sit slowly with Jesus’ own words in the Sermon on the Mount.
+      </li>
+      <li>
+        <a href={todayHref}><strong>Today’s reflection</strong></a>
+        — a quiet morning, midday, or evening word for this day.
+      </li>
+    </ol>
+
+    <p>
+      When you are ready for more:
+      <a href={withBase()}>Home</a>,
+      <a href={withBase('readings/')}>all readings</a>,
+      <a href={withBase('about/')}>About</a>, or
+      <a href={withBase('de/')}>Deutsch (Willkommen)</a>.
+    </p>
+  </article>
+</BaseLayout>

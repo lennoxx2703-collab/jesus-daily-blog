@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { absoluteUrl, withBase } from '../../lib/site';
+
+const links = [
+  {
+    label: 'Home',
+    href: absoluteUrl(),
+    blurb: 'Three quiet reflections a day — morning, midday, and evening — on the life and love of Jesus.',
+  },
+  {
+    label: 'Hard times',
+    href: absoluteUrl('hard-times/'),
+    blurb: 'Hurting? Start here. Short verses for anxiety, grief, fear, loneliness, and other hard days.',
+  },
+  {
+    label: 'Longer readings',
+    href: absoluteUrl('readings/'),
+    blurb: 'Sit slowly with chapters of Jesus’ teaching — Scripture to read, not rush.',
+  },
+  {
+    label: 'RSS feed',
+    href: absoluteUrl('rss.xml'),
+    blurb: 'Follow new reflections in any feed reader, without an account or algorithm.',
+  },
+  {
+    label: 'Start here',
+    href: absoluteUrl('start-here/'),
+    blurb: 'For someone curious about Jesus — who He is, in plain words, and three gentle next steps.',
+  },
+  {
+    label: 'Willkommen (DE)',
+    href: absoluteUrl('de/'),
+    blurb: 'Kurzer Einstieg auf Deutsch — wer Jesus ist, und Links zu Hard times, Readings und Home.',
+  },
+];
+---
+<BaseLayout
+  title="Share"
+  description="Gentle links to share Walking with Jesus — home, hard times, readings, and RSS."
+>
+  <article class="prose">
+    <h1>Share this invitation</h1>
+    <p>
+      If someone you love needs a quiet word about Jesus, you can pass along one of these links.
+      Keep it simple. A short message and a link is enough.
+    </p>
+
+    <ul class="share-link-list">
+      {links.map((item) => (
+        <li class="share-link-card">
+          <h2>{item.label}</h2>
+          <p>{item.blurb}</p>
+          <p class="share-url">
+            <code>{item.href}</code>
+          </p>
+          <button
+            type="button"
+            class="share-btn copy-share-btn"
+            data-url={item.href}
+          >
+            Copy link
+          </button>
+        </li>
+      ))}
+    </ul>
+
+    <p class="share-status-line" id="share-copy-status" role="status" aria-live="polite"></p>
+
+    <p>
+      Prefer to browse first?
+      <a href={withBase()}>Home</a>,
+      <a href={withBase('hard-times/')}>Hard times</a>,
+      <a href={withBase('readings/')}>Readings</a>, or the
+      <a href={withBase('about/')}>About</a> page.
+    </p>
+  </article>
+
+  <script is:inline>
+    (function () {
+      var status = document.getElementById('share-copy-status');
+      var buttons = document.querySelectorAll('.copy-share-btn');
+      if (!status || !buttons.length) return;
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var url = btn.getAttribute('data-url') || '';
+          function done(ok) {
+            status.textContent = ok ? 'Link copied.' : 'Could not copy. Select the link instead.';
+            window.setTimeout(function () { status.textContent = ''; }, 2500);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(function () { done(true); }).catch(function () { done(false); });
+          } else {
+            try {
+              var input = document.createElement('input');
+              input.value = url;
+              document.body.appendChild(input);
+              input.select();
+              document.execCommand('copy');
+              document.body.removeChild(input);
+              done(true);
+            } catch (e) {
+              done(false);
+            }
+          }
+        });
+      });
+    })();
+  </script>
+</BaseLayout>

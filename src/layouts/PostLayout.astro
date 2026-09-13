@@ -1,6 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import { withBase } from '../lib/site';
+import { withBase, siteName, absoluteUrl } from '../lib/site';
 import {
   formatDate,
   isoDate,
@@ -44,8 +44,21 @@ const slotText = slotLabel(daySlot);
 const shareSubject = encodeURIComponent(`${title} · Walking with Jesus`);
 const shareBody = encodeURIComponent(`${title}\n\n${description}\n\n${permalink}`);
 const mailto = `mailto:?subject=${shareSubject}&body=${shareBody}`;
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  name: title,
+  headline: title,
+  description,
+  datePublished: isoDate(pubDate),
+  isPartOf: {
+    '@type': 'Blog',
+    name: siteName,
+    url: absoluteUrl(),
+  },
+};
 ---
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} ogType="article" jsonLd={articleJsonLd}>
   <a class="back-link" href={withBase()}>← All reflections</a>
   <article class="prose post-article">
     <header class="post-header">

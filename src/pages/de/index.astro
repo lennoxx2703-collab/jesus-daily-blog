@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+import { comparePostsDayOrder, isoDate } from '../../lib/posts';
+
+const allPosts = await getCollection('posts');
+const todayKey = isoDate(new Date());
+const todaysPosts = allPosts
+  .filter((post) => isoDate(post.data.pubDate) === todayKey)
+  .sort(comparePostsDayOrder);
+const todayHref =
+  todaysPosts.length > 0
+    ? withBase(`posts/${todaysPosts[0].slug}/`)
+    : withBase();
+const readingHref = withBase('readings/sermon-on-the-mount/');
+---
+<BaseLayout
+  title="Willkommen"
+  description="Willkommen bei Walking with Jesus — ein ruhiger Einstieg: wer Jesus ist, und drei nächste Schritte."
+>
+  <article class="prose" lang="de">
+    <h1>Willkommen</h1>
+    <p>
+      Jesus ist der Sohn Gottes, der den Menschen nahegekommen ist. Er hat geheilt,
+      vergeben, mit Klarheit und Güte gelehrt und sein Leben gegeben, damit wir zu Gott
+      nach Hause finden können. Er lebt. Und er lädt weiterhin ein — neugierig, müde
+      oder verletzt: <em>Komm und sieh.</em>
+    </p>
+    <p>
+      Du musst nicht alles verstanden haben. Ein nächster Schritt darf klein sein.
+    </p>
+
+    <h2>Drei nächste Schritte</h2>
+    <ol class="start-steps">
+      <li>
+        <a href={withBase('hard-times/')}><strong>Hard times</strong></a>
+        — wenn etwas wehtut: ein kurzer Bibelvers für diese Not.
+      </li>
+      <li>
+        <a href={readingHref}><strong>Eine längere Lesung</strong></a>
+        — ruhig bei Jesu Worten in der Bergpredigt verweilen.
+      </li>
+      <li>
+        <a href={todayHref}><strong>Heutige Betrachtung</strong></a>
+        — ein leises Wort für den Morgen, Mittag oder Abend.
+      </li>
+    </ol>
+
+    <p>
+      Weiterführende Seiten (meist auf Englisch):
+      <a href={withBase()}>Home</a>,
+      <a href={withBase('hard-times/')}>Hard times</a>,
+      <a href={withBase('readings/')}>Readings</a>,
+      <a href={withBase('start-here/')}>Start here</a>,
+      <a href={withBase('about/')}>About</a>.
+    </p>
+  </article>
+</BaseLayout>

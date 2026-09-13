@@ -706,6 +706,12 @@ a.tag-chip:hover {
   margin: 0 0 2.25rem;
 }
 
+@media (min-width: 900px) {
+  .home-paths {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .path-card {
   display: flex;
   flex-direction: column;
@@ -855,4 +861,59 @@ a.tag-chip-active:hover {
   .home-paths {
     grid-template-columns: 1fr;
   }
+}
+
+
+.share-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.share-link-card {
+  margin: 0;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+}
+
+.share-link-card h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.15rem;
+}
+
+.share-link-card p {
+  margin: 0 0 0.75rem;
+}
+
+.share-url code {
+  display: block;
+  padding: 0.55rem 0.7rem;
+  border-radius: 6px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  word-break: break-all;
+  color: var(--accent);
+}
+
+.share-status-line {
+  min-height: 1.4em;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+}
+
+
+.start-steps {
+  margin: 1.25rem 0 1.75rem;
+  padding-left: 1.25rem;
+}
+
+.start-steps li {
+  margin: 0 0 0.85rem;
+  padding-left: 0.25rem;
 }
