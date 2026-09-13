@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+
+type Related = { label: string; href: string };
+type Prayer = {
+  title: string;
+  body: string;
+  verse?: string;
+  reference?: string;
+  related?: Related[];
+};
+
+const prayers: Prayer[] = [
+  {
+    title: 'Thanksgiving',
+    body: 'Lord Jesus, thank You for this day and for gifts I almost walked past. Thank You for breath, for people who love me, and for mercy that met me before I asked. Teach my heart to notice Your kindness and to answer with simple gratitude.',
+  },
+  {
+    title: 'A hard day',
+    body: 'Jesus, this day is heavy, and I do not have many words. I bring You the tiredness, the worry, and the part of me that wants to hide. Sit with me. Give me rest that is not earned, and enough light for the next small step.',
+    verse: 'Come to me, all you who labor and are heavily burdened, and I will give you rest.',
+    reference: 'Matthew 11:28',
+    related: [
+      { label: 'exhaustion', href: 'hard-times/exhaustion/' },
+      { label: 'anxiety', href: 'hard-times/anxiety/' },
+    ],
+  },
+  {
+    title: 'For a friend',
+    body: 'Lord Jesus, I hold before You someone I love. You know their name, their need, and what I cannot fix. Draw near to them with comfort and courage. If they are hurting, let them feel they are not alone — and show me how to be a gentle friend.',
+    related: [
+      { label: 'Hard times', href: 'hard-times/' },
+      { label: 'loneliness', href: 'hard-times/loneliness/' },
+      { label: 'grief', href: 'hard-times/grief/' },
+    ],
+  },
+  {
+    title: 'For guidance',
+    body: 'Jesus, I cannot see the whole path, and I do not want to lean only on my own understanding. Make the next step plain, and keep me close if I have to wait. Lead me in Your love, not in my hurry.',
+    verse: 'Trust in Yahweh with all your heart, and don’t lean on your own understanding.',
+    reference: 'Proverbs 3:5',
+    related: [
+      { label: 'waiting', href: 'hard-times/waiting/' },
+      { label: 'doubt', href: 'hard-times/doubt/' },
+    ],
+  },
+  {
+    title: 'Confession',
+    body: 'Lord Jesus, I come without hiding. I have sinned in thought, in word, and in what I left undone. Forgive me. Wash what I cannot clean, and give me a heart that turns toward You again. Thank You that You are faithful and kind.',
+    verse: 'If we confess our sins, he is faithful and righteous to forgive us the sins, and to cleanse us from all unrighteousness.',
+    reference: '1 John 1:9',
+    related: [{ label: 'shame', href: 'hard-times/shame/' }],
+  },
+  {
+    title: 'Morning',
+    body: 'Jesus, this morning is Yours before it is mine. Walk with me through ordinary hours — in work, in rest, and in the people I will meet. Keep my heart soft and my steps near You.',
+    verse: 'They are new every morning. Great is your faithfulness.',
+    reference: 'Lamentations 3:23',
+  },
+  {
+    title: 'Evening',
+    body: 'Stay with us, Lord, for the day is ending. I give You what went well and what I could not finish. Forgive what was unkind, and quiet my mind for sleep. Keep those I love through the night, and let me rest in Your peace.',
+  },
+];
+---
+<BaseLayout
+  title="Pray"
+  description="Simple written prayers to pray with Jesus — thanksgiving, a hard day, a friend, guidance, confession, morning, and evening."
+>
+  <article class="prose">
+    <h1>Pray</h1>
+    <p>
+      You do not need special words. These short prayers are here if you want company
+      while you speak with Jesus. Read one slowly. Change a name. Leave a sentence out.
+      He already knows the rest.
+    </p>
+
+    <ul class="pray-list">
+      {prayers.map((prayer) => (
+        <li class="prayer-box pray-card">
+          <h2>{prayer.title}</h2>
+          <p>{prayer.body}</p>
+          {prayer.verse && (
+            <p class="pray-verse">
+              “{prayer.verse}” — {prayer.reference} <span class="ht-credit">WEB</span>
+            </p>
+          )}
+          {prayer.related && (
+            <p class="pray-related">
+              Related:{' '}
+              {prayer.related.map((item, index) => (
+                <>
+                  {index > 0 && <span aria-hidden="true"> · </span>}
+                  <a href={withBase(item.href)}>{item.label}</a>
+                </>
+              ))}
+            </p>
+          )}
+        </li>
+      ))}
+    </ul>
+
+    <p>
+      If a day is especially hard, sit first with
+      <a href={withBase('hard-times/')}>Hard times</a>.
+      New here? <a href={withBase('start-here/')}>Start here</a>.
+      Prefer a longer word? Try the
+      <a href={withBase('readings/')}>readings</a>.
+    </p>
+  </article>
+</BaseLayout>

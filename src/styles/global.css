@@ -938,3 +938,38 @@ a.tag-chip-active:hover {
 .faithful-bloggers-link {
   line-height: 0;
 }
+
+
+.pray-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.pray-card {
+  margin: 0;
+}
+
+.pray-card .pray-verse {
+  margin: 0.85rem 0 0;
+  font-size: 1rem;
+  color: var(--ink-muted);
+}
+
+.pray-card .pray-related {
+  margin: 0.75rem 0 0;
+  font-style: normal;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+.pray-card .ht-credit {
+  display: inline;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+

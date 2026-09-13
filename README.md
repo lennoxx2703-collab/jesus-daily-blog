@@ -96,6 +96,7 @@ npm run build
 - **Archive** — `/archive/` all posts grouped by month
 - **Tags** — `/tags/` and `/tags/[tag]/`
 - **Search** — `/search/` client-side filter (posts, readings, verses)
+- **Pray** — `/pray/` simple written prayers to pray with Jesus
 - **About** — short statement about the blog
 - **RSS** — `/jesus-daily-blog/rss.xml`
 
