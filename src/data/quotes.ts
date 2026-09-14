@@ -181,6 +181,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://blabbermouth.net/news/alice-cooper-jesus-christ-is-the-core-of-everything-hes-life-itself-hes-the-light',
   },
+  {
+    id: 'jelly-roll-heart-for-jesus-2025',
+    person: 'Jelly Roll',
+    quote: 'Ultimately, I have a heart for God, and I have a heart for Jesus.',
+    year: 2025,
+    sourceTitle: 'Brandon Lake conversation (via Crosswalk)',
+    sourceUrl:
+      'https://www.crosswalk.com/headlines/contributors/michael-foust/jelly-roll-opens-up-about-his-faith-declares-i-have-a-heart-for-jesus.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
