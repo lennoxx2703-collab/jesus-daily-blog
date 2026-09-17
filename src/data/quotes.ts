@@ -190,6 +190,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.crosswalk.com/headlines/contributors/michael-foust/jelly-roll-opens-up-about-his-faith-declares-i-have-a-heart-for-jesus.html',
   },
+  {
+    id: 'roumie-surrender-jesus-2023',
+    person: 'Jonathan Roumie',
+    quote:
+      'I literally was on my knees and I said, "Jesus, I surrender myself to you. Take care of everything." And He did.',
+    year: 2023,
+    sourceTitle: 'Fox News Digital interview',
+    sourceUrl:
+      'https://www.foxnews.com/lifestyle/jonathan-roumie-faith-prayer-life-advent-always-god-hasnt-forsaken-us',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
