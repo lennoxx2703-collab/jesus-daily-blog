@@ -200,6 +200,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.foxnews.com/lifestyle/jonathan-roumie-faith-prayer-life-advent-always-god-hasnt-forsaken-us',
   },
+  {
+    id: 'wahlberg-jesus-save-sinners-2022',
+    person: 'Mark Wahlberg',
+    quote:
+      "Jesus didn't come to save the righteous, He came to save the sinners. We're all weak.",
+    year: 2022,
+    sourceTitle: 'CBN News (Fox News / Raymond Arroyo interview)',
+    sourceUrl:
+      'https://cbn.com/news/news/jesus-didnt-come-save-righteous-mark-wahlberg-discusses-gods-redemption-new-film-father',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
