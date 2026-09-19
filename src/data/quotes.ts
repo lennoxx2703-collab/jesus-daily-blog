@@ -210,6 +210,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://cbn.com/news/news/jesus-didnt-come-save-righteous-mark-wahlberg-discusses-gods-redemption-new-film-father',
   },
+  {
+    id: 'tebow-identity-jesus-2016',
+    person: 'Tim Tebow',
+    quote:
+      "I'm so thankful because of my relationship with Jesus Christ and being adopted in the family of God… My identity lies as a child of God, and that's something that will never be shaken.",
+    year: 2016,
+    sourceTitle: 'Bible Gateway Blog interview',
+    sourceUrl:
+      'https://www.biblegateway.com/blog/2016/10/discovering-your-identity-in-lifes-storms-an-interview-with-tim-tebow/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
