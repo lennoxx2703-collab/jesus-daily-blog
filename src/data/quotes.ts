@@ -220,6 +220,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.biblegateway.com/blog/2016/10/discovering-your-identity-in-lifes-storms-an-interview-with-tim-tebow/',
   },
+  {
+    id: 'grammer-follower-of-jesus-2025',
+    person: 'Kelsey Grammer',
+    quote: "I'm not going to deny that I have faith and I'm a follower of Jesus.",
+    year: 2025,
+    sourceTitle: 'Daily Wire interview',
+    sourceUrl:
+      'https://www.dailywire.com/news/kelsey-grammer-talks-faith-hollywood-and-his-new-christmas-movie',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
