@@ -229,6 +229,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.dailywire.com/news/kelsey-grammer-talks-faith-hollywood-and-his-new-christmas-movie',
   },
+  {
+    id: 'underwood-answer-jesus-2021',
+    person: 'Carrie Underwood',
+    quote: 'I feel like the answer to all of our problems is Jesus.',
+    year: 2021,
+    sourceTitle: 'GRAMMY.com interview',
+    sourceUrl:
+      'https://www.grammy.com/news/carrie-underwood-talks-creating-her-first-gospel-album-my-savior-working-cece-winans-legacy-music',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
