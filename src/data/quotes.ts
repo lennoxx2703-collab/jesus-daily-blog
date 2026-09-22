@@ -238,6 +238,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.grammy.com/news/carrie-underwood-talks-creating-her-first-gospel-album-my-savior-working-cece-winans-legacy-music',
   },
+  {
+    id: 'donnie-wahlberg-without-jesus-2026',
+    person: 'Donnie Wahlberg',
+    quote:
+      "I don't know where I would be without Jesus, but I know where I will be with Him!",
+    year: 2026,
+    sourceTitle: 'CBN News (birthday Instagram post, as reported)',
+    sourceUrl:
+      'https://cbn.com/news/entertainment/i-was-empty-without-him-singer-and-tv-star-donnie-wahlberg-gets-deep-about',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
