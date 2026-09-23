@@ -248,6 +248,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://cbn.com/news/entertainment/i-was-empty-without-him-singer-and-tv-star-donnie-wahlberg-gets-deep-about',
   },
+  {
+    id: 'kat-von-d-on-fire-jesus-2024',
+    person: 'Kat Von D',
+    quote: "I'm on fire for Jesus and I don't plan on this dimming out.",
+    year: 2024,
+    sourceTitle: 'Relatable with Allie Beth Stuckey (via CBN News)',
+    sourceUrl:
+      'https://cbn.com/news/entertainment/kat-von-d-reflects-breaking-free-addiction-occult-im-fire-jesus',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
