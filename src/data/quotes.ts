@@ -257,6 +257,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://cbn.com/news/entertainment/kat-von-d-reflects-breaking-free-addiction-occult-im-fire-jesus',
   },
+  {
+    id: 'kirk-franklin-love-jesus-paramount-2025',
+    person: 'Kirk Franklin',
+    quote:
+      'My love for Jesus and my love for his Church – my love for his people – is paramount in everything that I do.',
+    year: 2025,
+    sourceTitle: 'Premier Christianity interview',
+    sourceUrl:
+      'https://www.premierchristianity.com/interviews/kirk-franklin-people-have-questioned-my-integrity-but-my-love-for-jesus-is-paramount-in-everything-i-do/19961.article',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
