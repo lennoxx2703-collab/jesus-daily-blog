@@ -267,6 +267,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.premierchristianity.com/interviews/kirk-franklin-people-have-questioned-my-integrity-but-my-love-for-jesus-is-paramount-in-everything-i-do/19961.article',
   },
+  {
+    id: 'porter-jr-right-with-jesus-2026',
+    person: 'Michael Porter Jr.',
+    quote:
+      "That's why just make sure you're right with God, man. Not just any God. Make sure you're right with Jesus Christ.",
+    year: 2026,
+    sourceTitle: 'RELEVANT (Kick livestream with N3on)',
+    sourceUrl:
+      'https://relevantmagazine.com/culture/thats-why-im-not-scared-of-death-nba-player-michael-porter-jr-spent-a-livestream-telling-n3on-jesus-is-the-only-way/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
