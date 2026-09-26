@@ -277,6 +277,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://relevantmagazine.com/culture/thats-why-im-not-scared-of-death-nba-player-michael-porter-jr-spent-a-livestream-telling-n3on-jesus-is-the-only-way/',
   },
+  {
+    id: 'sanchez-identity-in-christ-2025',
+    person: 'Jessica Sanchez',
+    quote:
+      "My identity is in Christ, and that's what has kept me steady through all of this.",
+    year: 2025,
+    sourceTitle: 'Christian Post interview (via Crosswalk)',
+    sourceUrl:
+      'https://www.crosswalk.com/culture/television/agt-finalist-jessica-sanchez-says-faith-in-christ-has-sustained-her.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
