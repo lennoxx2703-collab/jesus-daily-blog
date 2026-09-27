@@ -287,6 +287,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.crosswalk.com/culture/television/agt-finalist-jessica-sanchez-says-faith-in-christ-has-sustained-her.html',
   },
+  {
+    id: 'forrest-frank-jesus-changed-life-2025',
+    person: 'Forrest Frank',
+    quote:
+      'My main message is that Jesus changed my life, and every song is a reflection of that testimony. He saved my life.',
+    year: 2025,
+    sourceTitle: 'GRAMMY.com interview',
+    sourceUrl:
+      'https://www.grammy.com/news/forrest-frank-child-of-god-interview-2025-grammys/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
