@@ -297,6 +297,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.grammy.com/news/forrest-frank-child-of-god-interview-2025-grammys/',
   },
+  {
+    id: 'bure-sharing-gospel-2026',
+    person: 'Candace Cameron Bure',
+    quote:
+      "Whether someone's ready for it or not, I'm not going to stop sharing the gospel.",
+    year: 2026,
+    sourceTitle: 'ChurchLeaders interview',
+    sourceUrl:
+      'https://churchleaders.com/news/2222755-candace-cameron-bure-tour-sharing-the-gospel-grandmother.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
