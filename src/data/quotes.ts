@@ -307,6 +307,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://churchleaders.com/news/2222755-candace-cameron-bure-tour-sharing-the-gospel-grandmother.html',
   },
+  {
+    id: 'mclaughlin-christ-saved-me-2024',
+    person: 'Sydney McLaughlin-Levrone',
+    quote:
+      "Christ saved me and it's been the best decision of my life. I haven't looked back.",
+    year: 2024,
+    sourceTitle: 'Fellowship of Christian Athletes interview',
+    sourceUrl:
+      'https://www.fca.org/fca-in-action/blog-detail/2024/10/31/olympic-track-and-field-gold-medalist-sydney-mclaughlin-levrone',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
