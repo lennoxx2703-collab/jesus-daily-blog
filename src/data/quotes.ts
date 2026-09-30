@@ -317,6 +317,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.fca.org/fca-in-action/blog-detail/2024/10/31/olympic-track-and-field-gold-medalist-sydney-mclaughlin-levrone',
   },
+  {
+    id: 'scheffler-believe-in-jesus-2024',
+    person: 'Scottie Scheffler',
+    quote:
+      "I'm a faithful guy. I believe in a Creator. I believe in Jesus. Ultimately, I think that's what defines me the most.",
+    year: 2024,
+    sourceTitle: 'Fox News (Masters press conference)',
+    sourceUrl:
+      'https://www.foxnews.com/sports/masters-favorite-scottie-scheffler-talks-faith-asked-what-defines-him-person',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
