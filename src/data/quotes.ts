@@ -327,6 +327,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.foxnews.com/sports/masters-favorite-scottie-scheffler-talks-faith-asked-what-defines-him-person',
   },
+  {
+    id: 'lecrae-jesus-foundation-2025',
+    person: 'Lecrae',
+    quote:
+      'Jesus is my foundation, so let\'s rebuild this thing in a healthier way.',
+    year: 2025,
+    sourceTitle: 'The Breakfast Club (via RELEVANT)',
+    sourceUrl:
+      'https://relevantmagazine.com/culture/lecrae-talks-church-hurt-and-reconstructing-his-faith-on-the-breakfast-club/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
