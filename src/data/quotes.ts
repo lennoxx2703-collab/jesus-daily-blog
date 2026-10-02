@@ -337,6 +337,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://relevantmagazine.com/culture/lecrae-talks-church-hurt-and-reconstructing-his-faith-on-the-breakfast-club/',
   },
+  {
+    id: 'butker-care-what-jesus-thinks-2024',
+    person: 'Harrison Butker',
+    quote:
+      "I'm a child of God. I need to care about what Jesus thinks of me more than anyone else.",
+    year: 2024,
+    sourceTitle: 'Fox News (Stronger Men\'s Conference)',
+    sourceUrl:
+      'https://www.foxnews.com/sports/chiefs-star-kicker-harrison-butker-credits-prayer-sidelines-mental-fortitude',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
