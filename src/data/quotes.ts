@@ -347,6 +347,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.foxnews.com/sports/chiefs-star-kicker-harrison-butker-credits-prayer-sidelines-mental-fortitude',
   },
+  {
+    id: 'stefani-relationship-with-god-2026',
+    person: 'Gwen Stefani',
+    quote:
+      "The only thing that's important in life is your relationship with God. Everything is from God. It's a miracle!",
+    year: 2026,
+    sourceTitle: 'Hallow: Prayer & Meditation (via ChurchPop)',
+    sourceUrl:
+      'https://www.churchpop.com/gwen-stefani-i-want-god-to-use-me-christs-light-talents/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
