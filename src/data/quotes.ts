@@ -357,6 +357,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.churchpop.com/gwen-stefani-i-want-god-to-use-me-christs-light-talents/',
   },
+  {
+    id: 'kupp-point-to-jesus-2026',
+    person: 'Cooper Kupp',
+    quote:
+      'I was made to play football, to be on a stage, to be able to point to Jesus, to be able to call people to Him, to be able to live a life that reflects Jesus in every way.',
+    year: 2026,
+    sourceTitle: 'Arise with the Guys (via Crosswalk)',
+    sourceUrl:
+      'https://www.crosswalk.com/headlines/contributors/michael-foust/super-bowl-champion-cooper-kupp-says-football-is-a-platform-to-share-jesus.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
