@@ -367,6 +367,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.crosswalk.com/headlines/contributors/michael-foust/super-bowl-champion-cooper-kupp-says-football-is-a-platform-to-share-jesus.html',
   },
+  {
+    id: 'hurts-god-greater-high-low-2025',
+    person: 'Jalen Hurts',
+    quote:
+      "God is greater than any high or low. And He's there unconditionally. So [I'm] just leaning on Him, not just in this season but any season of life.",
+    year: 2025,
+    sourceTitle: 'Super Bowl LIX Opening Night (via Sports Spectrum)',
+    sourceUrl:
+      'https://sportsspectrum.com/sport/football/2025/02/06/super-bowl-eagles-jalen-hurts-god-is-greater/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
