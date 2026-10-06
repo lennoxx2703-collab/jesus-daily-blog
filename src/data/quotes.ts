@@ -377,6 +377,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://sportsspectrum.com/sport/football/2025/02/06/super-bowl-eagles-jalen-hurts-god-is-greater/',
   },
+  {
+    id: 'barton-drives-me-jesus-2026',
+    person: 'Malachi Barton',
+    quote:
+      "Honestly, what drives me is Jesus Christ, and being a light of God in a business where there isn't a lot of that.",
+    year: 2026,
+    sourceTitle: 'Variety profile (Camp Rock 3, Aug 2026)',
+    sourceUrl:
+      'https://variety.com/2026/tv/features/malachi-barton-camp-rock-3-disney-faith-god-1236826142/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
