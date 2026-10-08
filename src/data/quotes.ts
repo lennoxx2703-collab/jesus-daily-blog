@@ -387,6 +387,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://variety.com/2026/tv/features/malachi-barton-camp-rock-3-disney-faith-god-1236826142/',
   },
+  {
+    id: 'kb-jesus-reigns-2026',
+    person: 'KB',
+    quote:
+      'There is a King with a Kingdom that is here and coming. Jesus reigns and His Kingdom will not be shaken.',
+    year: 2026,
+    sourceTitle: 'CCM Magazine cover story (Oct 2026)',
+    sourceUrl: 'https://www.ccmmagazine.com/news/kb-cover-story-october-2026/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */

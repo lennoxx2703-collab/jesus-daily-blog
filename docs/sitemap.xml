@@ -146,6 +146,21 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/being-seen/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/belonging/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/change/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/comfort/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -156,7 +171,17 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/evening/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/gospel/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/grace/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -176,7 +201,17 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/new-life/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/prayer/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/questions/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -267,6 +302,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/stories/2026-10-04-god-has-not-left-the-neighborhood/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/stories/2026-10-07-do-not-fear-for-i-am-with-you/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -442,6 +482,16 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-06-what-do-you-want-me-to-do-for-you/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-07-he-came-to-jesus-by-night/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-07-today-i-must-stay-at-your-house/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
