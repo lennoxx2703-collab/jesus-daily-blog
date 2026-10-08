@@ -211,6 +211,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/presence/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/questions/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -507,6 +512,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-08-i-want-to-be-made-clean/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-08-stay-with-us-for-it-is-toward-evening/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
