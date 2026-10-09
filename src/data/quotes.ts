@@ -396,6 +396,16 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'CCM Magazine cover story (Oct 2026)',
     sourceUrl: 'https://www.ccmmagazine.com/news/kb-cover-story-october-2026/',
   },
+  {
+    id: 'mcdonough-one-boss-god-2026',
+    person: 'Neal McDonough',
+    quote:
+      "I have one boss, and that's God. So, what can I do to make my Boss happy? What can I do to spread His word through entertainment?",
+    year: 2026,
+    sourceTitle: 'Crosswalk Headlines interview (Oct 2026)',
+    sourceUrl:
+      'https://www.crosswalk.com/headlines/contributors/michael-foust/neal-mcdonough-says-god-guides-his-hollywood-career-i-have-one-boss.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
