@@ -406,6 +406,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.crosswalk.com/headlines/contributors/michael-foust/neal-mcdonough-says-god-guides-his-hollywood-career-i-have-one-boss.html',
   },
+  {
+    id: 'murray-jesus-with-me-every-day-2022',
+    person: 'Chad Michael Murray',
+    quote:
+      'I feel stronger and safer walking onto my sets every day knowing that I have God with me every day. Jesus is there with me every day.',
+    year: 2022,
+    sourceTitle: 'Fox News Digital interview (May 2022)',
+    sourceUrl: 'https://www.foxnews.com/entertainment/chad-michael-murray-hollywood-faith-religion',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
