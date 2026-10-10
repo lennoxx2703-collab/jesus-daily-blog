@@ -216,6 +216,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/grief/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/healing/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -592,6 +597,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-09-while-he-was-still-far-off/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-10-jesus-wept/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
