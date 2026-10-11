@@ -415,6 +415,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Fox News Digital interview (May 2022)',
     sourceUrl: 'https://www.foxnews.com/entertainment/chad-michael-murray-hollywood-faith-religion',
   },
+  {
+    id: 'asbury-loved-jesus-entire-time-2026',
+    person: 'Cory Asbury',
+    quote: "I've loved Jesus the entire time.",
+    year: 2026,
+    sourceTitle: 'RELEVANT Magazine profile (Oct 2026)',
+    sourceUrl: 'https://relevantmagazine.com/magazine/cory-asbury-ran-from-his-calling-for-five-years-this-album-is-him-coming-home/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
