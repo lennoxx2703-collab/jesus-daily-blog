@@ -146,6 +146,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/anxiety/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/being-seen/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -307,6 +312,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/staying/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/surrender/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -652,6 +662,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-11-go-and-do-likewise/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-11-not-as-i-will/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
