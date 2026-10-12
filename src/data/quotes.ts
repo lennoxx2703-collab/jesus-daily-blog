@@ -423,6 +423,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'RELEVANT Magazine profile (Oct 2026)',
     sourceUrl: 'https://relevantmagazine.com/magazine/cory-asbury-ran-from-his-calling-for-five-years-this-album-is-him-coming-home/',
   },
+  {
+    id: 'corgan-jesus-lord-and-savior-2026',
+    person: 'Billy Corgan',
+    quote:
+      "I made the decision that I was going to talk about God honestly, at least God in my life or believing in Jesus as my Lord and Savior. And if it was going to hurt me, I didn't care.",
+    year: 2026,
+    sourceTitle: 'The Magnificent Others podcast with Michael Sweet, via The Christian Post (Sept 2026)',
+    sourceUrl: 'https://www.christianpost.com/news/billy-corgan-talks-faith-calls-jesus-my-lord-and-savior.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
