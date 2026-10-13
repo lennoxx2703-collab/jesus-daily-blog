@@ -331,6 +331,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/shepherd/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/staying/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -727,6 +732,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-13-he-saw-a-man-sitting-at-the-tax-booth/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-13-i-am-the-good-shepherd/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
