@@ -431,6 +431,14 @@ export const quotes: FaithQuote[] = [
     year: 2026,
     sourceTitle: 'The Magnificent Others podcast with Michael Sweet, via The Christian Post (Sept 2026)',
     sourceUrl: 'https://www.christianpost.com/news/billy-corgan-talks-faith-calls-jesus-my-lord-and-savior.html',
+  },  {
+    id: 'wilson-authentic-relationship-jesus-2026',
+    person: 'Lainey Wilson',
+    quote:
+      "I feel like the Jesus that I knew now is not the one that I grew up knowing. … I feel like I am finally starting to have an authentic relationship with Jesus Christ.",
+    year: 2026,
+    sourceTitle: 'Dove Awards acceptance remarks, via Crosswalk Headlines (Oct 2026)',
+    sourceUrl: 'https://www.crosswalk.com/headlines/contributors/michael-foust/lainey-wilson-opens-up-about-her-authentic-relationship-with-jesus-christ-at-dove-awards.html',
   },
 ];
 
