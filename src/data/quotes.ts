@@ -440,6 +440,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Dove Awards acceptance remarks, via Crosswalk Headlines (Oct 2026)',
     sourceUrl: 'https://www.crosswalk.com/headlines/contributors/michael-foust/lainey-wilson-opens-up-about-her-authentic-relationship-with-jesus-christ-at-dove-awards.html',
   },
+  {
+    id: 'posner-heart-much-bigger-2026',
+    person: 'Mike Posner',
+    quote:
+      "Christ has not made my life or my heart smaller, but much, much bigger. I'm working on developing more and more of a personal relationship with God.",
+    year: 2026,
+    sourceTitle: 'Instagram baptism post, via The Christian Post (Aug 2026)',
+    sourceUrl: 'https://www.christianpost.com/news/mike-posner-embraces-christianity-gets-baptized.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
