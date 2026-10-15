@@ -161,6 +161,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/bring-it-to-jesus/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/calling/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -817,6 +822,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-15-i-have-overcome-the-world/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-15-when-the-sun-was-setting/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
