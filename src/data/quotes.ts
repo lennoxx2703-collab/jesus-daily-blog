@@ -449,6 +449,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Instagram baptism post, via The Christian Post (Aug 2026)',
     sourceUrl: 'https://www.christianpost.com/news/mike-posner-embraces-christianity-gets-baptized.html',
   },
+  {
+    id: 'kramer-died-for-our-sins-2026',
+    person: 'Jana Kramer',
+    quote:
+      "We all have our hard moments. And we have someone that died for our sins, and that is there for us always. He's wanting us to seek Him.",
+    year: 2026,
+    sourceTitle: 'Interview with The Christian Post (Oct 2026)',
+    sourceUrl: 'https://www.christianpost.com/news/jana-kramer-stars-in-faith-filled-christmas-film-the-one.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
