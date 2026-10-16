@@ -458,6 +458,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Interview with The Christian Post (Oct 2026)',
     sourceUrl: 'https://www.christianpost.com/news/jana-kramer-stars-in-faith-filled-christmas-film-the-one.html',
   },
+  {
+    id: 'henderson-apart-from-jesus-2026',
+    person: 'TreVeyon Henderson',
+    quote:
+      "I once thought I was a 'tough soldier' until I met Jesus, then I realized that I'm so weak without Him, and apart from Jesus I can't do anything.",
+    year: 2026,
+    sourceTitle: 'X post, via The Christian Post (Aug 2026)',
+    sourceUrl: 'https://www.christianpost.com/news/nfls-treveyon-henderson-apart-from-jesus-i-cant-do-anything.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
