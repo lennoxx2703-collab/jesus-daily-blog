@@ -467,6 +467,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'X post, via The Christian Post (Aug 2026)',
     sourceUrl: 'https://www.christianpost.com/news/nfls-treveyon-henderson-apart-from-jesus-i-cant-do-anything.html',
   },
+  {
+    id: 'john-cooper-christ-will-meet-you-2026',
+    person: 'John Cooper (Skillet)',
+    quote:
+      'Whatever your situation is, Christ will meet you. I can promise you that. … It might take a while, but do not give up because He will meet you.',
+    year: 2026,
+    sourceTitle: 'Interview with The Christian Post (Oct 2026)',
+    sourceUrl: 'https://www.christianpost.com/news/john-cooper-says-skillets-vulnerable-new-ep-offers-hope.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
