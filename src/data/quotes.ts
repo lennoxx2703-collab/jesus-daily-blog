@@ -475,6 +475,14 @@ export const quotes: FaithQuote[] = [
     year: 2026,
     sourceTitle: 'Interview with The Christian Post (Oct 2026)',
     sourceUrl: 'https://www.christianpost.com/news/john-cooper-says-skillets-vulnerable-new-ep-offers-hope.html',
+  },  {
+    id: 'polaha-god-met-me-2026',
+    person: 'Kristoffer Polaha',
+    quote:
+      "I know in my own life, I'm not perfect and have sinned. And if I didn't know a loving God who loved me in spite of that, then I would never have been the prodigal son who'd have to come back home. … And God, man, he met me and I can't deny it.",
+    year: 2026,
+    sourceTitle: 'Interview with EntertainmentNow (Oct 2026)',
+    sourceUrl: 'https://entertainmentnow.com/hallmark/kristoffer-polaha-marriage-faith-space-between-us/',
   },
 ];
 
