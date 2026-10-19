@@ -484,6 +484,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Interview with EntertainmentNow (Oct 2026)',
     sourceUrl: 'https://entertainmentnow.com/hallmark/kristoffer-polaha-marriage-faith-space-between-us/',
   },
+  {
+    id: 'matthew-west-surrender-freedom-2026',
+    person: 'Matthew West',
+    quote:
+      "As a follower of Christ, what I've discovered is when I surrender my life to a higher authority, I find freedom, not imprisonment. I find true strength and true power, not weakness.",
+    year: 2026,
+    sourceTitle: 'Interview with The Christian Post (Sep 2026)',
+    sourceUrl: 'https://www.christianpost.com/news/matthew-west-jesus-is-king-is-a-call-to-surrender-control.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
