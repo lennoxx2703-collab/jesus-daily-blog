@@ -411,6 +411,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/peter/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/prayer/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1037,6 +1042,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-19-thou-art-loosed/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-20-i-have-prayed-for-thee/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
