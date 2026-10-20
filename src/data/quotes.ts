@@ -492,6 +492,14 @@ export const quotes: FaithQuote[] = [
     year: 2026,
     sourceTitle: 'Interview with The Christian Post (Sep 2026)',
     sourceUrl: 'https://www.christianpost.com/news/matthew-west-jesus-is-king-is-a-call-to-surrender-control.html',
+  },  {
+    id: 'maye-follow-jesus-christ-2026',
+    person: 'Drake Maye',
+    quote:
+      "Being able to shine a light on others and get them to follow Jesus Christ is what I'm here for and what God put me here to do.",
+    year: 2026,
+    sourceTitle: 'Interview with Sports Spectrum (Super Bowl LX media, Feb 2026)',
+    sourceUrl: 'https://sportsspectrum.com/sport/football/2026/10/12/patriots-drake-maye-5-touchdowns-thanks-good-lord/',
   },
 ];
 
