@@ -501,6 +501,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Interview with Sports Spectrum (Super Bowl LX media, Feb 2026)',
     sourceUrl: 'https://sportsspectrum.com/sport/football/2026/10/12/patriots-drake-maye-5-touchdowns-thanks-good-lord/',
   },
+  {
+    id: 'grylls-found-in-christ-2026',
+    person: 'Bear Grylls',
+    quote:
+      'The thing that truly sets us free is finding home. That we are found in Christ. Found exactly as we are, mess and all.',
+    year: 2026,
+    sourceTitle: 'Instagram post (Oct 18, 2026), reported by Crosswalk',
+    sourceUrl: 'https://www.crosswalk.com/headlines/contributors/michael-foust/bear-grylls-says-jesus-changed-how-he-sees-himself-and-others-all-needing-his-mercy.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
