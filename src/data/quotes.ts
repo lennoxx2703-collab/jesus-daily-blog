@@ -510,6 +510,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Instagram post (Oct 18, 2026), reported by Crosswalk',
     sourceUrl: 'https://www.crosswalk.com/headlines/contributors/michael-foust/bear-grylls-says-jesus-changed-how-he-sees-himself-and-others-all-needing-his-mercy.html',
   },
+  {
+    id: 'zach-bryan-god-in-everything-2026',
+    person: 'Zach Bryan',
+    quote:
+      "I've always weirdly had God at the centre of everything from the time I was 15 onwards. I've seen God in everything.",
+    year: 2026,
+    sourceTitle: 'Conversation with Matthew McConaughey (Oct 2026), reported by Holler',
+    sourceUrl: 'https://holler.country/news/breaking/zach-bryan-opens-up-about-faith-and-says-his-wife-samantha-introduced-him-to-catholicism-ive-seen-god-in-everything/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
