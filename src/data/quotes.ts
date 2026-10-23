@@ -519,6 +519,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Conversation with Matthew McConaughey (Oct 2026), reported by Holler',
     sourceUrl: 'https://holler.country/news/breaking/zach-bryan-opens-up-about-faith-and-says-his-wife-samantha-introduced-him-to-catholicism-ive-seen-god-in-everything/',
   },
+  {
+    id: 'cooper-relationship-back-jesus-2026',
+    person: 'Alice Cooper',
+    quote:
+      'When I got sober, finally, 43 years ago, what occurred to me was the fact that I needed my relationship back with Jesus Christ.',
+    year: 2026,
+    sourceTitle: 'Rolling Stone interview on his memoir Devil on My Shoulder (Oct 2026)',
+    sourceUrl: 'https://www.rollingstone.com/music/music-features/alice-cooper-devil-on-my-shoulder-book-interview-1235640323/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
