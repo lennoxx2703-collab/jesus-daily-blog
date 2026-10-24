@@ -527,6 +527,14 @@ export const quotes: FaithQuote[] = [
     year: 2026,
     sourceTitle: 'Rolling Stone interview on his memoir Devil on My Shoulder (Oct 2026)',
     sourceUrl: 'https://www.rollingstone.com/music/music-features/alice-cooper-devil-on-my-shoulder-book-interview-1235640323/',
+  },  {
+    id: 'pratt-faith-start-end-day-2026',
+    person: 'Chris Pratt',
+    quote:
+      "I'm always gonna be a man of faith. My faith is how I start my day, it's how I end my day. It's the most important thing that I'll be able to pass on to my kids.",
+    year: 2026,
+    sourceTitle: 'Fox News Digital interview ahead of The Terminal List Season 2 (Oct 2026), reported by Crosswalk',
+    sourceUrl: 'https://www.crosswalk.com/headlines/contributors/michael-foust/chris-pratt-says-faith-in-christ-shapes-his-life-its-how-i-start-my-day-its-how-i-end-my-day.html',
   },
 ];
 
