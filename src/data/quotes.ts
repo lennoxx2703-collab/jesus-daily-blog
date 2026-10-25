@@ -536,6 +536,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Fox News Digital interview ahead of The Terminal List Season 2 (Oct 2026), reported by Crosswalk',
     sourceUrl: 'https://www.crosswalk.com/headlines/contributors/michael-foust/chris-pratt-says-faith-in-christ-shapes-his-life-its-how-i-start-my-day-its-how-i-end-my-day.html',
   },
+  {
+    id: 'kirk-franklin-sincere-love-jesus-2026',
+    person: 'Kirk Franklin',
+    quote:
+      "I've spent my entire life striving, striving to show people my sincere love for Jesus Christ.",
+    year: 2026,
+    sourceTitle: 'Audacy interview with Big Mack on I Am What I Am (Oct 2026)',
+    sourceUrl: 'https://www.audacy.com/national/music/kirk-franklin-i-am-what-i-am',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
