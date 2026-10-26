@@ -545,6 +545,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Audacy interview with Big Mack on I Am What I Am (Oct 2026)',
     sourceUrl: 'https://www.audacy.com/national/music/kirk-franklin-i-am-what-i-am',
   },
+  {
+    id: 'bocelli-life-in-good-hands-2021',
+    person: 'Andrea Bocelli',
+    quote:
+      'Whoever puts his life in the hands of the one who created it, who wants him, desires and loves him, puts their life in good hands.',
+    year: 2021,
+    sourceTitle: 'EWTN News In-Depth interview with Colm Flynn (2021)',
+    sourceUrl: 'https://www.youtube.com/watch?v=oN_FVhfZEPw',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
