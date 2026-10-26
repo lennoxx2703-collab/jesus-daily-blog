@@ -496,6 +496,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/relationships/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/rest/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1247,6 +1252,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-26-he-put-his-hands-again/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-26-until-seventy-times-seven/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
