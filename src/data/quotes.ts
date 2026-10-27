@@ -554,6 +554,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'EWTN News In-Depth interview with Colm Flynn (2021)',
     sourceUrl: 'https://www.youtube.com/watch?v=oN_FVhfZEPw',
   },
+  {
+    id: 'mckellar-jesus-this-whole-time-2026',
+    person: 'Danica McKellar',
+    quote: "It's been Jesus this whole time, and I just didn't recognize it.",
+    year: 2026,
+    sourceTitle: 'Beliefnet, quoting her Christian Post interview (Oct 2026)',
+    sourceUrl:
+      'https://www.beliefnet.com/columnists/idolchatter/2026/10/danica-mckellar-reveals-how-candace-cameron-bure-led-her-to-jesus-its-been-him-this-whole-time.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
