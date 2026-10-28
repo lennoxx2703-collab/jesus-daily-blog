@@ -563,6 +563,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.beliefnet.com/columnists/idolchatter/2026/10/danica-mckellar-reveals-how-candace-cameron-bure-led-her-to-jesus-its-been-him-this-whole-time.html',
   },
+  {
+    id: 'montell-jordan-do-it-afraid-2026',
+    person: 'Montell Jordan',
+    quote:
+      "We have to go into these situations knowing that God knows it's gonna be scary. He was afraid. There were things Jesus was afraid of.",
+    year: 2026,
+    sourceTitle: 'RELEVANT Magazine interview, "This Is How Montell Jordan Does It Now" (Oct 15, 2026)',
+    sourceUrl:
+      'https://relevantmagazine.com/magazine/this-is-how-they-do-it-now-montell-and-kristin-jordan-on-faith-marriage-and-doing-it-afraid/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
