@@ -166,6 +166,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/being-known/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/being-seen/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1307,6 +1312,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-27-the-things-which-belong-unto-thy-peace/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-28-i-saw-thee/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
