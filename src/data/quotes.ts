@@ -573,6 +573,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://relevantmagazine.com/magazine/this-is-how-they-do-it-now-montell-and-kristin-jordan-on-faith-marriage-and-doing-it-afraid/',
   },
+  {
+    id: 'elijah-alexander-experience-jesus-2026',
+    person: 'Elijah Alexander',
+    quote: 'This just happened to be the way I needed to experience Jesus.',
+    year: 2026,
+    sourceTitle: 'Movieguide, quoting the "Unashamed" podcast, "Joking With Jonathan Roumie Changed This CHOSEN Actor\'s Life" (Oct 25, 2026)',
+    sourceUrl:
+      'https://www.movieguide.org/news-articles/joking-with-jonathan-roumie-changed-this-chosen-actors-life.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
