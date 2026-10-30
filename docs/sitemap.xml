@@ -361,6 +361,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/greatest-commandment/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/grief/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1392,6 +1397,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-29-save-jesus-only/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-30-not-far-from-the-kingdom/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
