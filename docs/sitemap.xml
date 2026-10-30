@@ -381,6 +381,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/heaven/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/home/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1407,6 +1412,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-30-but-whom-say-ye-that-i-am/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-10-30-i-go-to-prepare-a-place/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
