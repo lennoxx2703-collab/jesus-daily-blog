@@ -582,6 +582,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.movieguide.org/news-articles/joking-with-jonathan-roumie-changed-this-chosen-actors-life.html',
   },
+  {
+    id: 'garfield-encounter-remains-2026',
+    person: 'Andrew Garfield',
+    quote: 'When you have that kind of blessed encounter with the image of Christ in the way that I did have... Yes, it remains.',
+    year: 2026,
+    sourceTitle: 'National Catholic Register, "Spidey\'s Sense: Andrew Garfield Discusses Faith, Grief and \'Falling in Love With Jesus\'" (Sep 2, 2026)',
+    sourceUrl:
+      'https://www.ncregister.com/interview/andrew-garfield-on-faith-the-uprising',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
