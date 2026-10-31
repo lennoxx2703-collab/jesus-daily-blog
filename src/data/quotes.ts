@@ -591,6 +591,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.ncregister.com/interview/andrew-garfield-on-faith-the-uprising',
   },
+  {
+    id: 'chynna-phillips-say-yes-2026',
+    person: 'Chynna Phillips',
+    quote: '…The teachings of Christ say that there is absolutely nothing you can bring to the table, that Jesus did all the work on the cross and that all you have to do is say yes.',
+    year: 2026,
+    sourceTitle: 'The Christian Post, "Chynna Phillips urges husband Billy Baldwin to embrace Jesus" (Oct 28, 2026), quoting the "Holding On" podcast',
+    sourceUrl:
+      'https://www.christianpost.com/news/chynna-phillips-urges-husband-billy-baldwin-to-embrace-jesus.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
