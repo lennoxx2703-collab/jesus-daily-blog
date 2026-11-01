@@ -600,6 +600,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.christianpost.com/news/chynna-phillips-urges-husband-billy-baldwin-to-embrace-jesus.html',
   },
+  {
+    id: 'granger-smith-greatest-news-2026',
+    person: 'Granger Smith',
+    quote: 'God came to the world in the personhood, the body of Jesus Christ, who lived the perfect life that we could not, went to the cross in a way we deserved and He did not… And that is the greatest news the world has ever known.',
+    year: 2026,
+    sourceTitle: 'CBN News, "Conversations From Studio 5": Conversation with Granger Smith (Oct 2, 2026)',
+    sourceUrl:
+      'https://podcasts.apple.com/us/podcast/conversations-from-studio-5/id1643193730',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
