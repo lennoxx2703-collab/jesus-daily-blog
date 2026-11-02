@@ -609,6 +609,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://podcasts.apple.com/us/podcast/conversations-from-studio-5/id1643193730',
   },
+  {
+    id: 'sophie-cunningham-nothing-separate-2026',
+    person: 'Sophie Cunningham',
+    quote: 'There’s nothing that you can or can’t do that’s going to separate you from God’s love and grace and forgiveness. That’s why Jesus came and died on the cross, because he already knew everything you were going to do.',
+    year: 2026,
+    sourceTitle: 'Premier Christian News: WNBA’s Sophie Cunningham speaks about faith with Theo Von (Nov 1, 2026)',
+    sourceUrl:
+      'https://premierchristian.news/en/news/article/a-revival-happening-wnba-s-sophie-cunningham-speaks-about-faith-in-elite-sport-with-theo-von',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
