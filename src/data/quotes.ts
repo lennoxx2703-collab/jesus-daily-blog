@@ -618,6 +618,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://premierchristian.news/en/news/article/a-revival-happening-wnba-s-sophie-cunningham-speaks-about-faith-in-elite-sport-with-theo-von',
   },
+  {
+    id: 'iskander-christ-makes-my-heart-2026',
+    person: 'Michael Iskander',
+    quote: 'I pray that Christ makes my heart resemble a little bit of what David’s was.',
+    year: 2026,
+    sourceTitle: 'Movieguide: What House of David Taught Michael Iskander About Prayer and Pride (Nov 2, 2026; Liberty University Convocation, Mar 11, 2026)',
+    sourceUrl:
+      'https://www.movieguide.org/news-articles/house-of-david-taught-michael-iskander-about-prayer-pride.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
