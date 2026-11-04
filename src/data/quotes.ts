@@ -627,6 +627,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.movieguide.org/news-articles/house-of-david-taught-michael-iskander-about-prayer-pride.html',
   },
+  {
+    id: 'roumie-face-fades-2026',
+    person: 'Jonathan Roumie',
+    quote: 'My face may fade from people’s minds over the years, and that’s great. But hopefully as my face fades, their hearts grow more deeply in love with Jesus.',
+    year: 2026,
+    sourceTitle: 'CCM Magazine: Jonathan Roumie November 2026 Cover Story (Nov 2, 2026)',
+    sourceUrl:
+      'https://www.ccmmagazine.com/news/jonathan-roumie-and-the-songs-inspired-the-chosen-cover-story-november-2026/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
