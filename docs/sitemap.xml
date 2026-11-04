@@ -191,6 +191,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/bethany/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/boy-jesus/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -272,6 +277,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/desire/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/devotion/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1632,6 +1642,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-04-jesus-himself-drew-near/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-04-the-house-was-filled/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
