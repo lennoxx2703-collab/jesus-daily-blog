@@ -15,7 +15,7 @@ John tells us about one evening in Bethany, a few days before the cross.
 
 ## An ordinary supper
 
-It starts so plainly. "There they made him a supper." Nobody is preaching. Nothing is being healed. It's a meal at a friend's house, with plates and bread and probably too little room at the table. Martha is serving, as Martha does. Lazarus, who not long ago was in a tomb, is just sitting there eating. Resurrection has turned into an ordinary Tuesday-night kind of dinner.
+It starts so plainly. "There they made him a supper." Nobody is preaching. Nothing is being healed. It's a meal at a friend's house, with plates and bread and probably too little room at the table. Martha is serving, as Martha does. Lazarus, who not long ago was in a tomb, is just sitting there eating. Resurrection has turned into an ordinary weeknight dinner.
 
 I love that. The places where Jesus is most at home are often not the dramatic ones. He's at the table. He's in the kitchen-smell of an evening meal. He's where we are when the day winds down.
 
