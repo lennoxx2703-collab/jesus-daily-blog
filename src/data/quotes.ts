@@ -636,6 +636,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.ccmmagazine.com/news/jonathan-roumie-and-the-songs-inspired-the-chosen-cover-story-november-2026/',
   },
+  {
+    id: 'alex-call-they-see-jesus-2026',
+    person: 'Alex Call',
+    quote: 'If Jesus is calling me and all of us to do that, well, then I want to play my part. I want to do my thing for Christ. I want to live it out in a way that, you know, other people see my faith, and they say they see Jesus.',
+    year: 2026,
+    sourceTitle: 'Movieguide: This Dodgers Outfielder Is Learning to ‘Embrace’ Trials (Nov 4, 2026; “The Walk” podcast, May 2026)',
+    sourceUrl:
+      'https://www.movieguide.org/news-articles/dodgers-outfielder-alex-call-is-learning-to-embrace-trials.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
