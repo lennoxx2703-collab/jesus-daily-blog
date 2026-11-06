@@ -645,6 +645,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.movieguide.org/news-articles/dodgers-outfielder-alex-call-is-learning-to-embrace-trials.html',
   },
+  {
+    id: 'caviezel-saved-me-love-him-2026',
+    person: 'Jim Caviezel',
+    quote: 'He saved me, and I love Him, and I want the world to know.',
+    year: 2026,
+    sourceTitle: 'Movieguide: How a Conversation With Jimmy Stewart Inspired Jim Caviezel’s Career (Nov 5, 2026; The Michael Knowles Show, Nov 1, 2026)',
+    sourceUrl:
+      'https://www.movieguide.org/news-articles/a-conversation-with-jimmy-stewart-inspired-jim-caviezels-career.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
