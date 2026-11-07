@@ -654,6 +654,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.movieguide.org/news-articles/a-conversation-with-jimmy-stewart-inspired-jim-caviezels-career.html',
   },
+  {
+    id: 'jen-lilley-jesus-center-marriage-2026',
+    person: 'Jen Lilley',
+    quote:
+      'And I think that for us, keeping Jesus at the center of our marriage has really been what has gotten us through extremely difficult times.',
+    year: 2026,
+    sourceTitle: 'Fox News Digital interview (Nov 6, 2026)',
+    sourceUrl:
+      'https://www.foxnews.com/entertainment/jimmy-star-jen-lilley-says-keeping-jesus-center-marriage-helped-through-extremely-difficult-times',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
