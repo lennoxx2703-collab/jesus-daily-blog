@@ -664,6 +664,16 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.foxnews.com/entertainment/jimmy-star-jen-lilley-says-keeping-jesus-center-marriage-helped-through-extremely-difficult-times',
   },
+  {
+    id: 'cousins-fan-vs-follower-2026',
+    person: 'Kirk Cousins',
+    quote:
+      'There’s a difference between being a fan of Jesus and being a follower of Jesus.',
+    year: 2026,
+    sourceTitle: 'Movieguide (Nov 6, 2026), quoting a Christhlete video',
+    sourceUrl:
+      'https://www.movieguide.org/news-articles/nfl-qb-kirk-cousins-follows-jesus-no-matter-what-it-costs.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
