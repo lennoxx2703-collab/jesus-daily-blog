@@ -674,6 +674,15 @@ export const quotes: FaithQuote[] = [
     sourceUrl:
       'https://www.movieguide.org/news-articles/nfl-qb-kirk-cousins-follows-jesus-no-matter-what-it-costs.html',
   },
+  {
+    id: 'jennifer-oneill-love-of-my-life-2026',
+    person: "Jennifer O'Neill",
+    quote:
+      'So, at 38 years old… the love of my life came in, Jesus, and just changed everything.',
+    year: 2026,
+    sourceTitle: 'Parent Compass Radio, “CoverGirl Fame to Faith” (Nov 6, 2026)',
+    sourceUrl: 'https://www.oneplace.com/ministries/parent-compass-radio/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
