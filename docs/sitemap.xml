@@ -376,6 +376,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/fellowship/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/focus/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1752,6 +1757,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-08-why-seek-ye-the-living-among-the-dead/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-09-come-and-dine/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
