@@ -906,6 +906,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/upper-room/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/victory/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1772,6 +1777,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-09-sufficient-unto-the-day/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-10-as-i-have-loved-you/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
