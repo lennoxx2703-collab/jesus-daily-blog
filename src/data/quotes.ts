@@ -683,6 +683,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Parent Compass Radio, “CoverGirl Fame to Faith” (Nov 6, 2026)',
     sourceUrl: 'https://www.oneplace.com/ministries/parent-compass-radio/',
   },
+  {
+    id: 'khloe-kardashian-jesus-son-of-god-2026',
+    person: 'Khloé Kardashian',
+    quote:
+      "I'm a child of God, and I believe in God and that Jesus is the son of God, and that's my belief system. It's something that gets me through every day, good or bad.",
+    year: 2026,
+    sourceTitle: 'Movieguide, “5 Celebrities Who Have Talked About God or Faith in 2026” (Jan 15, 2026), quoting her podcast',
+    sourceUrl: 'https://www.movieguide.org/news-articles/5-celebrities-who-have-talked-about-god-or-faith-in-2026.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
