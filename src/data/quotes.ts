@@ -692,6 +692,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Movieguide, “5 Celebrities Who Have Talked About God or Faith in 2026” (Jan 15, 2026), quoting her podcast',
     sourceUrl: 'https://www.movieguide.org/news-articles/5-celebrities-who-have-talked-about-god-or-faith-in-2026.html',
   },
+  {
+    id: 'xavier-smalls-light-dark-industry-2026',
+    person: 'Xavier Smalls',
+    quote:
+      "I want to be the light in this dark industry and be an example of what it means to be a follower of Jesus while also being in the entertainment industry. It's difficult because you're called to say and do a lot of controversial things. But for me, it's always God.",
+    year: 2026,
+    sourceTitle: 'The Quintessential Gentleman, “Xavier Smalls on ‘Beauty in Black,’ Fatherhood and Finding Purpose Beyond Acting” (Nov 10, 2026)',
+    sourceUrl: 'https://www.theqgentleman.com/post/2026-11-xavier-smalls-on-beauty-in-black-fatherhood-and-finding-purpose-beyond-acting/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
