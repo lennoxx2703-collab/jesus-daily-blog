@@ -701,6 +701,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'The Quintessential Gentleman, “Xavier Smalls on ‘Beauty in Black,’ Fatherhood and Finding Purpose Beyond Acting” (Nov 10, 2026)',
     sourceUrl: 'https://www.theqgentleman.com/post/2026-11-xavier-smalls-on-beauty-in-black-fatherhood-and-finding-purpose-beyond-acting/',
   },
+  {
+    id: 'chase-rice-choose-jesus-2026',
+    person: 'Chase Rice',
+    quote:
+      "I just know that I want to choose Jesus. I want to choose Jesus today. I want to choose Jesus in this moment, in this struggle, in this good thing. If I'm doing that, I can't go wrong there.",
+    year: 2026,
+    sourceTitle: 'Whiskey Riff, “I Want To Choose Jesus” – Chase Rice on the Take Back Ocala podcast (Nov 3, 2026)',
+    sourceUrl: 'https://www.whiskeyriff.com/2026/11/03/i-want-to-choose-jesus-chase-rice-opens-up-about-finding-his-faith-in-vulnerable-conversation-about-trauma-loss-shame/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
