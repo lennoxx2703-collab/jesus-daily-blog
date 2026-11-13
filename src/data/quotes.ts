@@ -710,6 +710,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Whiskey Riff, “I Want To Choose Jesus” – Chase Rice on the Take Back Ocala podcast (Nov 3, 2026)',
     sourceUrl: 'https://www.whiskeyriff.com/2026/11/03/i-want-to-choose-jesus-chase-rice-opens-up-about-finding-his-faith-in-vulnerable-conversation-about-trauma-loss-shame/',
   },
+  {
+    id: 'caviezel-only-want-them-to-see-you-2026',
+    person: 'Jim Caviezel',
+    quote: "And I had asked Him, 'I don't want them to see me, I only want them to see you.'",
+    year: 2026,
+    sourceTitle: 'The Christian Post: Jim Caviezel claims Jesus physically appeared, convinced him to star in “The Passion of the Christ” (Nov 12, 2026; Hang Out with Sean Hannity, Nov 10, 2026)',
+    sourceUrl: 'https://www.christianpost.com/news/jim-caviezel-claims-jesus-physically-appeared-to-him.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
