@@ -718,6 +718,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'The Christian Post: Jim Caviezel claims Jesus physically appeared, convinced him to star in “The Passion of the Christ” (Nov 12, 2026; Hang Out with Sean Hannity, Nov 10, 2026)',
     sourceUrl: 'https://www.christianpost.com/news/jim-caviezel-claims-jesus-physically-appeared-to-him.html',
   },
+  {
+    id: 'cam-bynum-jesus-famous-before-me-2026',
+    person: 'Cam Bynum',
+    quote: '…to always make Jesus famous before me.',
+    year: 2026,
+    sourceTitle: 'Sports Spectrum Podcast: Indianapolis Colts safety Cam Bynum on faith, joy, in-game celebrations (Nov 13, 2026)',
+    sourceUrl: 'https://sportsspectrum.com/podcast/2026/11/13/podcast-colts-safety-cam-bynum-faith-joy-celebrations/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
