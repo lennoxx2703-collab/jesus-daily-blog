@@ -726,6 +726,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: 'Sports Spectrum Podcast: Indianapolis Colts safety Cam Bynum on faith, joy, in-game celebrations (Nov 13, 2026)',
     sourceUrl: 'https://sportsspectrum.com/podcast/2026/11/13/podcast-colts-safety-cam-bynum-faith-joy-celebrations/',
   },
+  {
+    id: 'drake-thomas-jesus-everything-2026',
+    person: 'Drake Thomas',
+    quote: 'Jesus is everything to me. Without Jesus, I\'m not here. He\'s the unshakeable foundation that I lean on in all situations.',
+    year: 2026,
+    sourceTitle: "Sports Spectrum: Seahawks LB Drake Thomas goes from undrafted to Super Bowl starter: 'Jesus is everything to me' (Feb 5, 2026)",
+    sourceUrl: 'https://sportsspectrum.com/sport/football/2026/02/05/seahawks-drake-thomas-super-bowl-jesus-everything/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
