@@ -733,6 +733,13 @@ export const quotes: FaithQuote[] = [
     year: 2026,
     sourceTitle: "Sports Spectrum: Seahawks LB Drake Thomas goes from undrafted to Super Bowl starter: 'Jesus is everything to me' (Feb 5, 2026)",
     sourceUrl: 'https://sportsspectrum.com/sport/football/2026/02/05/seahawks-drake-thomas-super-bowl-jesus-everything/',
+  },  {
+    id: 'sal-stewart-jesus-everlasting-2026',
+    person: 'Sal Stewart',
+    quote: 'Baseball can come and go in a heartbeat, but Jesus is everlasting. … When my identity is in Christ, I always know who I am.',
+    year: 2026,
+    sourceTitle: "Sports Spectrum: Reds 1B Sal Stewart wins Rookie of the Year, knows 'Jesus is King' (Nov 10, 2026; quoting CBN Sports)",
+    sourceUrl: 'https://sportsspectrum.com/sport/baseball/2026/11/10/cincinnati-reds-sal-stewart-rookie-year-jesus-king/',
   },
 ];
 
