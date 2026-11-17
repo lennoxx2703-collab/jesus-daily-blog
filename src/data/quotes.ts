@@ -741,6 +741,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: "Sports Spectrum: Reds 1B Sal Stewart wins Rookie of the Year, knows 'Jesus is King' (Nov 10, 2026; quoting CBN Sports)",
     sourceUrl: 'https://sportsspectrum.com/sport/baseball/2026/11/10/cincinnati-reds-sal-stewart-rookie-year-jesus-king/',
   },
+  {
+    id: 'grammer-stand-up-for-jesus-2026',
+    person: 'Kelsey Grammer',
+    quote: "We have a lot of things to do, and some of them are just to stand up for Jesus. … But if somebody asks me to deny that I believe in Christ, I'm not going to do it.",
+    year: 2026,
+    sourceTitle: "The Christian Post: Kelsey Grammer reflects on patriotism, vows to never deny Jesus Christ (Nov 12, 2026)",
+    sourceUrl: 'https://www.christianpost.com/news/kelsey-grammer-vows-to-never-deny-jesus-christ.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
