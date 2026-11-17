@@ -626,6 +626,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/loneliness/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/longing/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1962,6 +1967,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-16-nevertheless-at-thy-word/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-17-i-will-not-leave-you-comfortless/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
