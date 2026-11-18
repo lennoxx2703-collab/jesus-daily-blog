@@ -749,6 +749,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: "The Christian Post: Kelsey Grammer reflects on patriotism, vows to never deny Jesus Christ (Nov 12, 2026)",
     sourceUrl: 'https://www.christianpost.com/news/kelsey-grammer-vows-to-never-deny-jesus-christ.html',
   },
+  {
+    id: 'kj-apa-on-my-knees-2026',
+    person: 'KJ Apa',
+    quote: "Faith is everything. … I've certainly been there in my life where I've been on my knees, like, begging for God to help me with something, something that I can't do myself.",
+    year: 2026,
+    sourceTitle: "The Christian Post: KJ Apa, 'Jimmy' cast reveal how Jimmy Stewart's faith sustained him (Nov 7, 2026)",
+    sourceUrl: 'https://www.christianpost.com/news/kj-apa-jimmy-cast-on-how-jimmy-stewarts-faith-sustained-him.html',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
