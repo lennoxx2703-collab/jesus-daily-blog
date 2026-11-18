@@ -891,6 +891,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/sorrow/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/staying/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2022,6 +2027,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-18-not-to-be-ministered-unto/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-18-your-sorrow-shall-be-turned-into-joy/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
