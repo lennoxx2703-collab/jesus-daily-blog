@@ -757,6 +757,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: "The Christian Post: KJ Apa, 'Jimmy' cast reveal how Jimmy Stewart's faith sustained him (Nov 7, 2026)",
     sourceUrl: 'https://www.christianpost.com/news/kj-apa-jimmy-cast-on-how-jimmy-stewarts-faith-sustained-him.html',
   },
+  {
+    id: 'mary-beth-mclaughlin-here-for-jesus-2026',
+    person: 'Mary Beth McLaughlin',
+    quote: "I don't want to live like this any more. I'm here for Jesus. I'm here to be a witness to my teammates.",
+    year: 2026,
+    sourceTitle: "Sports Spectrum: Mary Beth McLaughlin helps Vanderbilt women's soccer earn No. 1 seed, knows 'I'm here for Jesus' (Nov 17, 2026)",
+    sourceUrl: 'https://sportsspectrum.com/sport/soccer/2026/11/17/mary-beth-mclaughlin-vanderbilt-soccer-here-for-jesus/',
+  },
 ];
 
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
