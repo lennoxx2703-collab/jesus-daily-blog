@@ -765,8 +765,15 @@ export const quotes: FaithQuote[] = [
     sourceTitle: "Sports Spectrum: Mary Beth McLaughlin helps Vanderbilt women's soccer earn No. 1 seed, knows 'I'm here for Jesus' (Nov 17, 2026)",
     sourceUrl: 'https://sportsspectrum.com/sport/soccer/2026/11/17/mary-beth-mclaughlin-vanderbilt-soccer-here-for-jesus/',
   },
+  {
+    id: 'lou-gramm-lord-and-savior-2026',
+    person: 'Lou Gramm',
+    quote: "He definitely is my lord and savior. He's saved me from a number of things — drug addiction and alcoholism. I've been clean and sober for over 30 years.",
+    year: 2026,
+    sourceTitle: "Blabbermouth: Lou Gramm on the I Love You, Jesus podcast (Nov 19, 2026)",
+    sourceUrl: 'https://blabbermouth.net/news/lou-gramm-says-jesus-saved-him-from-death-from-his-brain-tumor-i-know-that-jesus-was-guiding-that-doctors-hands-during-the-operation',
+  },
 ];
-
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
 export function dayIndexForDate(date: Date = new Date()): number {
   const start = new Date(date.getFullYear(), 0, 1);
