@@ -773,6 +773,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: "Blabbermouth: Lou Gramm on the I Love You, Jesus podcast (Nov 19, 2026)",
     sourceUrl: 'https://blabbermouth.net/news/lou-gramm-says-jesus-saved-him-from-death-from-his-brain-tumor-i-know-that-jesus-was-guiding-that-doctors-hands-during-the-operation',
   },
+  {
+    id: 'cam-little-jesus-bringing-me-up-2026',
+    person: 'Cam Little',
+    quote: "Even when I was down in the low, Jesus was bringing me back up. Even when I'm up here, Jesus is still bringing me back up to even higher heights.",
+    year: 2026,
+    sourceTitle: "Sports Spectrum: Jaguars kicker Cam Little knows 'Jesus has changed my life' (Nov 19, 2026, quoting Identity Sports podcast)",
+    sourceUrl: 'https://sportsspectrum.com/sport/football/2026/11/19/jaguars-kicker-cam-little-leagues-best-jesus-changed-life/',
+  },
 ];
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
 export function dayIndexForDate(date: Date = new Date()): number {
