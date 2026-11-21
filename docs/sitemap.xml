@@ -641,6 +641,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/known-by-name/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/last-supper/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2092,6 +2097,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-20-stretch-forth-thine-hand/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-21-jesus-saith-unto-her-mary/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
