@@ -781,6 +781,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: "Sports Spectrum: Jaguars kicker Cam Little knows 'Jesus has changed my life' (Nov 19, 2026, quoting Identity Sports podcast)",
     sourceUrl: 'https://sportsspectrum.com/sport/football/2026/11/19/jaguars-kicker-cam-little-leagues-best-jesus-changed-life/',
   },
+  {
+    id: 'will-anderson-owe-all-to-jesus-2026',
+    person: 'Will Anderson Jr.',
+    quote: 'Thank You, Jesus. Jesus, I owe all I am to You. … Without You, I am nothing.',
+    year: 2026,
+    sourceTitle: "Sports Spectrum: Texans DE Will Anderson leading Houston's resurgence, gives 'all the glory to God' (Nov 9, 2026, quoting his contract-extension press conference)",
+    sourceUrl: 'https://sportsspectrum.com/sport/football/2026/11/09/texans-will-anderson-houston-resurgence-glory-god/',
+  },
 ];
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
 export function dayIndexForDate(date: Date = new Date()): number {
