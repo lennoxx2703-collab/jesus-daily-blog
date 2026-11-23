@@ -789,6 +789,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: "Sports Spectrum: Texans DE Will Anderson leading Houston's resurgence, gives 'all the glory to God' (Nov 9, 2026, quoting his contract-extension press conference)",
     sourceUrl: 'https://sportsspectrum.com/sport/football/2026/11/09/texans-will-anderson-houston-resurgence-glory-god/',
   },
+  {
+    id: 'tomlin-hope-is-in-jesus-2026',
+    person: 'Chris Tomlin',
+    quote: "That's the message we get to share every Christmas, is [to] remind people of the hope, remind the world of the hope that we have, and that is in Jesus.",
+    year: 2026,
+    sourceTitle: "The Christian Post: Chris Tomlin says 'there is no Christmas without the cross' in new holiday worship album (Nov 17, 2026 interview)",
+    sourceUrl: 'https://www.christianpost.com/news/chris-tomlin-says-there-is-no-christmas-without-the-cross.html',
+  },
 ];
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
 export function dayIndexForDate(date: Date = new Date()): number {
