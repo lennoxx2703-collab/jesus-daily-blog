@@ -797,6 +797,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: "The Christian Post: Chris Tomlin says 'there is no Christmas without the cross' in new holiday worship album (Nov 17, 2026 interview)",
     sourceUrl: 'https://www.christianpost.com/news/chris-tomlin-says-there-is-no-christmas-without-the-cross.html',
   },
+  {
+    id: 'purdy-free-through-jesus-2025',
+    person: 'Brock Purdy',
+    quote: "I've given my life to Jesus. … And now I have this freedom to go and live changed and free through Jesus.",
+    year: 2025,
+    sourceTitle: "Sports Spectrum Podcast (Mar 2025), quoted in Sports Spectrum: 49ers QB Brock Purdy making MVP case, has 'trusted in God' amid career success (Nov 23, 2026)",
+    sourceUrl: 'https://sportsspectrum.com/sport/football/2026/11/23/49ers-brock-purdy-mvp-case-trusted-in-god-success/',
+  },
 ];
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
 export function dayIndexForDate(date: Date = new Date()): number {
