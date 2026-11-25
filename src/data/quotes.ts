@@ -805,6 +805,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: "Sports Spectrum Podcast (Mar 2025), quoted in Sports Spectrum: 49ers QB Brock Purdy making MVP case, has 'trusted in God' amid career success (Nov 23, 2026)",
     sourceUrl: 'https://sportsspectrum.com/sport/football/2026/11/23/49ers-brock-purdy-mvp-case-trusted-in-god-success/',
   },
+  {
+    id: 'charles-esten-individual-turnstile-2026',
+    person: 'Charles Esten',
+    quote: "That's not how a relationship… and faith works. It's more the individual turnstile — you've got to find your way to that connection.",
+    year: 2026,
+    sourceTitle: "CBN News: Hollywood Star Charles Esten Gets REAL About Jesus and Faith (Nov 22, 2026)",
+    sourceUrl: 'https://cbn.com/news/entertainment/hollywood-star-charles-esten-gets-real-about-jesus-and-faith',
+  },
 ];
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
 export function dayIndexForDate(date: Date = new Date()): number {
