@@ -813,6 +813,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: "CBN News: Hollywood Star Charles Esten Gets REAL About Jesus and Faith (Nov 22, 2026)",
     sourceUrl: 'https://cbn.com/news/entertainment/hollywood-star-charles-esten-gets-real-about-jesus-and-faith',
   },
+  {
+    id: 'mcclurkin-nothing-without-jesus-2026',
+    person: 'Donnie McClurkin',
+    quote: "We make celebrities, but the truth of the matter is we're nothing without Jesus. … I want to make sure that I lay everything at His feet and that He gets all of the glory.",
+    year: 2026,
+    sourceTitle: "CBN News: 'It's Time to Hang the Hat Up': Gospel Artist Donnie McClurkin Drops Final Album (Nov 20, 2026)",
+    sourceUrl: 'https://cbn.com/news/entertainment/its-time-hang-hat-gospel-artist-donnie-mcclurkin-drops-final-album',
+  },
 ];
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
 export function dayIndexForDate(date: Date = new Date()): number {
