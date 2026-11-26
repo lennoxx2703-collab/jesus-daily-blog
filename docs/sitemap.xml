@@ -161,6 +161,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/adoption/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/advent/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2267,6 +2272,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-25-the-lord-turned-and-looked/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-26-behold-my-mother-and-my-brethren/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
