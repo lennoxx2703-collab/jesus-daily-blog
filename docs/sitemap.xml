@@ -766,6 +766,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/need/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/tags/neighbor/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2297,6 +2302,11 @@
   </url>
   <url>
     <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-26-increase-our-faith/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lennoxx2703-collab.github.io/jesus-daily-blog/posts/2026-11-27-they-need-not-depart/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
