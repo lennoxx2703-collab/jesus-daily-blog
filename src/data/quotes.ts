@@ -821,6 +821,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: "CBN News: 'It's Time to Hang the Hat Up': Gospel Artist Donnie McClurkin Drops Final Album (Nov 20, 2026)",
     sourceUrl: 'https://cbn.com/news/entertainment/its-time-hang-hat-gospel-artist-donnie-mcclurkin-drops-final-album',
   },
+  {
+    id: 'stroud-audience-of-one-2026',
+    person: 'C.J. Stroud (Texans QB)',
+    quote: "It makes sense when everybody has faith when everything is going right. That's not really faith. Faith is what you can't see. … I know for myself and I know for a lot of our players, we're doing it for an audience of one, that's God.",
+    year: 2026,
+    sourceTitle: "RELEVANT: Texans Quarterback C.J. Stroud: 'We're doing it for an audience of one, that's God' (Nov 21, 2026, postgame press conference)",
+    sourceUrl: 'https://relevantmagazine.com/culture/sports/texans-quarterback-c-j-stroud-were-doing-it-for-an-audience-of-one-thats-god/',
+  },
 ];
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
 export function dayIndexForDate(date: Date = new Date()): number {
