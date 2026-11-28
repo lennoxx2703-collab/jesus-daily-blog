@@ -829,6 +829,14 @@ export const quotes: FaithQuote[] = [
     sourceTitle: "RELEVANT: Texans Quarterback C.J. Stroud: 'We're doing it for an audience of one, that's God' (Nov 21, 2026, postgame press conference)",
     sourceUrl: 'https://relevantmagazine.com/culture/sports/texans-quarterback-c-j-stroud-were-doing-it-for-an-audience-of-one-thats-god/',
   },
+  {
+    id: 'aiden-flora-one-of-his-disciples-2026',
+    person: 'Aiden Flora (Iowa State RB, nation\'s leading rusher)',
+    quote: "I get to play at this high level and just speak His name and be one of His disciples. I believe that He's put me on this platform to spread His Word. I think that's my 'why.'",
+    year: 2026,
+    sourceTitle: "Sports Spectrum: Iowa State's Aiden Flora, nation's leading rusher, chases Heisman Trophy 'with God as my guide' (Nov 24, 2026, quoting the Heisman Hopefuls Podcast)",
+    sourceUrl: 'https://sportsspectrum.com/sport/football/2026/11/24/iowa-state-aiden-flora-leading-rusher-heisman-god-guide/',
+  },
 ];
 /** Local calendar day-of-year, 0-based (Jan 1 = 0). */
 export function dayIndexForDate(date: Date = new Date()): number {
